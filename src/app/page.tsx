@@ -87,7 +87,7 @@ export default function LandingPage() {
                 </div>
               )}
             </div>
-            <a href="#cta" className="btn-primary !py-2.5 !px-6 !text-sm">
+            <a href="https://app.hellonanny-san.com/signup_user" className="btn-primary !py-2.5 !px-6 !text-sm">
               {t.nav.getStarted}<ChevronRight className="w-4 h-4 ml-1" />
             </a>
           </div>
@@ -112,7 +112,7 @@ export default function LandingPage() {
                   </button>
                 ))}
               </div>
-              <a href="#cta" onClick={() => setMobileMenuOpen(false)} className="btn-primary text-center mt-2">{t.nav.getStarted}</a>
+              <a href="https://app.hellonanny-san.com/signup_user" onClick={() => setMobileMenuOpen(false)} className="btn-primary text-center mt-2">{t.nav.getStarted}</a>
             </div>
           </div>
         )}
@@ -129,7 +129,7 @@ export default function LandingPage() {
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10">{t.hero.subtitle}</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-              <a href="#cta" className="btn-primary text-lg">
+              <a href="https://app.hellonanny-san.com/signup_user" className="btn-primary text-lg">
                 {t.hero.cta}<ArrowRight className="w-5 h-5 ml-2" />
               </a>
             </div>
@@ -221,7 +221,7 @@ export default function LandingPage() {
                   </li>
                 ))}
               </ul>
-              <a href="#cta" className="btn-primary w-full justify-center text-lg">
+              <a href="https://app.hellonanny-san.com/signup_user" className="btn-primary w-full justify-center text-lg">
                 {t.pricing.cta}<ArrowRight className="w-5 h-5 ml-2" />
               </a>
               <p className="text-center text-sm text-gray-500 mt-4">{t.pricing.trial}</p>
@@ -267,7 +267,7 @@ export default function LandingPage() {
         <div className="section-container text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4">{t.cta.title}</h2>
           <p className="text-gray-400 text-lg mb-10 max-w-xl mx-auto">{t.cta.subtitle}</p>
-          <a href="#" className="inline-flex items-center justify-center px-10 py-5 text-xl font-bold text-brand-black bg-brand-yellow rounded-full hover:bg-brand-yellow-dark transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+          <a href="https://app.hellonanny-san.com/signup_user" className="inline-flex items-center justify-center px-10 py-5 text-xl font-bold text-brand-black bg-brand-yellow rounded-full hover:bg-brand-yellow-dark transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
             {t.cta.button}<ArrowRight className="w-6 h-6 ml-2" />
           </a>
           <p className="text-gray-500 text-sm mt-4">{t.cta.note}</p>
