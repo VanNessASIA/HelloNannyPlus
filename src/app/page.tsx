@@ -17,7 +17,6 @@ import {
   X,
   Globe,
   UserPlus,
-  Handshake,
   ArrowRight,
   Heart,
   BadgeCheck,
@@ -258,10 +257,10 @@ export default function LandingPage() {
     "search", "distance", "chat", "video", "offer", "review", "safety", "price",
   ] as const;
 
-  const stepIcons = [
-    <UserPlus key="s1" className="w-10 h-10 text-brand-yellow" />,
-    <Search key="s2" className="w-10 h-10 text-brand-yellow" />,
-    <Handshake key="s3" className="w-10 h-10 text-brand-yellow" />,
+  const stepPhotos = [
+    "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&q=80",
+    "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&q=80",
+    "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400&q=80",
   ];
 
   return (
@@ -364,16 +363,25 @@ export default function LandingPage() {
                 ))}
               </div>
             </div>
-            {/* Right: Phone Mockup */}
+            {/* Right: Phone Mockup with lifestyle photo background */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
+                {/* Background lifestyle photo */}
+                <div className="absolute -inset-8 md:-inset-12 rounded-3xl overflow-hidden opacity-20 lg:opacity-30">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="https://images.unsplash.com/photo-1587614382346-4ec70e388b28?w=600&q=80"
+                    alt=""
+                    className="w-full h-full object-cover rounded-3xl"
+                  />
+                </div>
                 {/* Main phone */}
                 <PhoneMockup className="relative z-10">
                   <MockSearchScreen />
                 </PhoneMockup>
                 {/* Decorative elements */}
-                <div className="absolute -top-6 -right-6 w-24 h-24 bg-brand-yellow/20 rounded-full blur-2xl" />
-                <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-brand-yellow/10 rounded-full blur-3xl" />
+                <div className="absolute -top-6 -right-6 w-24 h-24 bg-brand-yellow/20 rounded-full blur-2xl z-0" />
+                <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-brand-yellow/10 rounded-full blur-3xl z-0" />
               </div>
             </div>
           </div>
@@ -398,6 +406,43 @@ export default function LandingPage() {
                 <p className="text-gray-500 text-sm leading-relaxed">{t.features[key].desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* LIFESTYLE BANNER — ナニーがいる暮らし */}
+      <section className="relative overflow-hidden">
+        <div className="relative h-[420px] md:h-[520px]">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?w=1600&q=80"
+            alt="Happy family lifestyle"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
+          <div className="relative z-10 h-full flex items-center">
+            <div className="section-container">
+              <div className="max-w-lg">
+                <span className="inline-block bg-brand-yellow/20 backdrop-blur-sm text-brand-yellow font-semibold text-sm px-4 py-1.5 rounded-full mb-4">
+                  {locale === "ja" ? "✨ もっと笑顔の毎日を" : locale === "zh" ? "✨ 更多微笑的每一天" : locale === "th" ? "✨ วันที่มีรอยยิ้มมากขึ้น" : "✨ More smiles every day"}
+                </span>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-4 leading-tight">
+                  {locale === "ja" ? "ナニーがいる暮らし" : locale === "zh" ? "有保姆的生活" : locale === "th" ? "ชีวิตที่มีพี่เลี้ยง" : "Life with a Nanny"}
+                </h2>
+                <p className="text-white/80 text-lg md:text-xl leading-relaxed mb-8">
+                  {locale === "ja"
+                    ? "子どもたちの笑顔が増える。自分の時間が生まれる。家族みんなが、もっと幸せになる。"
+                    : locale === "zh"
+                    ? "孩子们的笑容更多了。有了属于自己的时间。全家人都更幸福了。"
+                    : locale === "th"
+                    ? "รอยยิ้มของเด็กๆ เพิ่มขึ้น มีเวลาเป็นของตัวเอง ทุกคนในครอบครัวมีความสุขมากขึ้น"
+                    : "More smiles from the kids. More time for yourself. A happier life for the whole family."}
+                </p>
+                <a href="https://app.hellonanny-san.com/signup_user" className="inline-flex items-center px-8 py-4 text-lg font-semibold text-brand-black bg-brand-yellow rounded-full hover:bg-brand-yellow-dark transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                  {t.hero.cta}<ArrowRight className="w-5 h-5 ml-2" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -453,14 +498,20 @@ export default function LandingPage() {
             <span className="inline-block text-brand-yellow-dark font-semibold text-sm uppercase tracking-wider mb-3">{t.howItWorks.sectionTag}</span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-brand-black">{t.howItWorks.title}</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {(["step1", "step2", "step3"] as const).map((stepKey, i) => (
-              <div key={stepKey} className="relative text-center">
-                <div className="w-20 h-20 bg-brand-gray-50 rounded-full flex items-center justify-center mx-auto mb-6 shadow-md border-4 border-brand-yellow/20">
-                  {stepIcons[i]}
+              <div key={stepKey} className="relative text-center group">
+                {/* Step photo */}
+                <div className="w-full h-48 rounded-2xl overflow-hidden mb-6 shadow-lg">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={stepPhotos[i]}
+                    alt=""
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
-                <span className="inline-block bg-brand-yellow text-brand-black text-sm font-bold px-3 py-1 rounded-full mb-3">{i + 1}</span>
-                <h3 className="font-bold text-xl text-brand-black mb-2">{t.howItWorks[stepKey].title}</h3>
+                <span className="inline-flex items-center justify-center w-10 h-10 bg-brand-yellow text-brand-black text-lg font-bold rounded-full mb-3 shadow-md -mt-11 relative z-10 border-4 border-white">{i + 1}</span>
+                <h3 className="font-bold text-xl text-brand-black mb-2 mt-2">{t.howItWorks[stepKey].title}</h3>
                 <p className="text-gray-500">{t.howItWorks[stepKey].desc}</p>
               </div>
             ))}
@@ -509,7 +560,7 @@ export default function LandingPage() {
       </section>
 
       {/* REVIEWS */}
-      <section id="reviews" className="py-16 md:py-24 bg-white">
+      <section id="reviews" className="py-16 md:py-24 bg-gradient-to-b from-white via-brand-yellow/5 to-white relative">
         <div className="section-container">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="inline-block text-brand-yellow-dark font-semibold text-sm uppercase tracking-wider mb-3">{t.reviews.sectionTag}</span>
@@ -545,73 +596,29 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* LIFESTYLE / TRUST BANNER */}
-      <section className="py-16 md:py-20 bg-gradient-to-r from-brand-yellow/5 via-brand-yellow/10 to-brand-yellow/5">
-        <div className="section-container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
-            {/* Illustration: Happy family scene */}
-            <div className="relative">
-              <div className="bg-white rounded-3xl p-8 shadow-lg border border-brand-yellow/20">
-                <div className="grid grid-cols-3 gap-4">
-                  {/* Family illustration cards */}
-                  <div className="bg-brand-yellow/10 rounded-2xl p-4 flex flex-col items-center text-center">
-                    <div className="w-12 h-12 bg-brand-yellow/20 rounded-full flex items-center justify-center mb-2">
-                      <ShieldCheck className="w-6 h-6 text-brand-yellow-dark" />
-                    </div>
-                    <span className="text-xs font-semibold text-brand-black">
-                      {locale === "ja" ? "安全確認" : locale === "zh" ? "安全验证" : locale === "th" ? "ปลอดภัย" : "Verified"}
-                    </span>
-                  </div>
-                  <div className="bg-brand-yellow/10 rounded-2xl p-4 flex flex-col items-center text-center">
-                    <div className="w-12 h-12 bg-brand-yellow/20 rounded-full flex items-center justify-center mb-2">
-                      <Heart className="w-6 h-6 text-red-400" />
-                    </div>
-                    <span className="text-xs font-semibold text-brand-black">
-                      {locale === "ja" ? "信頼" : locale === "zh" ? "信赖" : locale === "th" ? "ไว้ใจ" : "Trusted"}
-                    </span>
-                  </div>
-                  <div className="bg-brand-yellow/10 rounded-2xl p-4 flex flex-col items-center text-center">
-                    <div className="w-12 h-12 bg-brand-yellow/20 rounded-full flex items-center justify-center mb-2">
-                      <Star className="w-6 h-6 text-brand-yellow fill-brand-yellow" />
-                    </div>
-                    <span className="text-xs font-semibold text-brand-black">
-                      {locale === "ja" ? "高評価" : locale === "zh" ? "高评分" : locale === "th" ? "คะแนนสูง" : "Top Rated"}
-                    </span>
-                  </div>
-                </div>
-                {/* Stats bar */}
-                <div className="mt-6 bg-brand-gray-50 rounded-xl p-4 flex justify-around">
-                  <div className="text-center">
-                    <div className="text-xl font-extrabold text-brand-black">98%</div>
-                    <div className="text-[10px] text-gray-500">
-                      {locale === "ja" ? "満足度" : locale === "zh" ? "满意度" : locale === "th" ? "ความพึงพอใจ" : "Satisfaction"}
-                    </div>
-                  </div>
-                  <div className="w-px bg-gray-200" />
-                  <div className="text-center">
-                    <div className="text-xl font-extrabold text-brand-black">500+</div>
-                    <div className="text-[10px] text-gray-500">
-                      {locale === "ja" ? "マッチ成立" : locale === "zh" ? "成功匹配" : locale === "th" ? "จับคู่สำเร็จ" : "Matches"}
-                    </div>
-                  </div>
-                  <div className="w-px bg-gray-200" />
-                  <div className="text-center">
-                    <div className="text-xl font-extrabold text-brand-black">24h</div>
-                    <div className="text-[10px] text-gray-500">
-                      {locale === "ja" ? "サポート" : locale === "zh" ? "客服支持" : locale === "th" ? "สนับสนุน" : "Support"}
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* Decorative blob */}
-              <div className="absolute -z-10 -top-4 -left-4 w-full h-full bg-brand-yellow/10 rounded-3xl" />
-            </div>
-            {/* Right: Trust text */}
-            <div className="text-center md:text-left">
-              <h2 className="text-3xl md:text-4xl font-extrabold text-brand-black mb-4">
-                {locale === "ja" ? "ご家族の安心を第一に" : locale === "zh" ? "家庭安全第一" : locale === "th" ? "ความปลอดภัยของครอบครัวมาก่อน" : "Your Family's Safety Comes First"}
+      {/* LIFESTYLE / TRUST BANNER — Photo-driven */}
+      <section className="overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
+          {/* Left: Full-bleed photo */}
+          <div className="relative h-[320px] lg:h-auto lg:min-h-[520px]">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://images.unsplash.com/photo-1543342384-1f1350e27861?w=800&q=80"
+              alt="Caring nanny with child"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent lg:bg-none" />
+          </div>
+          {/* Right: Trust content */}
+          <div className="bg-brand-gray-50 flex items-center py-12 lg:py-20 px-6 sm:px-10 lg:px-16">
+            <div className="max-w-lg">
+              <span className="inline-block text-brand-yellow-dark font-semibold text-sm uppercase tracking-wider mb-3">
+                {locale === "ja" ? "安心・安全" : locale === "zh" ? "安心安全" : locale === "th" ? "ปลอดภัยมั่นใจ" : "Safety & Trust"}
+              </span>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-brand-black mb-4 leading-tight">
+                {locale === "ja" ? "ご家族の安心を\n第一に" : locale === "zh" ? "家庭安全第一" : locale === "th" ? "ความปลอดภัยของ\nครอบครัวมาก่อน" : "Your Family's Safety\nComes First"}
               </h2>
-              <p className="text-gray-600 text-lg mb-6 leading-relaxed">
+              <p className="text-gray-600 text-lg mb-8 leading-relaxed whitespace-pre-line">
                 {locale === "ja"
                   ? "すべての候補者がID確認済み。バックグラウンドチェック済みの候補者には専用マークを表示。レビューや評価で他のご家庭の声も確認でき、安心してお選びいただけます。"
                   : locale === "zh"
@@ -620,9 +627,53 @@ export default function LandingPage() {
                   ? "ผู้สมัครทุกคนผ่านการยืนยันตัวตน ผู้สมัครที่ผ่านการตรวจสอบประวัติจะมีเครื่องหมายพิเศษ คุณยังสามารถดูรีวิวจากครอบครัวอื่นเพื่อเลือกอย่างมั่นใจ"
                   : "Every candidate is ID-verified. Background-checked candidates display a special badge. Plus, read reviews from other families so you can choose with confidence."}
               </p>
+              {/* Trust stats row */}
+              <div className="grid grid-cols-3 gap-3 mb-8">
+                <div className="text-center bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
+                  <div className="text-2xl md:text-3xl font-extrabold text-brand-black">98%</div>
+                  <div className="text-xs text-gray-500 mt-1">
+                    {locale === "ja" ? "満足度" : locale === "zh" ? "满意度" : locale === "th" ? "ความพึงพอใจ" : "Satisfaction"}
+                  </div>
+                </div>
+                <div className="text-center bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
+                  <div className="text-2xl md:text-3xl font-extrabold text-brand-black">500+</div>
+                  <div className="text-xs text-gray-500 mt-1">
+                    {locale === "ja" ? "マッチ成立" : locale === "zh" ? "成功匹配" : locale === "th" ? "จับคู่สำเร็จ" : "Matches"}
+                  </div>
+                </div>
+                <div className="text-center bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
+                  <div className="text-2xl md:text-3xl font-extrabold text-brand-black">24h</div>
+                  <div className="text-xs text-gray-500 mt-1">
+                    {locale === "ja" ? "サポート" : locale === "zh" ? "客服支持" : locale === "th" ? "สนับสนุน" : "Support"}
+                  </div>
+                </div>
+              </div>
               <a href="https://app.hellonanny-san.com/signup_user" className="btn-primary inline-flex text-lg">
                 {t.cta.button}<ArrowRight className="w-5 h-5 ml-2" />
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PRE-CTA LIFESTYLE PHOTO BANNER */}
+      <section className="relative overflow-hidden">
+        <div className="relative h-[320px] md:h-[400px]">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=1600&q=80"
+            alt="Family walking together"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/40" />
+          <div className="relative z-10 h-full flex items-center justify-center text-center">
+            <div className="section-container">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-4 leading-tight">
+                {locale === "ja" ? "ゆとりのある暮らしを、\nあなたの家族に。" : locale === "zh" ? "给您的家庭，\n更从容的生活。" : locale === "th" ? "ชีวิตที่มีเวลามากขึ้น\nเพื่อครอบครัวของคุณ" : "A more relaxed life,\nfor your family."}
+              </h2>
+              <p className="text-white/70 text-lg md:text-xl max-w-xl mx-auto whitespace-pre-line">
+                {locale === "ja" ? "HelloNanny+で、信頼できるお手伝いさんに出会おう" : locale === "zh" ? "在HelloNanny+上，遇见值得信赖的帮手" : locale === "th" ? "พบพี่เลี้ยงที่ไว้วางใจได้บน HelloNanny+" : "Find a trusted helper on HelloNanny+"}
+              </p>
             </div>
           </div>
         </div>
