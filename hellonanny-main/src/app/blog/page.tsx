@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import ScrollAnimation from "@/components/ScrollAnimation";
 import { Calendar, ArrowRight } from "lucide-react";
 
 const blogPosts = [
@@ -101,84 +102,90 @@ export default function BlogPage() {
       {/* Hero */}
       <section className="py-20 bg-brand-yellow">
         <div className="section-container text-center">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-brand-black mb-4">
-            Blog
-          </h1>
-          <p className="text-brand-black/70 text-lg max-w-2xl mx-auto">
-            Tips, insights, and stories about childcare and hiring in Bangkok.
-          </p>
+          <ScrollAnimation type="fade-in">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-brand-black mb-4">
+              Blog
+            </h1>
+            <p className="text-brand-black/70 text-lg max-w-2xl mx-auto">
+              Tips, insights, and stories about childcare and hiring in Bangkok.
+            </p>
+          </ScrollAnimation>
         </div>
       </section>
 
       {/* Featured Post */}
       <section className="py-12">
         <div className="section-container">
-          <Link
-            href={`/blog/${blogPosts[0].slug}`}
-            className="group grid md:grid-cols-2 gap-8 bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
-          >
-            <div className="relative h-64 md:h-auto min-h-[300px]">
-              <Image
-                src={blogPosts[0].image}
-                alt={blogPosts[0].title}
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div className="p-8 flex flex-col justify-center">
-              <span className="inline-block px-3 py-1 bg-brand-yellow/20 text-brand-yellow-dark text-xs font-semibold rounded-full mb-4 w-fit">
-                Latest
-              </span>
-              <h2 className="text-2xl font-bold text-brand-black mb-3 group-hover:text-brand-yellow-dark transition-colors">
-                {blogPosts[0].title}
-              </h2>
-              <p className="text-gray-600 mb-4">{blogPosts[0].excerpt}</p>
-              <div className="flex items-center gap-2 text-sm text-gray-400">
-                <Calendar className="w-4 h-4" />
-                {blogPosts[0].date}
+          <ScrollAnimation type="scale-in">
+            <Link
+              href={`/blog/${blogPosts[0].slug}`}
+              className="group grid md:grid-cols-2 gap-8 bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+            >
+              <div className="relative h-64 md:h-auto min-h-[300px] overflow-hidden">
+                <Image
+                  src={blogPosts[0].image}
+                  alt={blogPosts[0].title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
-            </div>
-          </Link>
+              <div className="p-8 flex flex-col justify-center">
+                <span className="inline-block px-3 py-1 bg-brand-yellow/20 text-brand-yellow-dark text-xs font-semibold rounded-full mb-4 w-fit">
+                  Latest
+                </span>
+                <h2 className="text-2xl font-bold text-brand-black mb-3 group-hover:text-brand-yellow-dark transition-colors">
+                  {blogPosts[0].title}
+                </h2>
+                <p className="text-gray-600 mb-4">{blogPosts[0].excerpt}</p>
+                <div className="flex items-center gap-2 text-sm text-gray-400">
+                  <Calendar className="w-4 h-4" />
+                  {blogPosts[0].date}
+                </div>
+              </div>
+            </Link>
+          </ScrollAnimation>
         </div>
       </section>
 
       {/* Blog Grid */}
       <section className="py-12">
         <div className="section-container">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.slice(1).map((post) => (
-              <Link
-                key={post.slug}
-                href={`/blog/${post.slug}`}
-                className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-shadow group"
-              >
-                <div className="relative h-52 overflow-hidden">
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 text-sm text-gray-400 mb-3">
-                    <Calendar className="w-4 h-4" />
-                    {post.date}
+          <ScrollAnimation type="stagger">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {blogPosts.slice(1).map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group hover:-translate-y-1"
+                >
+                  <div className="relative h-52 overflow-hidden">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
                   </div>
-                  <h2 className="text-lg font-bold text-brand-black mb-2 group-hover:text-brand-yellow-dark transition-colors line-clamp-2">
-                    {post.title}
-                  </h2>
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-                    {post.excerpt}
-                  </p>
-                  <span className="inline-flex items-center text-sm font-semibold text-brand-yellow-dark">
-                    Read more
-                    <ArrowRight className="w-4 h-4 ml-1" />
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
+                  <div className="p-6">
+                    <div className="flex items-center gap-2 text-sm text-gray-400 mb-3">
+                      <Calendar className="w-4 h-4" />
+                      {post.date}
+                    </div>
+                    <h2 className="text-lg font-bold text-brand-black mb-2 group-hover:text-brand-yellow-dark transition-colors line-clamp-2">
+                      {post.title}
+                    </h2>
+                    <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    <span className="inline-flex items-center text-sm font-semibold text-brand-yellow-dark">
+                      Read more
+                      <ArrowRight className="w-4 h-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" />
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </ScrollAnimation>
         </div>
       </section>
     </div>
