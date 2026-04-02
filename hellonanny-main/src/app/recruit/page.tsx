@@ -12,6 +12,7 @@ import {
   Phone,
   Mail,
 } from "lucide-react";
+import RecruitForm from "@/components/RecruitForm";
 
 const positions = [
   {
@@ -147,7 +148,7 @@ export default function RecruitPage() {
 
       {/* Application Form */}
       <section className="py-20 bg-white">
-        <div className="section-container max-w-4xl">
+        <div className="section-container max-w-3xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-extrabold text-brand-black mb-4">
               Apply Now
@@ -158,19 +159,9 @@ export default function RecruitPage() {
             </p>
           </div>
 
-          {/* Google Form Embed */}
-          <div className="bg-brand-gray-50 rounded-3xl overflow-hidden shadow-lg">
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSfoIS8eh-R4dEENbLTxZ_l95Ca0wZ1maOREaWTTHm-Ws-v5rw/viewform?embedded=true"
-              width="100%"
-              height="900"
-              frameBorder={0}
-              marginHeight={0}
-              marginWidth={0}
-              className="w-full"
-            >
-              Loading...
-            </iframe>
+          {/* Custom Form */}
+          <div className="bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-gray-100">
+            <RecruitForm />
           </div>
 
           {/* Alternative Contact */}
