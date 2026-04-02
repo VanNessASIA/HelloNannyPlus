@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+Thai:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+
+:root {
+  --background: #ffffff;
+  --foreground: #1A1A1A;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "Inter", "Noto Sans JP", "Noto Sans Thai", "Noto Sans SC", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-brand-black bg-brand-yellow rounded-full hover:bg-brand-yellow-dark transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-brand-black bg-white border-2 border-brand-black rounded-full hover:bg-brand-gray-50 transition-all duration-300;
+  }
+
+  .btn-line {
+    @apply inline-flex items-center justify-center px-6 py-3 text-lg font-semibold text-white bg-[#06C755] rounded-full hover:bg-[#05b04c] transition-all duration-300 shadow-lg;
+  }
+
+  .btn-whatsapp {
+    @apply inline-flex items-center justify-center px-6 py-3 text-lg font-semibold text-white bg-[#25D366] rounded-full hover:bg-[#1fbd5a] transition-all duration-300 shadow-lg;
+  }
+
+  .img-overlay {
+    @apply relative overflow-hidden;
+  }
+
+  .img-overlay::after {
+    content: "";
+    @apply absolute inset-0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.4));
+  }
+
+  .img-cover {
+    @apply w-full h-full object-cover;
+  }
+}
