@@ -80,7 +80,7 @@ export default function Home() {
               { icon: Users, value: "2,000+", label: "Nannies" },
               { icon: Heart, value: "500+", label: "Families" },
               { icon: Shield, value: "100%", label: "Screened" },
-              { icon: Clock, value: "3 Days", label: "Avg. Match" },
+              { icon: Clock, value: "24h", label: "Same-Day Match" },
             ].map((stat, i) => (
               <div
                 key={i}

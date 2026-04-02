@@ -3,9 +3,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useLocale } from "@/lib/LocaleContext";
-import { ChevronRight, Send, Video, CreditCard } from "lucide-react";
+import {
+  ChevronRight,
+  Send,
+  Video,
+  CreditCard,
+  Check,
+} from "lucide-react";
 
-const stepIcons = [Send, Video, CreditCard];
 const stepPhotos = [
   "/images/mom-with-phone.jpg",
   "/images/couple-with-laptop.jpg",
@@ -14,7 +19,80 @@ const stepPhotos = [
 
 export default function ProcessPage() {
   const { t } = useLocale();
-  const steps = [t.steps.step1, t.steps.step2, t.steps.step3];
+
+  const steps = [
+    {
+      icon: Send,
+      title: "Submit Your Request",
+      desc: "Send us your requirements via LINE or our contact form. Tell us what kind of help you need — nanny, maid, or both.",
+      details: [
+        "Using our unique AI system, we carefully select candidates from our registered staff based on your needs.",
+        "You'll receive a list of potential matches within 1 business day.",
+        "If no immediate matches are available, we will advertise your request to find new candidates.",
+      ],
+    },
+    {
+      icon: Video,
+      title: "Online Interview",
+      desc: "Choose how you'd like to conduct your interview:",
+      details: [
+        "Option 1: Online interview with support from our team (400 baht service fee).",
+        "Option 2: Online interview without our assistance (free).",
+        "Option 3: Direct interview with the babysitter only (deposit required).",
+      ],
+      tip: "This is the time to ask questions, address concerns about salary, and confirm whether the candidate meets your expectations.",
+    },
+    {
+      icon: CreditCard,
+      title: "Pay After Matching",
+      desc: "Pay the referral fee after confirming the match.",
+      details: [
+        "Payment Methods: Bank transfer, QR Code, Credit/Debit card (upon request).",
+        "Payment must be made in full before service starts.",
+        "After Matching Support: We'll support both you and your staff to ensure a smooth start.",
+        "Replacement Policy: If an issue arises, you can replace staff depending on your selected plan.",
+      ],
+    },
+  ];
+
+  const plans = [
+    {
+      name: "Part-time",
+      price: "6,000",
+      badge: "Affordable plan",
+      features: [
+        "Pre-Request Hearing",
+        "Communication service",
+        "Up to 2 replacements",
+      ],
+      note: "Weekly working hours less than 30 hours",
+      highlight: false,
+    },
+    {
+      name: "Full-time",
+      price: "7,800",
+      badge: "Regular plan",
+      features: [
+        "Pre-Request Hearing",
+        "Communication service",
+        "Up to 3 replacements",
+      ],
+      note: "Weekly working hours 30 hours or more",
+      highlight: true,
+    },
+    {
+      name: "Short-time",
+      price: "3,000",
+      badge: "Trial plan",
+      features: [
+        "Pre-Request Hearing",
+        "Communication service",
+        "1 replacement",
+      ],
+      note: "5 to 15 days trial period",
+      highlight: false,
+    },
+  ];
 
   return (
     <div className="min-h-screen">
@@ -29,10 +107,10 @@ export default function ProcessPage() {
         <div className="absolute inset-0 bg-brand-black/60" />
         <div className="relative z-10 section-container text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
-            {t.processPage.title}
+            Our Simple 3-Step Process
           </h1>
           <p className="text-white/80 text-lg max-w-2xl mx-auto">
-            {t.processPage.subtitle}
+            Getting started is easy. Find your perfect helper today.
           </p>
         </div>
       </section>
@@ -42,13 +120,11 @@ export default function ProcessPage() {
         <div className="section-container">
           <div className="space-y-24">
             {steps.map((step, i) => {
-              const Icon = stepIcons[i];
+              const Icon = step.icon;
               return (
                 <div
                   key={i}
-                  className={`grid md:grid-cols-2 gap-12 items-center ${
-                    i % 2 === 1 ? "" : ""
-                  }`}
+                  className="grid md:grid-cols-2 gap-12 items-center"
                 >
                   <div className={i % 2 === 1 ? "md:order-2" : ""}>
                     <div className="relative rounded-3xl overflow-hidden h-[350px] shadow-xl">
@@ -72,9 +148,24 @@ export default function ProcessPage() {
                     <h2 className="text-2xl md:text-3xl font-extrabold text-brand-black mb-4">
                       Step {i + 1}: {step.title}
                     </h2>
-                    <p className="text-gray-600 text-lg leading-relaxed">
+                    <p className="text-gray-600 text-lg leading-relaxed mb-4">
                       {step.desc}
                     </p>
+                    <ul className="space-y-2">
+                      {step.details.map((detail, j) => (
+                        <li key={j} className="flex items-start gap-2 text-gray-600">
+                          <Check className="w-5 h-5 text-brand-yellow-dark flex-shrink-0 mt-0.5" />
+                          <span>{detail}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    {step.tip && (
+                      <div className="mt-4 p-4 bg-brand-yellow/10 rounded-xl">
+                        <p className="text-sm text-brand-yellow-dark font-medium">
+                          💡 Tip: {step.tip}
+                        </p>
+                      </div>
+                    )}
                   </div>
                 </div>
               );
@@ -83,12 +174,77 @@ export default function ProcessPage() {
         </div>
       </section>
 
+      {/* Pricing */}
+      <section className="py-20 bg-brand-gray-50">
+        <div className="section-container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-brand-black mb-4">
+              System Usage Fee
+            </h2>
+            <p className="text-gray-600 text-lg">
+              One-time fee only. No hidden charges. Nanny salaries are set separately.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            {plans.map((plan, i) => (
+              <div
+                key={i}
+                className={`relative bg-white rounded-3xl p-8 shadow-lg border-2 ${
+                  plan.highlight
+                    ? "border-brand-yellow scale-105"
+                    : "border-gray-100"
+                }`}
+              >
+                {plan.highlight && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-brand-yellow text-brand-black text-sm font-bold rounded-full">
+                    Most Popular
+                  </div>
+                )}
+                <div className="text-center mb-6">
+                  <h3 className="text-xl font-bold text-brand-black mb-1">
+                    {plan.name}
+                  </h3>
+                  <p className="text-sm text-gray-500">{plan.badge}</p>
+                  <div className="mt-4">
+                    <span className="text-4xl font-extrabold text-brand-black">
+                      {plan.price}
+                    </span>
+                    <span className="text-gray-500 ml-1">THB</span>
+                  </div>
+                </div>
+                <ul className="space-y-3 mb-6">
+                  {plan.features.map((feature, j) => (
+                    <li key={j} className="flex items-center gap-2 text-gray-700">
+                      <Check className="w-5 h-5 text-brand-yellow-dark" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-xs text-gray-400 text-center">
+                  ※ {plan.note}
+                </p>
+                <Link
+                  href="/contact"
+                  className="block mt-6 text-center py-3 px-6 rounded-full font-bold text-sm transition-colors bg-brand-yellow text-brand-black hover:bg-brand-yellow-dark"
+                >
+                  Send a Request
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-brand-yellow">
         <div className="section-container text-center">
-          <h2 className="text-3xl font-extrabold text-brand-black mb-6">
-            {t.cta.title}
+          <h2 className="text-3xl font-extrabold text-brand-black mb-4">
+            Find your helper today!
           </h2>
+          <p className="text-brand-black/70 mb-6">
+            Send us your request now and get matched within 24 hours.
+          </p>
           <Link href="/contact" className="btn-primary">
             {t.hero.cta}
             <ChevronRight className="w-5 h-5 ml-2" />
