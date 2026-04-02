@@ -3,7 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useParams } from "next/navigation";
-import { Calendar, ArrowLeft } from "lucide-react";
+import ScrollAnimation from "@/components/ScrollAnimation";
+import { Calendar, ArrowLeft, ChevronRight, User } from "lucide-react";
 import { blogData } from "@/lib/blog-data";
 
 export default function BlogPostPage() {
@@ -24,82 +25,235 @@ export default function BlogPostPage() {
     );
   }
 
+  // Find related posts (exclude current)
+  const relatedPosts = blogData.filter((p) => p.slug !== slug).slice(0, 3);
+
+  // Parse content into rich blocks
+  const renderContent = (content: string) => {
+    const blocks = content.split("\n\n");
+    let sectionIndex = 0;
+
+    return blocks.map((block, i) => {
+      const trimmed = block.trim();
+      if (!trimmed) return null;
+
+      // Main headings (e.g., "Checkpoint 1: ...", "## ...", numbered sections)
+      if (/^(Checkpoint|Step)\s+\d+/i.test(trimmed) || /^#{2}\s/.test(trimmed)) {
+        sectionIndex++;
+        const text = trimmed.replace(/^#{2}\s/, "");
+        return (
+          <div key={i} className="mt-12 mb-6 flex items-start gap-4">
+            <div className="w-10 h-10 bg-brand-yellow rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+              <span className="text-sm font-extrabold text-brand-black">{sectionIndex}</span>
+            </div>
+            <h2 className="text-2xl font-bold text-brand-black leading-snug">
+              {text}
+            </h2>
+          </div>
+        );
+      }
+
+      // Sub headings (### or lines ending with colon-like patterns)
+      if (/^#{3}\s/.test(trimmed)) {
+        const text = trimmed.replace(/^#{3}\s/, "");
+        return (
+          <h3 key={i} className="text-xl font-bold text-brand-black mt-10 mb-4 border-l-4 border-brand-yellow pl-4">
+            {text}
+          </h3>
+        );
+      }
+
+      // Section-style headings (e.g. "HelloNanny's Ongoing Support")
+      if (/^[A-Z][\w\s''-]+$/.test(trimmed) && trimmed.length < 80 && !trimmed.includes('.')) {
+        return (
+          <h3 key={i} className="text-xl font-bold text-brand-black mt-10 mb-4 border-l-4 border-brand-yellow pl-4">
+            {trimmed}
+          </h3>
+        );
+      }
+
+      // Numbered headings like "1. Something"
+      if (/^\d+\.\s/.test(trimmed) && trimmed.length < 100 && !trimmed.includes('. ') && trimmed.split('.').length <= 2) {
+        sectionIndex++;
+        return (
+          <div key={i} className="mt-12 mb-6 flex items-start gap-4">
+            <div className="w-10 h-10 bg-brand-yellow rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+              <span className="text-sm font-extrabold text-brand-black">{sectionIndex}</span>
+            </div>
+            <h2 className="text-2xl font-bold text-brand-black leading-snug">
+              {trimmed}
+            </h2>
+          </div>
+        );
+      }
+
+      // Bullet lists
+      if (trimmed.startsWith("•") || trimmed.startsWith("-") || trimmed.startsWith("・")) {
+        const items = trimmed.split("\n").filter(Boolean);
+        return (
+          <ul key={i} className="space-y-3 my-6 ml-2">
+            {items.map((item, j) => (
+              <li key={j} className="flex items-start gap-3 text-gray-700">
+                <span className="w-2 h-2 bg-brand-yellow rounded-full flex-shrink-0 mt-2.5" />
+                <span className="leading-relaxed">{item.replace(/^[•\-・]\s*/, "")}</span>
+              </li>
+            ))}
+          </ul>
+        );
+      }
+
+      // Blockquote-style (starts with > or "Note:")
+      if (trimmed.startsWith(">") || trimmed.startsWith("Note:") || trimmed.startsWith("Tip:")) {
+        const text = trimmed.replace(/^>\s*/, "");
+        return (
+          <div key={i} className="my-8 bg-brand-yellow/10 border-l-4 border-brand-yellow rounded-r-2xl p-6">
+            <p className="text-gray-700 leading-relaxed italic">
+              {text}
+            </p>
+          </div>
+        );
+      }
+
+      // Regular paragraph
+      return (
+        <p key={i} className="text-gray-700 leading-[1.9] mb-5 text-[16.5px]">
+          {trimmed}
+        </p>
+      );
+    });
+  };
+
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="relative h-[40vh] min-h-[300px] flex items-center">
+      <section className="relative h-[45vh] min-h-[350px] flex items-end overflow-hidden">
         <Image
           src={post.image}
           alt={post.title}
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-brand-black/60" />
-        <div className="relative z-10 section-container">
-          <Link
-            href="/blog"
-            className="inline-flex items-center text-white/80 hover:text-white mb-4 transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Blog
-          </Link>
-          <h1 className="text-3xl md:text-4xl font-extrabold text-white max-w-3xl">
-            {post.title}
-          </h1>
-          <div className="flex items-center gap-2 text-white/60 mt-4">
-            <Calendar className="w-4 h-4" />
-            {post.date}
-          </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-black/80 via-brand-black/40 to-brand-black/20" />
+        <div className="relative z-10 section-container pb-12">
+          <ScrollAnimation type="fade-in">
+            <Link
+              href="/blog"
+              className="inline-flex items-center text-white/70 hover:text-white mb-6 transition-colors text-sm font-medium"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Blog
+            </Link>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white max-w-4xl leading-tight">
+              {post.title}
+            </h1>
+            <div className="flex items-center gap-6 mt-6">
+              <div className="flex items-center gap-2 text-white/60 text-sm">
+                <Calendar className="w-4 h-4" />
+                {post.date}
+              </div>
+              <div className="flex items-center gap-2 text-white/60 text-sm">
+                <User className="w-4 h-4" />
+                Hello Nanny Team
+              </div>
+            </div>
+          </ScrollAnimation>
         </div>
       </section>
 
       {/* Content */}
       <section className="py-16">
-        <div className="section-container max-w-3xl">
-          <div className="prose prose-lg prose-gray max-w-none">
-            {post.content.split("\n\n").map((paragraph, i) => {
-              // Check if it's a heading (starts with number and period or all caps)
-              if (/^\d+\.\s/.test(paragraph) || /^#{1,3}\s/.test(paragraph)) {
-                const text = paragraph.replace(/^#{1,3}\s/, "");
-                return (
-                  <h2
-                    key={i}
-                    className="text-xl font-bold text-brand-black mt-8 mb-4"
-                  >
-                    {text}
-                  </h2>
-                );
-              }
-              if (paragraph.startsWith("•") || paragraph.startsWith("-")) {
-                return (
-                  <ul key={i} className="list-disc pl-6 space-y-2">
-                    {paragraph.split("\n").map((item, j) => (
-                      <li key={j} className="text-gray-700">
-                        {item.replace(/^[•-]\s*/, "")}
-                      </li>
-                    ))}
-                  </ul>
-                );
-              }
-              return (
-                <p key={i} className="text-gray-700 leading-relaxed mb-4">
-                  {paragraph}
+        <div className="section-container">
+          <div className="max-w-3xl mx-auto">
+            {/* Lead paragraph / excerpt highlight */}
+            <ScrollAnimation type="fade-in">
+              <div className="bg-brand-gray-50 rounded-2xl p-8 mb-12 border-l-4 border-brand-yellow">
+                <p className="text-lg text-gray-800 leading-relaxed font-medium">
+                  {post.excerpt}
                 </p>
-              );
-            })}
+              </div>
+            </ScrollAnimation>
+
+            {/* Article body */}
+            <ScrollAnimation type="fade-in" delay={100}>
+              <article className="article-content">
+                {renderContent(post.content)}
+              </article>
+            </ScrollAnimation>
+
+            {/* Share / Tags area */}
+            <div className="mt-16 pt-8 border-t border-gray-200">
+              <div className="flex items-center justify-between">
+                <Link
+                  href="/blog"
+                  className="inline-flex items-center text-brand-yellow-dark hover:text-brand-black transition-colors font-semibold"
+                >
+                  <ArrowLeft className="w-4 h-4 mr-2" />
+                  Back to all articles
+                </Link>
+                <Link href="/contact" className="btn-primary text-sm py-3 px-6 shimmer">
+                  Find Your Nanny
+                  <ChevronRight className="w-4 h-4 ml-1" />
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
+      {/* Related Posts */}
+      {relatedPosts.length > 0 && (
+        <section className="py-16 bg-brand-gray-50">
+          <div className="section-container">
+            <ScrollAnimation type="fade-in">
+              <h2 className="text-2xl font-bold text-brand-black mb-8 text-center">
+                Related Articles
+              </h2>
+            </ScrollAnimation>
+            <ScrollAnimation type="stagger">
+              <div className="grid md:grid-cols-3 gap-8">
+                {relatedPosts.map((related) => (
+                  <Link
+                    key={related.slug}
+                    href={`/blog/${related.slug}`}
+                    className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group hover:-translate-y-1"
+                  >
+                    <div className="relative h-44 overflow-hidden">
+                      <Image
+                        src={related.image}
+                        alt={related.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="p-5">
+                      <p className="text-xs text-gray-400 mb-2">{related.date}</p>
+                      <h3 className="font-bold text-brand-black text-sm line-clamp-2 group-hover:text-brand-yellow-dark transition-colors">
+                        {related.title}
+                      </h3>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </ScrollAnimation>
+          </div>
+        </section>
+      )}
+
       {/* CTA */}
-      <section className="py-16 bg-brand-gray-50">
+      <section className="py-16 bg-brand-yellow">
         <div className="section-container text-center">
-          <h2 className="text-2xl font-bold text-brand-black mb-4">
-            Ready to find your perfect helper?
-          </h2>
-          <Link href="/contact" className="btn-primary">
-            Send a Request
-          </Link>
+          <ScrollAnimation type="fade-in">
+            <h2 className="text-2xl font-bold text-brand-black mb-4">
+              Ready to find your perfect helper?
+            </h2>
+            <p className="text-brand-black/70 mb-6">
+              Send us your request and get matched within 24 hours.
+            </p>
+            <Link href="/contact" className="btn-primary shimmer">
+              Send a Request
+              <ChevronRight className="w-5 h-5 ml-2" />
+            </Link>
+          </ScrollAnimation>
         </div>
       </section>
     </div>
