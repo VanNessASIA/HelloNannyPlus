@@ -9,32 +9,33 @@ const blogPosts = [
     slug: "5Checkpoints",
     title: "5 Checkpoints to Evaluate If Your Nanny Is Truly Trustworthy",
     excerpt:
-      "The three keys to identifying a truly trustworthy nanny are verifying her background, observing how she interacts with your child, and checking references.",
+      "The short answer: the three keys to identifying a truly trustworthy nanny are verifying her background, observing how she interacts with your child, and assessing her ability to handle emergencies.",
     image: "/images/nanny-playing-baby.jpg",
-    date: "2026-03-19",
+    date: "2024-09-29",
   },
   {
     slug: "7Things",
     title: "7 Things to Know Before Hiring a Nanny or Maid in Bangkok",
     excerpt:
-      "When hiring a nanny or maid in Bangkok, the two most important things are defining the role clearly and using a trusted placement agency.",
+      "The bottom line: when hiring a nanny or maid in Bangkok, the two most important things are defining the role clearly and using a trusted placement agency.",
     image: "/images/mom-baby-park.jpg",
-    date: "2026-03-19",
+    date: "2024-12-20",
   },
   {
     slug: "Interview_Success_Guide",
     title:
       "Interview Success Guide for Nannies: How to Confidently Show Your Best Self",
     excerpt:
-      "Meeting a new family can be both exciting and nerve-wracking. During interviews, it's your chance to showcase your experience and personality.",
+      "Meeting a new family can be both exciting and nerve-wracking. Especially during interviews, it's your chance to showcase your experience and personality.",
     image: "/images/mom-reading-kids.jpg",
-    date: "2025-06-19",
+    date: "2024-12-20",
   },
   {
     slug: "Salaries_2025Edition",
-    title: "How Much Are Nanny and Maid Salaries in Bangkok? [2025 Edition]",
+    title:
+      "How much are Nanny and Maid Salaries in Bangkok? [2025 Edition!!]",
     excerpt:
-      "Hiring a nanny or maid in Bangkok can significantly improve your family's quality of life. But how much should you expect to pay?",
+      "Hiring a nanny or maid in Bangkok can significantly improve your family's quality of life—especially for working parents or expat households.",
     image: "/images/couple-with-laptop.jpg",
     date: "2025-05-21",
   },
@@ -45,7 +46,7 @@ const blogPosts = [
     excerpt:
       "Hiring a nanny in Thailand is a great way to ease the burden of household chores and childcare, making daily life more comfortable.",
     image: "/images/cleaner-making-bed.jpg",
-    date: "2025-02-25",
+    date: "2024-11-12",
   },
   {
     slug: "Nationality-Based_Characteristics",
@@ -59,35 +60,38 @@ const blogPosts = [
   {
     slug: "Success_Stories",
     title:
-      "Hiring a Nanny in Thailand: Key Considerations and Success Stories",
+      "Hiring a Nanny in Thailand: Key Considerations and Success Stories for a Smooth Start and Strong Relationship",
     excerpt:
-      "Hiring a nanny can be a wonderful decision that enhances your family's quality of life. Learn from real success stories.",
+      "Hiring a nanny can be a wonderful decision that enriches your family's life. However, if it's your first time hiring, you may have concerns or questions.",
     image: "/images/happy-family.jpg",
     date: "2025-01-29",
   },
   {
     slug: "The_Cost-Effectiveness",
-    title: "The Cost-Effectiveness of Hiring a Nanny in Thailand",
+    title:
+      "Maximizing Value: Cost-Effective Tips for Hiring a Nanny or Maid in Thailand",
     excerpt:
-      "Understanding the true costs and benefits of hiring household help in Thailand. A comprehensive guide for families.",
+      "When hiring a nanny or maid, costs are often a primary consideration. However, choosing the cheapest option may not always guarantee the quality of service you need.",
     image: "/images/family-on-bed.jpg",
-    date: "2025-01-22",
+    date: "2025-01-28",
   },
   {
     slug: "Hiring_a_Nanny_for_the_First_Time",
-    title: "Hiring a Nanny for the First Time: A Complete Beginner's Guide",
+    title:
+      "Successfully Hiring Your First Nanny in Bangkok: Tips to Build Trust and Start Strong",
     excerpt:
-      "Everything you need to know before hiring a nanny for the first time, from setting expectations to building trust.",
+      "Congratulations on your new life in Bangkok! Adjusting to a new environment while managing childcare and household tasks can be challenging.",
     image: "/images/baby-crawling.jpg",
-    date: "2025-01-15",
+    date: "2025-01-21",
   },
   {
     slug: "Building_Trust_and_Longevity",
-    title: "Building Trust and Longevity with Your Nanny",
+    title:
+      "Why Your Nanny or Maid Keeps Leaving—and How to Build Lasting Relationships in Bangkok",
     excerpt:
-      "How to create a lasting, positive relationship with your nanny that benefits the entire family.",
+      "If you've hired a nanny or maid in Bangkok, Thailand, only to see them leave soon after, you're not alone.",
     image: "/images/mom-with-phone.jpg",
-    date: "2025-01-08",
+    date: "2024-12-25",
   },
 ];
 
