@@ -37,7 +37,7 @@ export default function Home() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-black/10" />
         <div className="relative z-10 section-container">
           <div className="max-w-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
             <p className="text-brand-yellow font-semibold text-lg mb-2 animate-fade-in">

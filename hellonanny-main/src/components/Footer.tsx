@@ -103,26 +103,35 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm">{t.footer.operated}</p>
-          <div className="flex items-center gap-4">
+        {/* DBD Registered Badge */}
+        <div className="border-t border-gray-800 pt-8 mb-8">
+          <div className="flex flex-col items-center gap-3">
             <a
               href="https://dbdregistered.dbd.go.th/api/public/shopinfoReg?param=ED910EA4CF80105F54489E5B15B8D7ABC336052F85B4E69E310A0D0848E0EF21"
               target="_blank"
               rel="noopener noreferrer"
+              className="bg-white rounded-xl p-3 hover:shadow-lg transition-shadow"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="https://dbdregistered.dbd.go.th/api/public/bannerreg?param=ED910EA4CF80105F54489E5B15B8D7ABC336052F85B4E69E310A0D0848E0EF21"
                 alt="DBD Registered"
-                width={64}
-                height={64}
+                width={100}
+                height={100}
               />
             </a>
-            <p className="text-sm">
-              &copy; {new Date().getFullYear()} Hello Nanny. {t.footer.rights}
+            <p className="text-xs text-gray-500 text-center">
+              Registered with the Department of Business Development, Thailand
             </p>
           </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-sm">{t.footer.operated}</p>
+          <p className="text-sm">
+            &copy; {new Date().getFullYear()} Hello Nanny. {t.footer.rights}
+          </p>
         </div>
       </div>
     </footer>
