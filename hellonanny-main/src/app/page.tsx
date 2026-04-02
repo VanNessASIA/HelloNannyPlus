@@ -313,12 +313,15 @@ export default function Home() {
               {t.airtable.subtitle}
             </p>
           </div>
-          <div className="bg-white rounded-3xl p-12 border-2 border-dashed border-gray-300 text-center">
-            <Users className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-            <p className="text-gray-400 text-lg">{t.airtable.placeholder}</p>
-            <p className="text-gray-300 text-sm mt-2">
-              Airtable embed will be placed here
-            </p>
+          <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+            <iframe
+              className="airtable-embed"
+              src="https://airtable.com/embed/app55k7J6zqdyZVaw/shr8b8IDle44hG25C?viewControls=on"
+              frameBorder="0"
+              width="100%"
+              height="533"
+              style={{ background: "transparent", border: "1px solid #ccc" }}
+            />
           </div>
         </div>
       </section>
