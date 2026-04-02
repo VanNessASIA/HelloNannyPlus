@@ -31,32 +31,15 @@ export default function RecruitForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
-    const payload = { formType: "recruit", ...form };
+    const payload = encodeURIComponent(
+      JSON.stringify({ formType: "recruit", ...form })
+    );
+    const url = `${FORM_ENDPOINT}?payload=${payload}`;
 
-    const iframe = document.createElement("iframe");
-    iframe.name = "hidden_iframe";
-    iframe.style.display = "none";
-    document.body.appendChild(iframe);
-
-    const formEl = document.createElement("form");
-    formEl.method = "POST";
-    formEl.action = FORM_ENDPOINT;
-    formEl.target = "hidden_iframe";
-
-    const input = document.createElement("input");
-    input.type = "hidden";
-    input.name = "payload";
-    input.value = JSON.stringify(payload);
-    formEl.appendChild(input);
-
-    document.body.appendChild(formEl);
-    formEl.submit();
-
-    setTimeout(() => {
-      document.body.removeChild(formEl);
-      document.body.removeChild(iframe);
-      setStatus("success");
-    }, 2000);
+    const img = new window.Image();
+    img.onload = () => setStatus("success");
+    img.onerror = () => setStatus("success");
+    img.src = url;
   };
 
   if (status === "success") {

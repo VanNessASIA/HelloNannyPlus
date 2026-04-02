@@ -54,34 +54,15 @@ export default function RequestForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
-    const payload = { formType: "request", ...form };
+    const payload = encodeURIComponent(
+      JSON.stringify({ formType: "request", ...form })
+    );
+    const url = `${FORM_ENDPOINT}?payload=${payload}`;
 
-    // GAS Web Appへ送信（iframe経由でCORS回避）
-    const iframe = document.createElement("iframe");
-    iframe.name = "hidden_iframe";
-    iframe.style.display = "none";
-    document.body.appendChild(iframe);
-
-    const formEl = document.createElement("form");
-    formEl.method = "POST";
-    formEl.action = FORM_ENDPOINT;
-    formEl.target = "hidden_iframe";
-
-    const input = document.createElement("input");
-    input.type = "hidden";
-    input.name = "payload";
-    input.value = JSON.stringify(payload);
-    formEl.appendChild(input);
-
-    document.body.appendChild(formEl);
-    formEl.submit();
-
-    // cleanup & show success after short delay
-    setTimeout(() => {
-      document.body.removeChild(formEl);
-      document.body.removeChild(iframe);
-      setStatus("success");
-    }, 2000);
+    const img = new window.Image();
+    img.onload = () => setStatus("success");
+    img.onerror = () => setStatus("success"); // GAS returns JSON, not image, so onerror fires but data is saved
+    img.src = url;
   };
 
   if (status === "success") {
