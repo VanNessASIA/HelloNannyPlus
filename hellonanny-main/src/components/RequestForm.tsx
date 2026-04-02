@@ -51,20 +51,37 @@ export default function RequestForm() {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
-    try {
-      await fetch(FORM_ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ formType: "request", ...form }),
-        mode: "no-cors",
-      });
+    const payload = { formType: "request", ...form };
+
+    // GAS Web Appへ送信（iframe経由でCORS回避）
+    const iframe = document.createElement("iframe");
+    iframe.name = "hidden_iframe";
+    iframe.style.display = "none";
+    document.body.appendChild(iframe);
+
+    const formEl = document.createElement("form");
+    formEl.method = "POST";
+    formEl.action = FORM_ENDPOINT;
+    formEl.target = "hidden_iframe";
+
+    const input = document.createElement("input");
+    input.type = "hidden";
+    input.name = "payload";
+    input.value = JSON.stringify(payload);
+    formEl.appendChild(input);
+
+    document.body.appendChild(formEl);
+    formEl.submit();
+
+    // cleanup & show success after short delay
+    setTimeout(() => {
+      document.body.removeChild(formEl);
+      document.body.removeChild(iframe);
       setStatus("success");
-    } catch {
-      setStatus("error");
-    }
+    }, 2000);
   };
 
   if (status === "success") {
