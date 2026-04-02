@@ -1,22 +1,26 @@
 "use client";
 
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, ReactNode } from "react";
 import { Locale, locales, getTranslations } from "./i18n";
 
 type LocaleContextType = {
   locale: Locale;
-  setLocale: (l: Locale) => void;
   t: ReturnType<typeof getTranslations>;
 };
 
 const LocaleContext = createContext<LocaleContextType | null>(null);
 
-export function LocaleProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocale] = useState<Locale>("en");
+export function LocaleProvider({
+  children,
+  locale,
+}: {
+  children: ReactNode;
+  locale: Locale;
+}) {
   const t = getTranslations(locale);
 
   return (
-    <LocaleContext.Provider value={{ locale, setLocale, t }}>
+    <LocaleContext.Provider value={{ locale, t }}>
       {children}
     </LocaleContext.Provider>
   );

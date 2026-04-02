@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useLocale } from "@/lib/LocaleContext";
 
 export default function Footer() {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
 
   return (
     <footer className="py-12 md:py-16 bg-brand-gray-900 text-gray-400">
@@ -32,17 +32,17 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">{t.footer.service}</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/service" className="hover:text-white transition-colors">
+                <Link href={`/${locale}/service`} className="hover:text-white transition-colors">
                   {t.nav.about}
                 </Link>
               </li>
               <li>
-                <Link href="/process" className="hover:text-white transition-colors">
+                <Link href={`/${locale}/process`} className="hover:text-white transition-colors">
                   {t.nav.process}
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-white transition-colors">
+                <Link href={`/${locale}/contact`} className="hover:text-white transition-colors">
                   {t.footer.links.contact}
                 </Link>
               </li>
@@ -52,22 +52,22 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">{t.footer.company}</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/about" className="hover:text-white transition-colors">
+                <Link href={`/${locale}/about`} className="hover:text-white transition-colors">
                   {t.footer.links.about}
                 </Link>
               </li>
               <li>
-                <Link href="/faq" className="hover:text-white transition-colors">
+                <Link href={`/${locale}/faq`} className="hover:text-white transition-colors">
                   {t.footer.links.faq}
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="hover:text-white transition-colors">
+                <Link href={`/${locale}/blog`} className="hover:text-white transition-colors">
                   {t.footer.links.blog}
                 </Link>
               </li>
               <li>
-                <Link href="/recruit" className="hover:text-white transition-colors">
+                <Link href={`/${locale}/recruit`} className="hover:text-white transition-colors">
                   {t.footer.links.recruit}
                 </Link>
               </li>
@@ -78,7 +78,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  href="/service-agreement"
+                  href={`/${locale}/service-agreement`}
                   className="hover:text-white transition-colors"
                 >
                   {t.footer.links.terms}
@@ -86,7 +86,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/privacy-policy"
+                  href={`/${locale}/privacy-policy`}
                   className="hover:text-white transition-colors"
                 >
                   {t.footer.links.privacy}
@@ -94,7 +94,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/customer-harassment-policy"
+                  href={`/${locale}/customer-harassment-policy`}
                   className="hover:text-white transition-colors"
                 >
                   {t.footer.links.harassment}
