@@ -3,8 +3,6 @@
 import { useState } from "react";
 import { Send, CheckCircle, Loader2 } from "lucide-react";
 
-const FORM_ENDPOINT = process.env.NEXT_PUBLIC_FORM_ENDPOINT || "";
-
 const positions = [
   "Nanny / Babysitter",
   "Maid / Housekeeper",
@@ -28,18 +26,24 @@ export default function RecruitForm() {
   const update = (key: string, value: string) =>
     setForm((prev) => ({ ...prev, [key]: value }));
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
-    const payload = encodeURIComponent(
-      JSON.stringify({ formType: "recruit", ...form })
-    );
-    const url = `${FORM_ENDPOINT}?payload=${payload}`;
-
-    const img = new window.Image();
-    img.onload = () => setStatus("success");
-    img.onerror = () => setStatus("success");
-    img.src = url;
+    try {
+      const res = await fetch("/api/submit-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ formType: "recruit", ...form }),
+      });
+      const data = await res.json();
+      if (data.status === "success") {
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
   if (status === "success") {

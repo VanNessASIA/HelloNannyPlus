@@ -3,8 +3,6 @@
 import { useState } from "react";
 import { Send, CheckCircle, Loader2 } from "lucide-react";
 
-const FORM_ENDPOINT = process.env.NEXT_PUBLIC_FORM_ENDPOINT || "";
-
 const helpTypes = ["Nanny / Babysitter", "Maid / Housekeeper", "Both (Nanny + Maid)"];
 const liveOptions = ["Live-in", "Live-out (commute)", "Either is fine"];
 const languageOptions = ["English", "Thai", "Japanese", "Chinese (Mandarin)", "Other"];
@@ -51,18 +49,24 @@ export default function RequestForm() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
-    const payload = encodeURIComponent(
-      JSON.stringify({ formType: "request", ...form })
-    );
-    const url = `${FORM_ENDPOINT}?payload=${payload}`;
-
-    const img = new window.Image();
-    img.onload = () => setStatus("success");
-    img.onerror = () => setStatus("success"); // GAS returns JSON, not image, so onerror fires but data is saved
-    img.src = url;
+    try {
+      const res = await fetch("/api/submit-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ formType: "request", ...form }),
+      });
+      const data = await res.json();
+      if (data.status === "success") {
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
   if (status === "success") {
