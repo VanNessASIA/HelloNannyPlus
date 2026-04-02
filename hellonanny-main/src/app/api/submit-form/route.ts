@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 
-const GAS_URL = process.env.NEXT_PUBLIC_FORM_ENDPOINT || "";
+const GAS_URL =
+  process.env.NEXT_PUBLIC_FORM_ENDPOINT ||
+  "https://script.google.com/macros/s/AKfycbw3AaBAKmQukyL4OzMgJRDWLizuMYjoYH4TOn3jEM88F3K7zcl_X5oPXAtAsR6XBvhfmA/exec";
 
 export async function POST(req: Request) {
   try {
