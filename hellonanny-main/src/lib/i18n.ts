@@ -200,7 +200,7 @@ const translations = {
       companyName: "VANNESS ASIA CO., LTD.",
       address:
         "689 Bhiraj Tower at EmQuartier, 15th Floor, Unit 1501, Sukhumvit Road, North Klongton, Vadhana, Bangkok 10110",
-      hours: "Mon - Sat: 9:00 - 18:00",
+      hours: "Mon-Fri: 9:00-18:00 / Sat-Sun: By Appointment",
       operated: "Operated by VANNESS ASIA CO., LTD.",
       rights: "All rights reserved.",
     },
@@ -472,7 +472,7 @@ const translations = {
       companyName: "VANNESS ASIA CO., LTD.",
       address:
         "689 Bhiraj Tower at EmQuartier, 15th Floor, Unit 1501, Sukhumvit Road, North Klongton, Vadhana, Bangkok 10110",
-      hours: "月〜土: 9:00 - 18:00",
+      hours: "月〜金: 9:00-18:00 / 土日: 予約制",
       operated: "運営: VANNESS ASIA CO., LTD.",
       rights: "All rights reserved.",
     },
@@ -727,7 +727,7 @@ const translations = {
       companyName: "VANNESS ASIA CO., LTD.",
       address:
         "689 Bhiraj Tower at EmQuartier, 15th Floor, Unit 1501, Sukhumvit Road, North Klongton, Vadhana, Bangkok 10110",
-      hours: "周一至周六: 9:00 - 18:00",
+      hours: "周一至周五: 9:00-18:00 / 周六日: 预约制",
       operated: "运营方: VANNESS ASIA CO., LTD.",
       rights: "版权所有。",
     },
@@ -974,7 +974,7 @@ const translations = {
       companyName: "VANNESS ASIA CO., LTD.",
       address:
         "689 Bhiraj Tower at EmQuartier, 15th Floor, Unit 1501, Sukhumvit Road, North Klongton, Vadhana, Bangkok 10110",
-      hours: "จันทร์ - เสาร์: 9:00 - 18:00",
+      hours: "จันทร์-ศุกร์: 9:00-18:00 / เสาร์-อาทิตย์: นัดหมายล่วงหน้า",
       operated: "ดำเนินการโดย VANNESS ASIA CO., LTD.",
       rights: "สงวนลิขสิทธิ์",
     },
