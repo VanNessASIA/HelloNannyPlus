@@ -30,7 +30,7 @@ const translations = {
       cta: "Send a Request",
     },
     stats: {
-      title: "Over 1,000 Nannies Registered!",
+      title: "Over 2,000 Nannies Registered!",
       subtitle:
         "We have a large pool of qualified nannies and maids ready to help your family.",
     },
@@ -302,7 +302,7 @@ const translations = {
       cta: "リクエストを送る",
     },
     stats: {
-      title: "1,000人以上のナニーが登録中！",
+      title: "2,000人以上のナニーが登録中！",
       subtitle:
         "ご家族のお手伝いをする準備ができた、資格を持つナニーとメイドが多数在籍しています。",
     },
@@ -571,7 +571,7 @@ const translations = {
       cta: "提交请求",
     },
     stats: {
-      title: "已注册保姆超过1,000人！",
+      title: "已注册保姆超过2,000人！",
       subtitle: "我们拥有大量合格的保姆和家政人员，随时准备帮助您的家庭。",
     },
     whatIs: {
@@ -808,7 +808,7 @@ const translations = {
       cta: "ส่งคำขอ",
     },
     stats: {
-      title: "พี่เลี้ยงลงทะเบียนแล้วกว่า 1,000 คน!",
+      title: "พี่เลี้ยงลงทะเบียนแล้วกว่า 2,000 คน!",
       subtitle: "เรามีพี่เลี้ยงและแม่บ้านที่ผ่านการคัดกรองพร้อมช่วยเหลือครอบครัวของคุณ",
     },
     whatIs: {

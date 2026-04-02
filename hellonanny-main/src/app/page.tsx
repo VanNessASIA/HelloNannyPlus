@@ -77,7 +77,7 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { icon: Users, value: "1,000+", label: "Nannies" },
+              { icon: Users, value: "2,000+", label: "Nannies" },
               { icon: Heart, value: "500+", label: "Families" },
               { icon: Shield, value: "100%", label: "Screened" },
               { icon: Clock, value: "3 Days", label: "Avg. Match" },

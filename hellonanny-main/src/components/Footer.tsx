@@ -107,13 +107,13 @@ export default function Footer() {
           <p className="text-sm">{t.footer.operated}</p>
           <div className="flex items-center gap-4">
             <a
-              href="https://www.trustmarkthai.com/callbackData/detail.do?data=a]oc`Ydf7eadcPcbee7Odf7bacb7eYbaPa]oc`Ydf7bacb7eYbaP0105567229649&markID=8"
+              href="https://dbdregistered.dbd.go.th/api/public/shopinfoReg?param=ED910EA4CF80105F54489E5B15B8D7ABC336052F85B4E69E310A0D0848E0EF21"
               target="_blank"
               rel="noopener noreferrer"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://www.trustmarkthai.com/trust_banners/banner_registered/8/banner-8-s-en.png"
+                src="https://dbdregistered.dbd.go.th/api/public/bannerreg?param=ED910EA4CF80105F54489E5B15B8D7ABC336052F85B4E69E310A0D0848E0EF21"
                 alt="DBD Registered"
                 width={64}
                 height={64}
