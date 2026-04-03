@@ -7,22 +7,6 @@ import ScrollAnimation from "@/components/ScrollAnimation";
 import { Calendar, ArrowLeft, ChevronRight, User } from "lucide-react";
 import { useLocale } from "@/lib/LocaleContext";
 import { blogData } from "@/lib/blog-data";
-import { locales, type Locale } from "@/lib/i18n-config";
-
-export async function generateStaticParams() {
-  const params: { locale: Locale; slug: string }[] = [];
-
-  locales.forEach((locale) => {
-    blogData.forEach((post) => {
-      params.push({
-        locale,
-        slug: post.slug,
-      });
-    });
-  });
-
-  return params;
-}
 
 export default function BlogPostPage() {
   const params = useParams();

@@ -19,12 +19,6 @@ import {
 import ScrollAnimation from "@/components/ScrollAnimation";
 import { useCountUp } from "@/hooks/useScrollAnimation";
 
-type Props = {
-  params: Promise<{
-    locale: string;
-  }>;
-};
-
 const stepPhotos = [
   "/images/mom-with-phone.jpg",
   "/images/couple-with-laptop.jpg",
@@ -58,7 +52,7 @@ function CountUpStat({
   );
 }
 
-export default function Home(_props: Props) {
+export default function Home() {
   const { t, locale } = useLocale();
 
   return (
@@ -322,6 +316,11 @@ export default function Home(_props: Props) {
                       </li>
                     ))}
                   </ul>
+                  {plan.note && (
+                    <p className={`text-xs mb-6 ${plan.popular ? "text-white/50" : "text-gray-400"}`}>
+                      ※ {plan.note}
+                    </p>
+                  )}
                   <Link
                     href={`/${locale}/contact`}
                     className={`block w-full text-center py-3 rounded-full font-semibold transition-all duration-300 hover:-translate-y-0.5 ${

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { locales, defaultLocale, type Locale } from "@/lib/i18n-config";
-import { getTranslations } from "@/lib/i18n";
 import ClientLayout from "@/components/ClientLayout";
 
 type Props = {
@@ -19,8 +18,6 @@ export async function generateStaticParams() {
 export async function generateMetadata(props: Props): Promise<Metadata> {
   const params = await props.params;
   const locale = (params.locale as Locale) || defaultLocale;
-  const t = getTranslations(locale);
-
   const titles: Record<Locale, string> = {
     en: "Hello Nanny | Nanny & Maid Matching Service in Bangkok",
     ja: "Hello Nanny | バンコクの家政婦・ナニーマッチングサービス",

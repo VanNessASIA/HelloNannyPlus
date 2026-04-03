@@ -64,7 +64,7 @@ export default function ProcessPage() {
       features: [
         "Pre-Request Hearing",
         "Communication service",
-        "Up to 2 replacements",
+        "You can choose up to 2 times",
       ],
       note: "Weekly working hours less than 30 hours",
       highlight: false,
@@ -76,21 +76,21 @@ export default function ProcessPage() {
       features: [
         "Pre-Request Hearing",
         "Communication service",
-        "Up to 3 replacements",
+        "You can choose up to 3 times",
       ],
-      note: "Weekly working hours 30 hours or more",
+      note: "Within 2 months",
       highlight: true,
     },
     {
       name: "Short-time",
-      price: "3,000",
+      price: "4,000",
       badge: "Trial plan",
       features: [
         "Pre-Request Hearing",
         "Communication service",
-        "1 replacement",
+        "You can choose up to 1 time",
       ],
-      note: "5 to 15 days trial period",
+      note: "From 5 to 14 days",
       highlight: false,
     },
   ];

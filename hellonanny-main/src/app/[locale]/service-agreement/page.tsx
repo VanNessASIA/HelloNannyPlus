@@ -116,9 +116,9 @@ export default function ServiceAgreementPage() {
               <h3 className="font-bold text-brand-black mb-3 text-lg">Replacement Plans</h3>
               <div className="grid sm:grid-cols-3 gap-4 mb-6">
                 {[
-                  { name: "Short-time", price: "3,000 THB", detail: "Up to 1 replacement", note: "5 to 15 days" },
-                  { name: "Full-time", price: "7,800 THB", detail: "Up to 3 replacements", note: "2-month warranty" },
-                  { name: "Part-time", price: "6,000 THB", detail: "Up to 1 replacement", note: "2-month warranty" },
+                  { name: "Short-time", price: "4,000 THB", detail: "Choose up to 1 time", note: "5 to 14 days" },
+                  { name: "Full-time", price: "7,800 THB", detail: "Choose up to 3 times", note: "Within 2 months" },
+                  { name: "Part-time", price: "6,000 THB", detail: "Choose up to 2 times", note: "Weekly < 30 hours" },
                 ].map((plan, i) => (
                   <div key={i} className="bg-brand-gray-50 rounded-xl p-4 text-center">
                     <p className="font-bold text-brand-black text-sm">{plan.name}</p>
