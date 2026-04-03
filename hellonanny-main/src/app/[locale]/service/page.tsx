@@ -12,20 +12,20 @@ export default function ServicePage() {
   const features = [
     {
       icon: ShieldCheck,
-      title: "Reliability",
-      desc: "When searching for a nanny, many challenges arise — language barriers, uncertainty about salary, and selecting the right person. We conduct preliminary hearings with clients and communicate your requests in the nanny's native language to prevent mismatches and facilitate smooth communication.",
+      title: t.servicePage.features.reliability.title,
+      desc: t.servicePage.features.reliability.desc,
       image: "/images/baby-crawling.jpg",
     },
     {
       icon: Headphones,
-      title: "Accessibility",
-      desc: "All interviews can be completed online. Once you select your preferred nannies, we promptly confirm their latest availability. We send you a questionnaire form in advance to ensure smooth communication, and our team is available to assist during interviews if needed.",
+      title: t.servicePage.features.accessibility.title,
+      desc: t.servicePage.features.accessibility.desc,
       image: "/images/headset-support.jpg",
     },
     {
       icon: Sparkles,
-      title: "Comfortable & Elegant Days",
-      desc: "The presence of a nanny makes your daily life as elegant as living in a hotel. Especially for those raising children, it will be a great support allowing you to enjoy quality time with your family while household tasks are taken care of by experienced professionals.",
+      title: t.servicePage.features.comfortable.title,
+      desc: t.servicePage.features.comfortable.desc,
       image: "/images/cleaner-making-bed.jpg",
     },
   ];
@@ -44,10 +44,10 @@ export default function ServicePage() {
         <div className="relative z-10 section-container text-center">
           <ScrollAnimation type="fade-in">
             <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
-              What is Hello Nanny?
+              {t.servicePage.hero.title}
             </h1>
             <p className="text-white/80 text-lg max-w-2xl mx-auto">
-              We provide a matching service for babysitters, housekeepers, nannies, and maids in Thailand.
+              {t.servicePage.hero.subtitle}
             </p>
           </ScrollAnimation>
         </div>
@@ -58,19 +58,14 @@ export default function ServicePage() {
         <div className="section-container max-w-3xl text-center">
           <ScrollAnimation type="fade-in">
             <p className="text-lg text-gray-700 leading-relaxed">
-              Do you have these concerns?
+              {t.servicePage.concerns.title}
             </p>
           </ScrollAnimation>
           <ScrollAnimation type="stagger">
             <div className="mt-6 grid gap-3 text-left max-w-lg mx-auto">
-              {[
-                "How much does a nanny get paid?",
-                "Where should I hire someone from?",
-                "Is it okay if I don't speak the language?",
-                "I'm raising my children and don't have time for interviews.",
-              ].map((item, i) => (
+              {t.servicePage.concerns.items.map((item, i) => (
                 <div key={i} className="flex items-start gap-2">
-                  <span className="text-brand-yellow-dark font-bold">✔️</span>
+                  <span className="text-brand-yellow-dark font-bold">{"\u2714\uFE0F"}</span>
                   <span className="text-gray-700">{item}</span>
                 </div>
               ))}
@@ -78,7 +73,7 @@ export default function ServicePage() {
           </ScrollAnimation>
           <ScrollAnimation type="fade-in" delay={200}>
             <p className="mt-8 text-gray-600 leading-relaxed">
-              We started this service to solve concerns that everyone encounters when hiring household help in Bangkok. Using our network of experienced helpers, we want to give families peace of mind — answering your questions anytime and easily.
+              {t.servicePage.concerns.solution}
             </p>
           </ScrollAnimation>
         </div>
@@ -130,10 +125,10 @@ export default function ServicePage() {
           <ScrollAnimation type="fade-in">
             <div className="text-center mb-10">
               <h2 className="text-3xl md:text-4xl font-extrabold text-brand-black mb-4">
-                Available Nannies & Maids
+                {t.servicePage.nannies.title}
               </h2>
               <p className="text-gray-600 text-lg">
-                Browse our registered helpers. Filter by experience, language, and availability.
+                {t.servicePage.nannies.subtitle}
               </p>
             </div>
           </ScrollAnimation>

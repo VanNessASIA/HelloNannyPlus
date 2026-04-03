@@ -3,8 +3,12 @@
 import { MessageCircle, Phone, Mail, MapPin } from "lucide-react";
 import ScrollAnimation from "@/components/ScrollAnimation";
 import RequestForm from "@/components/RequestForm";
+import { useLocale } from "@/lib/LocaleContext";
 
 export default function ContactPage() {
+  const { t } = useLocale();
+  const cp = t.contactPage;
+
   return (
     <div className="min-h-screen">
       {/* Hero */}
@@ -12,11 +16,10 @@ export default function ContactPage() {
         <div className="section-container text-center">
           <ScrollAnimation type="fade-in">
             <h1 className="text-4xl md:text-5xl font-extrabold text-brand-black mb-4">
-              Send a Request
+              {cp.title}
             </h1>
             <p className="text-brand-black/70 text-lg max-w-2xl mx-auto">
-              Tell us about your family&apos;s needs and we&apos;ll match you with
-              the perfect nanny or maid.
+              {cp.subtitle}
             </p>
           </ScrollAnimation>
         </div>
@@ -41,7 +44,7 @@ export default function ContactPage() {
                 <div className="sticky top-24 space-y-6">
                   <div>
                     <h2 className="text-xl font-bold text-brand-black mb-4">
-                      Other Ways to Reach Us
+                      {cp.otherWays}
                     </h2>
                     <div className="space-y-3">
                       <a
@@ -55,10 +58,10 @@ export default function ContactPage() {
                         </div>
                         <div>
                           <p className="font-bold text-sm text-brand-black group-hover:text-[#06C755] transition-colors">
-                            LINE
+                            {cp.lineLabel}
                           </p>
                           <p className="text-xs text-gray-500">
-                            Official Account
+                            {cp.lineDesc}
                           </p>
                         </div>
                       </a>
@@ -73,7 +76,7 @@ export default function ContactPage() {
                         </div>
                         <div>
                           <p className="font-bold text-sm text-brand-black group-hover:text-[#25D366] transition-colors">
-                            WhatsApp
+                            {cp.whatsappLabel}
                           </p>
                           <p className="text-xs text-gray-500">
                             +66 649 133 653
@@ -86,7 +89,7 @@ export default function ContactPage() {
                   {/* Office Info */}
                   <div className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
                     <h3 className="font-bold text-brand-black mb-4 text-sm">
-                      Office Information
+                      {cp.officeTitle}
                     </h3>
                     <div className="space-y-4">
                       <div className="flex items-start gap-3">
@@ -113,11 +116,10 @@ export default function ContactPage() {
                   {/* Response Note */}
                   <div className="bg-brand-yellow/10 rounded-2xl p-6">
                     <p className="text-sm text-brand-black font-semibold mb-1">
-                      Response Time
+                      {cp.responseTitle}
                     </p>
                     <p className="text-xs text-gray-600">
-                      We typically respond within 24 hours on business days. For
-                      urgent requests, please contact us via LINE or WhatsApp.
+                      {cp.responseDesc}
                     </p>
                   </div>
                 </div>

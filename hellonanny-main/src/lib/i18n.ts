@@ -205,41 +205,171 @@ const translations = {
     },
     // Subpage content
     aboutPage: {
-      title: "About Us",
-      subtitle: "Learn more about Hello Nanny and our mission.",
-      companyName: "VANNESS ASIA CO., LTD.",
-      mission:
-        "Our mission is to connect families in Bangkok with trusted, reliable nannies and maids. We believe every family deserves quality childcare and household support.",
-      vision:
-        "To be the most trusted nanny and maid matching platform in Southeast Asia.",
-      values: [
-        { title: "Trust & Safety", desc: "We carefully screen every candidate to ensure your family's safety." },
-        { title: "Speed", desc: "Our efficient matching process gets you connected with the right helper fast." },
-        { title: "Affordability", desc: "No hidden fees. Transparent, one-time matching fees that anyone can afford." },
-        { title: "Multilingual", desc: "Our team and many of our nannies speak multiple languages." },
-      ],
+      hero: {
+        title: "About Us",
+        subtitle: "Connecting families with trusted nannies in Thailand",
+      },
+      whoWeAre: {
+        title: "Who We Are",
+        description: "Hello Nanny is a nanny and maid matching service operated by VANNESS ASIA CO., LTD. We serve as a bridge connecting skilled nannies with foreign families living in Thailand, helping them find the perfect match for their household needs.",
+      },
+      mission: {
+        title: "Mission",
+        description: "To be the bridge that connects skilled nannies with foreign families in Thailand. We believe every family deserves reliable, trustworthy childcare and household support, regardless of language or cultural barriers.",
+      },
+      vision: {
+        title: "Vision",
+        goalIntro: "Our goal is for every family to say:",
+        quote: "I\u2019m so glad I found this nanny!",
+        description: "We strive to create lasting, happy relationships between families and their helpers through careful matching and ongoing support.",
+      },
+      values: {
+        title: "Our Values",
+        subtitle: "What makes Hello Nanny different from other services",
+        items: [
+          { title: "Family-First Approach", desc: "We listen carefully to each family\u2019s unique rules, preferences, and lifestyle to find the right match. Every family is different, and we respect that." },
+          { title: "Breaking Language Barriers", desc: "We communicate with each nanny in their preferred language to ensure smooth understanding. Our multilingual team bridges the gap between families and helpers." },
+          { title: "Large & Vetted Network", desc: "With over 2,000 registered nannies and maids, we have a vast pool of experienced candidates. All are directly interviewed and verified by our team." },
+          { title: "Multicultural Understanding", desc: "We understand the unique needs of expat families in Thailand. Our service supports Japanese, English, Chinese, and Thai-speaking households." },
+          { title: "Speed & Reliability", desc: "Bangkok\u2019s fastest matching service. We aim to introduce candidates within 24 hours of receiving your request. Quick, efficient, and dependable." },
+        ],
+      },
+      companyInfo: {
+        title: "Company Information",
+        companyNameLabel: "Company Name",
+        companyNameValue: "VANNESS ASIA CO., LTD",
+        serviceNameLabel: "Service Name",
+        serviceNameValue: "Hello Nanny",
+        addressLabel: "Address",
+        addressValue: "64/1 Room No. 210, Soi Pasi 1, Ekamai Road, Khlong Tan Nuea, Watthana, Bangkok 10110",
+        taxIdLabel: "TAX ID",
+        taxIdValue: "0105567229649",
+        businessHoursLabel: "Business Hours",
+        emailLabel: "Email",
+        emailValue: "info@hellonanny-san.com",
+      },
+      cta: {
+        title: "Ready to find your perfect helper?",
+        subtitle: "Tell us about your needs and we\u2019ll match you with the right nanny.",
+        button: "Send a Request",
+      },
     },
     servicePage: {
-      title: "What is Hello Nanny?",
-      subtitle: "Your trusted nanny & maid matching service in Bangkok.",
-      sections: [
-        {
-          title: "Find the Perfect Helper",
-          desc: "Whether you need a full-time nanny, part-time maid, or temporary babysitter, we have the right match for you.",
+      hero: {
+        title: "What is Hello Nanny?",
+        subtitle: "We provide a matching service for babysitters, housekeepers, nannies, and maids in Thailand.",
+      },
+      concerns: {
+        title: "Do you have these concerns?",
+        items: [
+          "How much does a nanny get paid?",
+          "Where should I hire someone from?",
+          "Is it okay if I don\u2019t speak the language?",
+          "I\u2019m raising my children and don\u2019t have time for interviews.",
+        ],
+        solution: "We started this service to solve concerns that everyone encounters when hiring household help in Bangkok. Using our network of experienced helpers, we want to give families peace of mind \u2014 answering your questions anytime and easily.",
+      },
+      features: {
+        reliability: {
+          title: "Reliability",
+          desc: "When searching for a nanny, many challenges arise \u2014 language barriers, uncertainty about salary, and selecting the right person. We conduct preliminary hearings with clients and communicate your requests in the nanny\u2019s native language to prevent mismatches and facilitate smooth communication.",
         },
-        {
-          title: "Multilingual Support",
-          desc: "Our nannies speak English, Japanese, Thai, Chinese, and more. We bridge the language gap for international families.",
+        accessibility: {
+          title: "Accessibility",
+          desc: "All interviews can be completed online. Once you select your preferred nannies, we promptly confirm their latest availability. We send you a questionnaire form in advance to ensure smooth communication, and our team is available to assist during interviews if needed.",
         },
-        {
-          title: "Thoroughly Screened",
-          desc: "Every candidate goes through ID verification and an interview process. Background-checked candidates are specially marked.",
+        comfortable: {
+          title: "Comfortable & Elegant Days",
+          desc: "The presence of a nanny makes your daily life as elegant as living in a hotel. Especially for those raising children, it will be a great support allowing you to enjoy quality time with your family while household tasks are taken care of by experienced professionals.",
         },
-      ],
+      },
+      nannies: {
+        title: "Available Nannies & Maids",
+        subtitle: "Browse our registered helpers. Filter by experience, language, and availability.",
+      },
     },
     processPage: {
-      title: "Our Simple Processes",
-      subtitle: "Getting started is easy. Just follow these 3 simple steps.",
+      hero: {
+        title: "Our Simple 3-Step Process",
+        subtitle: "Getting started is easy. Find your perfect helper today.",
+      },
+      stepLabel: "Step",
+      steps: {
+        step1: {
+          title: "Submit Your Request",
+          desc: "Send us your requirements via LINE or our contact form. Tell us what kind of help you need \u2014 nanny, maid, or both.",
+          details: [
+            "Using our unique AI system, we carefully select candidates from our registered staff based on your needs.",
+            "You\u2019ll receive a list of potential matches within 1 business day.",
+            "If no immediate matches are available, we will advertise your request to find new candidates.",
+          ],
+        },
+        step2: {
+          title: "Online Interview",
+          desc: "Choose how you\u2019d like to conduct your interview:",
+          details: [
+            "Option 1: Online interview with support from our team (400 baht service fee).",
+            "Option 2: Online interview without our assistance (free).",
+            "Option 3: Direct interview with the babysitter only (deposit required).",
+          ],
+          tip: "This is the time to ask questions, address concerns about salary, and confirm whether the candidate meets your expectations.",
+        },
+        step3: {
+          title: "Pay After Matching",
+          desc: "Pay the referral fee after confirming the match.",
+          details: [
+            "Payment Methods: Bank transfer, QR Code, Credit/Debit card (upon request).",
+            "Payment must be made in full before service starts.",
+            "After Matching Support: We\u2019ll support both you and your staff to ensure a smooth start.",
+            "Replacement Policy: If an issue arises, you can replace staff depending on your selected plan.",
+          ],
+        },
+      },
+      pricing: {
+        title: "System Usage Fee",
+        subtitle: "One-time fee only. No hidden charges. Nanny salaries are set separately.",
+        mostPopular: "Most Popular",
+        sendRequest: "Send a Request",
+        plans: [
+          {
+            name: "Part-time",
+            price: "6,000",
+            badge: "Affordable plan",
+            features: [
+              "Pre-Request Hearing",
+              "Communication service",
+              "You can choose up to 2 times",
+            ],
+            note: "Weekly working hours less than 30 hours",
+          },
+          {
+            name: "Full-time",
+            price: "7,800",
+            badge: "Regular plan",
+            features: [
+              "Pre-Request Hearing",
+              "Communication service",
+              "You can choose up to 3 times",
+            ],
+            note: "Within 2 months",
+          },
+          {
+            name: "Short-time",
+            price: "4,000",
+            badge: "Trial plan",
+            features: [
+              "Pre-Request Hearing",
+              "Communication service",
+              "You can choose up to 1 time",
+            ],
+            note: "From 5 to 14 days",
+          },
+        ],
+      },
+      cta: {
+        title: "Find your helper today!",
+        subtitle: "Send us your request now and get matched within 24 hours.",
+      },
     },
     faqPage: {
       title: "Frequently Asked Questions",
@@ -256,12 +386,58 @@ const translations = {
         { q: "What about theft?", a: "When hiring, be sure to record a copy of the nanny's ID or passport, contact information, and home address. Keep valuables, brand name items, and money in a locked cupboard or safe. It is important to observe habits such as not lending or borrowing things, not handing over keys, and not leaving money or goods where they can be seen." },
         { q: "How can we get nannies to work longer?", a: "Three points are important: 1) Pay a reasonable salary considering commute/live-in costs. 2) Don't set overly strict rules — provide guidance gradually and create a comfortable working environment. 3) Be sure to praise them — finding good points and praising them motivates them to stay longer." },
       ],
+      categories: {
+        general: "General",
+        salaryCosts: "Salary & Costs",
+        serviceAgreement: "Service Agreement",
+        safetySecurity: "Safety & Security",
+        tipsForSuccess: "Tips for Success",
+      },
+      general: {
+        q1: "Why Hello Nanny?",
+        a1: "There are many housekeeper services in Bangkok, but there are only a few that can ensure Japanese quality, overcome the language barrier, and smoothly start business partnerships. We are a company that has helped many people in the past. We at Hello Nanny are committed to providing reliable and trustworthy hospitality to our clients.",
+        q2: "What kind of people do you hire?",
+        a2: "At Hello Nanny, all job seekers are directly interviewed online. In addition, we select only experienced and highly motivated people through our own community route. We also keep copies of passports and IDs of all job seekers.",
+        q3: "Can I interview candidates?",
+        a3: "We can interview you in the following ways. You can also change nannies depending on the plan you have chosen after hiring.\n\n\u2022 Option 1: Online interview with support from our team (400 baht service fee).\n\u2022 Option 2: Online interview without our assistance (free).\n\u2022 Option 3: Direct interview with the babysitter only (deposit required).",
+      },
+      salaryCosts: {
+        q1: "What is the approximate salary?",
+        a1: "Salary depends largely on the job seeker's experience and previous employment status. Those who commute will be paid more than those who live on-site (as they will have to pay for their own food and transportation costs).",
+        q2: "What about overtime work?",
+        a2: "Normally in Thailand it is 100 baht/hour, but it is recommended that the person be tipped according to his/her salary.",
+        q3: "About criminal check?",
+        a3: "If you need the criminal check for the candidates, we can arrange it for 1,000 baht per person.",
+      },
+      serviceAgreement: {
+        q1: "What if the match doesn't work out?",
+        a1: "Hello Nanny offers a change of nanny service after hiring, depending on the plan you have chosen. If you wish to make any changes, please feel free to contact us. We also recommend that you prepare a written contract if you are concerned. By confirming details before hiring, we can greatly reduce problems. Especially common are minor problems caused by miscommunication. A written contract can eliminate these problems.",
+        q2: "Do I need a contract?",
+        a2: "We have samples available, so please feel free to use them if you need them. If you have any items you would like to add other than those shown in the sample, please add them.",
+        q3: "What about public holidays in Thailand?",
+        a3: "Most nannies or maids basically follow the Thai calendar for holidays. However, please discuss details with the person you hire.",
+      },
+      safetySecurity: {
+        q1: "What about theft?",
+        a1: "When hiring, the most common concern families have is about theft. When hiring a nanny, be sure to record a copy of her ID or passport, contact information, and home address and keep them at home. Also, please keep valuables, brand name items, and money in a locked cupboard or safe. Even if you do not initially have bad intentions, there is no guarantee that you will not be tempted for a moment. To prevent this, it is important to observe such habits as not lending or borrowing things, not handing over keys, and not leaving money or goods where they can be seen. Please note that we are not involved in and cannot be held responsible for any problems between families and maids or babysitters.",
+      },
+      tipsForSuccess: {
+        q1: "How can we get nannies to work longer?",
+        a1: "We believe it is very important for the employer to take action to build a smooth relationship with Nanny and keep her working for a long time. The following three points are important:\n\n1. Pay a reasonable salary. Consider the cost of meals if they live in, and transportation if they commute. If the salary is too low, it will be easier for them to find another job.\n\n2. Don't set overly strict rules, but do the minimum amount of monitoring necessary. Nannies dislike strict rules and monitoring. Provide guidance gradually over a long period of time and create a comfortable working environment.\n\n3. Be sure to praise them. Praise will motivate them. It is important to find good points and praise them rather than always pointing out the bad points.",
+      },
     },
     contactPage: {
-      title: "Contact Us",
-      subtitle: "Have questions? Reach out to us through your preferred channel.",
+      title: "Send a Request",
+      subtitle: "Tell us about your family\u2019s needs and we\u2019ll match you with the perfect nanny or maid.",
       formTitle: "Send Us a Request",
       formPlaceholder: "Contact form will be embedded here.",
+      otherWays: "Other Ways to Reach Us",
+      lineLabel: "LINE",
+      lineDesc: "Official Account",
+      whatsappLabel: "WhatsApp",
+      officeTitle: "Office Information",
+      responseTitle: "Response Time",
+      responseDesc: "We typically respond within 24 hours on business days. For urgent requests, please contact us via LINE or WhatsApp.",
     },
     registerPage: {
       title: "Work With Us",
@@ -277,8 +453,25 @@ const translations = {
     },
     recruitPage: {
       title: "Join Our Team",
-      subtitle:
-        "We're looking for passionate people to join VANNESS ASIA. Help us connect families with great helpers.",
+      subtitle: "We\u2019re looking for passionate people to help families in Thailand",
+      whoTitle: "Who We\u2019re Looking For",
+      whoDesc: "We welcome Thai nationals with experience in childcare, household management, customer support, or consulting. If you love helping families and have a positive attitude, we want to hear from you!",
+      positions: {
+        nanny: { title: "Nanny / Babysitter", desc: "Childcare for foreign families living in Bangkok. Experience with children preferred." },
+        maid: { title: "Maid / Housekeeper", desc: "Cleaning, cooking, and household management for expat and Thai families." },
+        support: { title: "Customer Support", desc: "Assist families and nannies with matching process, scheduling, and communications." },
+        coordinator: { title: "Consulting / Coordinator", desc: "Help coordinate between families and helpers. Multilingual skills are a plus." },
+      },
+      whyTitle: "Why Work With Us",
+      benefits: {
+        salary: { title: "Competitive Salary", desc: "Salary is negotiable based on experience and skills." },
+        incentive: { title: "Incentive Program", desc: "Performance-based incentives and bonuses for great work." },
+        schedule: { title: "Flexible Schedule", desc: "Part-time, full-time, and live-in options available." },
+        team: { title: "Supportive Team", desc: "Join a multicultural, friendly team that values your contributions." },
+      },
+      applyTitle: "Apply Now",
+      applyDesc: "Fill out the form below or contact us directly. We\u2019ll get back to you as soon as possible.",
+      altContact: "Or contact us directly through:",
     },
   },
   ja: {
@@ -475,45 +668,175 @@ const translations = {
       rights: "All rights reserved.",
     },
     aboutPage: {
-      title: "会社概要",
-      subtitle: "Hello Nannyと私たちのミッションについて。",
-      companyName: "VANNESS ASIA CO., LTD.",
-      mission:
-        "バンコクのご家族と信頼できるナニー・メイドを繋ぐこと。すべてのご家族が質の高いチャイルドケアと家事サポートを受けられるべきだと信じています。",
-      vision:
-        "東南アジアで最も信頼されるナニー・メイドマッチングプラットフォームになること。",
-      values: [
-        { title: "信頼と安全", desc: "すべての候補者を丁寧にスクリーニングし、ご家族の安全を確保します。" },
-        { title: "スピード", desc: "効率的なマッチングプロセスで、迅速に理想のヘルパーと出会えます。" },
-        { title: "手頃な価格", desc: "隠れた費用はありません。誰もが利用できる透明な1回限りのマッチング料金です。" },
-        { title: "多言語対応", desc: "チームとナニーの多くが複数の言語を話します。" },
-      ],
+      hero: {
+        title: "会社概要",
+        subtitle: "タイでご家族と信頼できるナニーを繋ぐサービス",
+      },
+      whoWeAre: {
+        title: "私たちについて",
+        description: "Hello Nannyは、VANNESS ASIA CO., LTD.が運営するナニー・メイドマッチングサービスです。タイに住む外国人ご家族と経験豊富なナニーを繋ぐ架け橋として、ご家庭のニーズに最適なマッチングをサポートしています。",
+      },
+      mission: {
+        title: "ミッション",
+        description: "タイに住む外国人ご家族と経験豊富なナニーを繋ぐ架け橋になること。言語や文化の壁に関係なく、すべてのご家族が信頼できる育児・家事サポートを受けられるべきだと信じています。",
+      },
+      vision: {
+        title: "ビジョン",
+        goalIntro: "すべてのご家族にこう言っていただくことが私たちの目標です：",
+        quote: "このナニーに出会えて本当によかった！",
+        description: "丁寧なマッチングと継続的なサポートを通じて、ご家族とヘルパーの間に長く幸せな関係を築くことを目指しています。",
+      },
+      values: {
+        title: "私たちの価値観",
+        subtitle: "Hello Nannyが他のサービスと異なる理由",
+        items: [
+          { title: "ファミリーファースト", desc: "各ご家族の独自のルール、好み、ライフスタイルを丁寧にヒアリングし、最適なマッチを見つけます。すべてのご家族がユニークであり、それを尊重します。" },
+          { title: "言葉の壁を超える", desc: "各ナニーの母語でコミュニケーションを取り、スムーズな理解を確保します。多言語チームがご家族とヘルパーの橋渡しをします。" },
+          { title: "豊富な登録ネットワーク", desc: "2,000人以上のナニー・メイドが登録しており、経験豊富な候補者が揃っています。全員が私たちのチームによる直接面接と確認を受けています。" },
+          { title: "多文化理解", desc: "タイに住む駐在員ご家族の独自のニーズを理解しています。日本語、英語、中国語、タイ語に対応しています。" },
+          { title: "スピードと信頼性", desc: "バンコク最速のマッチングサービス。リクエスト受領後24時間以内に候補者をご紹介することを目指しています。迅速・効率的・信頼できるサービスです。" },
+        ],
+      },
+      companyInfo: {
+        title: "会社情報",
+        companyNameLabel: "会社名",
+        companyNameValue: "VANNESS ASIA CO., LTD",
+        serviceNameLabel: "サービス名",
+        serviceNameValue: "Hello Nanny",
+        addressLabel: "住所",
+        addressValue: "64/1 Room No. 210, Soi Pasi 1, Ekamai Road, Khlong Tan Nuea, Watthana, Bangkok 10110",
+        taxIdLabel: "TAX ID",
+        taxIdValue: "0105567229649",
+        businessHoursLabel: "営業時間",
+        emailLabel: "メール",
+        emailValue: "info@hellonanny-san.com",
+      },
+      cta: {
+        title: "理想のヘルパーを見つけませんか？",
+        subtitle: "ご要望をお聞かせください。最適なナニーをマッチングいたします。",
+        button: "リクエストを送る",
+      },
     },
     servicePage: {
-      title: "Hello Nannyとは？",
-      subtitle: "バンコクで信頼されるナニー・メイドマッチングサービス。",
-      sections: [
-        {
-          title: "最適なヘルパーを見つける",
-          desc: "フルタイムナニー、パートタイムメイド、一時的なベビーシッターなど、あなたにぴったりのマッチをご提供します。",
+      hero: {
+        title: "Hello Nannyとは？",
+        subtitle: "タイでベビーシッター、ハウスキーパー、ナニー、メイドのマッチングサービスを提供しています。",
+      },
+      concerns: {
+        title: "こんなお悩みありませんか？",
+        items: [
+          "ナニーの給与はどのくらい？",
+          "どこで人を雇えばいい？",
+          "言葉が通じなくても大丈夫？",
+          "子育て中で面接の時間がない。",
+        ],
+        solution: "バンコクで家事のヘルプを雇う際に誰もが直面する悩みを解決するために、このサービスを始めました。経験豊富なヘルパーのネットワークを活用し、ご家族に安心をお届けします。いつでも簡単にご質問にお答えします。",
+      },
+      features: {
+        reliability: {
+          title: "信頼性",
+          desc: "ナニーを探す際、言葉の壁や給与の不安、適切な人選など多くの課題があります。私たちはクライアントとの事前ヒアリングを行い、ナニーの母語でご要望を伝えることで、ミスマッチを防ぎ、スムーズなコミュニケーションを実現します。",
         },
-        {
-          title: "多言語サポート",
-          desc: "ナニーは英語、日本語、タイ語、中国語などを話します。国際的なご家族の言葉の壁を解消します。",
+        accessibility: {
+          title: "アクセシビリティ",
+          desc: "すべての面接はオンラインで完結できます。ご希望のナニーを選択後、最新の空き状況を迅速に確認します。事前にアンケートフォームをお送りし、スムーズなコミュニケーションを確保。必要に応じて面接中のサポートも行います。",
         },
-        {
-          title: "徹底的なスクリーニング",
-          desc: "すべての候補者がID確認と面接プロセスを経ています。バックグラウンドチェック済みの候補者は特別なマークで表示されます。",
+        comfortable: {
+          title: "快適で優雅な毎日",
+          desc: "ナニーの存在により、日常生活がホテルのように優雅になります。特にお子様を育てている方にとって、家事を経験豊富なプロに任せながら、ご家族との質の高い時間を楽しむことができる大きなサポートとなります。",
         },
-      ],
+      },
+      nannies: {
+        title: "登録ナニー＆メイド",
+        subtitle: "登録ヘルパーを閲覧できます。経験、言語、空き状況でフィルタリング可能です。",
+      },
     },
     processPage: {
-      title: "ご利用の流れ",
-      subtitle: "始めるのは簡単です。この3つのステップに従うだけ。",
+      hero: {
+        title: "簡単3ステップ",
+        subtitle: "始めるのは簡単です。今すぐ理想のヘルパーを見つけましょう。",
+      },
+      stepLabel: "ステップ",
+      steps: {
+        step1: {
+          title: "リクエストを送信",
+          desc: "LINEまたはお問い合わせフォームからご要望をお送りください。ナニー、メイド、またはその両方など、必要なヘルプの種類をお知らせください。",
+          details: [
+            "独自のAIシステムを使用し、ご要望に基づいて登録スタッフから候補者を厳選します。",
+            "1営業日以内に候補者リストをお届けします。",
+            "即時マッチする候補がいない場合は、新しい候補者を募集いたします。",
+          ],
+        },
+        step2: {
+          title: "オンライン面接",
+          desc: "面接方法をお選びください：",
+          details: [
+            "オプション1：弊社チームのサポート付きオンライン面接（サービス料400バーツ）。",
+            "オプション2：サポートなしのオンライン面接（無料）。",
+            "オプション3：ベビーシッターとの直接面接のみ（デポジットが必要）。",
+          ],
+          tip: "給与に関する質問や懸念を確認し、候補者がご期待に沿うかどうかを確認する時間です。",
+        },
+        step3: {
+          title: "マッチング後にお支払い",
+          desc: "マッチング確定後に紹介料をお支払いください。",
+          details: [
+            "お支払い方法：銀行振込、QRコード、クレジット/デビットカード（ご依頼により対応）。",
+            "サービス開始前に全額お支払いが必要です。",
+            "マッチング後サポート：スムーズなスタートのため、お客様とスタッフの両方をサポートします。",
+            "交代ポリシー：問題が発生した場合、選択プランに応じてスタッフの交代が可能です。",
+          ],
+        },
+      },
+      pricing: {
+        title: "システム利用料金",
+        subtitle: "1回限りの料金のみ。追加料金なし。ナニーの給与は別途設定されます。",
+        mostPopular: "一番人気",
+        sendRequest: "リクエストを送る",
+        plans: [
+          {
+            name: "パートタイム",
+            price: "6,000",
+            badge: "お手頃プラン",
+            features: [
+              "事前ヒアリング",
+              "コミュニケーションサービス",
+              "最大2回まで選択可能",
+            ],
+            note: "週30時間未満の勤務",
+          },
+          {
+            name: "フルタイム",
+            price: "7,800",
+            badge: "レギュラープラン",
+            features: [
+              "事前ヒアリング",
+              "コミュニケーションサービス",
+              "最大3回まで選択可能",
+            ],
+            note: "2ヶ月以内",
+          },
+          {
+            name: "ショートタイム",
+            price: "4,000",
+            badge: "お試しプラン",
+            features: [
+              "事前ヒアリング",
+              "コミュニケーションサービス",
+              "最大1回まで選択可能",
+            ],
+            note: "5〜14日間",
+          },
+        ],
+      },
+      cta: {
+        title: "今すぐヘルパーを見つけましょう！",
+        subtitle: "リクエストを送信すると、24時間以内にマッチングいたします。",
+      },
     },
     faqPage: {
       title: "よくある質問",
-      subtitle: "サービスに関するよくあるご質問と回答。",
+      subtitle: "サービスに関するよくあるご質問にお答えします。",
       items: [
         { q: "マッチングにどのくらい時間がかかりますか？", a: "ほとんどのご家族が3〜7日で適切なマッチを見つけています。最短24時間で見つかるケースもあります。" },
         { q: "ナニーはどの言語を話しますか？", a: "タイ語、英語、日本語、中国語など様々な言語を話すナニーがいます。言語能力でフィルタリングできます。" },
@@ -524,12 +847,58 @@ const translations = {
         { q: "決める前に候補者と面接できますか？", a: "もちろんです！ご自宅からオンラインビデオ面接で候補者と会えるよう手配いたします。" },
         { q: "どのような支払い方法がありますか？", a: "銀行振込、クレジットカード、各種デジタル決済に対応しています。" },
       ],
+      categories: {
+        general: "一般",
+        salaryCosts: "給与・費用",
+        serviceAgreement: "サービス契約",
+        safetySecurity: "安全・セキュリティ",
+        tipsForSuccess: "成功のコツ",
+      },
+      general: {
+        q1: "なぜHello Nannyなのですか？",
+        a1: "バンコクには多くのハウスキーパーサービスがありますが、日本品質を保証し、言葉の壁を克服し、スムーズにビジネスパートナーシップを開始できるサービスは数少ないです。私たちはこれまで多くの方々をサポートしてきた実績があります。Hello Nannyは、お客様に信頼できる安心のホスピタリティを提供することをお約束します。",
+        q2: "どのような人材を採用していますか？",
+        a2: "Hello Nannyでは、すべての求職者にオンラインで直接面接を行っています。さらに、独自のコミュニティルートを通じて、経験豊富でモチベーションの高い人材のみを厳選しています。全求職者のパスポートとIDのコピーも保管しています。",
+        q3: "候補者と面接できますか？",
+        a3: "以下の方法で面接が可能です。また、採用後も選択したプランに応じてナニーの変更が可能です。\n\n\u2022 オプション1：チームサポート付きオンライン面接（サービス料400バーツ）\n\u2022 オプション2：サポートなしのオンライン面接（無料）\n\u2022 オプション3：ベビーシッターとの直接面接のみ（デポジットが必要）",
+      },
+      salaryCosts: {
+        q1: "おおよその給与はいくらですか？",
+        a1: "給与は求職者の経験や以前の雇用状況によって大きく異なります。通勤の場合は、食費や交通費を自己負担するため、住み込みよりも高くなります。",
+        q2: "残業について教えてください。",
+        a2: "タイでは通常100バーツ/時間ですが、給与に応じたチップを渡すことをお勧めします。",
+        q3: "犯罪歴チェックについて",
+        a3: "候補者の犯罪歴チェックが必要な場合は、1人あたり1,000バーツで手配可能です。",
+      },
+      serviceAgreement: {
+        q1: "マッチングがうまくいかない場合は？",
+        a1: "Hello Nannyでは、選択したプランに応じて、採用後のナニー変更サービスを提供しています。変更をご希望の場合は、お気軽にお問い合わせください。また、心配な場合は書面による契約書の準備をお勧めします。採用前に詳細を確認することで、問題を大幅に減らすことができます。特にコミュニケーション不足による小さな問題が一般的ですが、書面での契約はこれらの問題を解消できます。",
+        q2: "契約書は必要ですか？",
+        a2: "サンプルをご用意していますので、必要に応じてご自由にお使いください。サンプルに記載されていない項目を追加したい場合は、追記してください。",
+        q3: "タイの祝日はどうなりますか？",
+        a3: "ほとんどのナニーやメイドは基本的にタイの祝日カレンダーに従います。ただし、詳細は雇用する方と相談してください。",
+      },
+      safetySecurity: {
+        q1: "盗難について",
+        a1: "採用時にご家族が最も心配されるのは盗難です。ナニーを雇う際は、必ずIDまたはパスポートのコピー、連絡先、自宅住所を記録し、自宅に保管してください。また、貴重品、ブランド品、現金は鍵付きの棚や金庫に保管してください。最初は悪意がなくても、一瞬の誘惑がないとは限りません。これを防ぐために、物の貸し借りをしない、鍵を渡さない、お金や物を見える場所に放置しないなどの習慣を守ることが重要です。なお、ご家族とメイド・ベビーシッター間のトラブルについて、弊社は関与せず責任を負いかねますのでご了承ください。",
+      },
+      tipsForSuccess: {
+        q1: "ナニーに長く働いてもらうには？",
+        a1: "雇用主がナニーとの円滑な関係を築き、長く働いてもらうための行動をとることが非常に重要だと考えています。以下の3つのポイントが大切です：\n\n1. 適正な給与を支払う。住み込みの場合は食費、通勤の場合は交通費を考慮してください。給与が低すぎると、他の仕事を見つけやすくなります。\n\n2. 過度に厳しいルールを設けず、必要最小限の管理を行う。ナニーは厳しいルールや監視を嫌います。長期的に徐々に指導し、快適な労働環境を作りましょう。\n\n3. 必ず褒める。褒めることがモチベーションにつながります。悪い点ばかり指摘するのではなく、良い点を見つけて褒めることが大切です。",
+      },
     },
     contactPage: {
-      title: "お問い合わせ",
-      subtitle: "ご質問がありましたら、お好みの方法でお気軽にご連絡ください。",
+      title: "リクエストを送る",
+      subtitle: "ご家族のニーズをお聞かせください。最適なナニーやメイドをご紹介します。",
       formTitle: "リクエストを送る",
       formPlaceholder: "お問い合わせフォームがここに埋め込まれます。",
+      otherWays: "その他のお問い合わせ方法",
+      lineLabel: "LINE",
+      lineDesc: "公式アカウント",
+      whatsappLabel: "WhatsApp",
+      officeTitle: "オフィス情報",
+      responseTitle: "返信時間",
+      responseDesc: "通常、営業日は24時間以内にご返信いたします。お急ぎの場合は、LINEまたはWhatsAppでお問い合わせください。",
     },
     registerPage: {
       title: "お仕事をお探しの方へ",
@@ -544,9 +913,26 @@ const translations = {
       contactTitle: "登録方法:",
     },
     recruitPage: {
-      title: "採用情報",
-      subtitle:
-        "VANNESS ASIAの一員として、ご家族と素晴らしいヘルパーを繋ぐお手伝いをしませんか？",
+      title: "チームに参加する",
+      subtitle: "タイのご家族を支援する情熱的な人材を募集しています",
+      whoTitle: "求める人材",
+      whoDesc: "育児、家事管理、カスタマーサポート、またはコンサルティングの経験があるタイ人の方を歓迎します。ご家族を助けることが好きで前向きな姿勢をお持ちの方、ぜひご応募ください！",
+      positions: {
+        nanny: { title: "ナニー / ベビーシッター", desc: "バンコク在住の外国人家庭の育児。子どもとの経験者優遇。" },
+        maid: { title: "メイド / ハウスキーパー", desc: "駐在員およびタイ人家庭の清掃、料理、家事管理。" },
+        support: { title: "カスタマーサポート", desc: "マッチングプロセス、スケジュール調整、コミュニケーションでご家族とナニーをサポート。" },
+        coordinator: { title: "コンサルティング / コーディネーター", desc: "ご家族とヘルパーの間の調整をサポート。多言語スキルがあれば尚可。" },
+      },
+      whyTitle: "私たちと働く理由",
+      benefits: {
+        salary: { title: "競争力のある給与", desc: "経験とスキルに応じて給与は応相談。" },
+        incentive: { title: "インセンティブ制度", desc: "優秀な成果に対する業績連動型インセンティブとボーナス。" },
+        schedule: { title: "柔軟なスケジュール", desc: "パートタイム、フルタイム、住み込みのオプションあり。" },
+        team: { title: "サポーティブなチーム", desc: "あなたの貢献を大切にする、多文化でフレンドリーなチームに参加。" },
+      },
+      applyTitle: "応募する",
+      applyDesc: "以下のフォームに記入するか、直接お問い合わせください。できるだけ早くご連絡いたします。",
+      altContact: "または以下から直接お問い合わせください：",
     },
   },
   zh: {
@@ -731,34 +1117,175 @@ const translations = {
       rights: "版权所有。",
     },
     aboutPage: {
-      title: "关于我们",
-      subtitle: "了解Hello Nanny和我们的使命。",
-      companyName: "VANNESS ASIA CO., LTD.",
-      mission: "我们的使命是将曼谷的家庭与值得信赖、可靠的保姆和家政连接起来。",
-      vision: "成为东南亚最值得信赖的保姆和家政匹配平台。",
-      values: [
-        { title: "信任与安全", desc: "我们仔细筛选每位候选人，确保您家庭的安全。" },
-        { title: "速度", desc: "高效的匹配流程让您快速找到合适的帮手。" },
-        { title: "实惠", desc: "没有隐藏费用。透明的一次性匹配费用。" },
-        { title: "多语言", desc: "我们的团队和许多保姆都会说多种语言。" },
-      ],
+      hero: {
+        title: "关于我们",
+        subtitle: "在泰国为家庭与值得信赖的保姆搭建桥梁",
+      },
+      whoWeAre: {
+        title: "我们是谁",
+        description: "Hello Nanny是由VANNESS ASIA CO., LTD.运营的保姆和家政匹配服务。我们是连接有技能的保姆与在泰国生活的外国家庭的桥梁，帮助他们找到最适合家庭需求的人选。",
+      },
+      mission: {
+        title: "使命",
+        description: "成为连接外国家庭与泰国优秀保姆的桥梁。我们相信每个家庭都应该获得可靠、值得信赖的育儿和家务支持，不受语言或文化障碍的限制。",
+      },
+      vision: {
+        title: "愿景",
+        goalIntro: "我们的目标是让每个家庭都说：",
+        quote: "找到这个保姆真是太好了！",
+        description: "我们通过精心匹配和持续支持，致力于在家庭和帮手之间建立持久、幸福的关系。",
+      },
+      values: {
+        title: "我们的价值观",
+        subtitle: "Hello Nanny与其他服务的不同之处",
+        items: [
+          { title: "家庭优先", desc: "我们仔细倾听每个家庭的独特规则、偏好和生活方式，以找到合适的匹配。每个家庭都是不同的，我们尊重这一点。" },
+          { title: "打破语言障碍", desc: "我们用每位保姆的母语进行沟通，确保顺畅的理解。我们的多语言团队在家庭和帮手之间架起桥梁。" },
+          { title: "庞大的审核网络", desc: "拥有超过2,000名注册保姆和家政，我们拥有大量经验丰富的候选人。所有人都经过我们团队的直接面试和验证。" },
+          { title: "多元文化理解", desc: "我们了解在泰国外籍家庭的独特需求。我们的服务支持日语、英语、中文和泰语家庭。" },
+          { title: "速度与可靠性", desc: "曼谷最快的匹配服务。我们的目标是在收到您的请求后24小时内介绍候选人。快速、高效、可靠。" },
+        ],
+      },
+      companyInfo: {
+        title: "公司信息",
+        companyNameLabel: "公司名称",
+        companyNameValue: "VANNESS ASIA CO., LTD",
+        serviceNameLabel: "服务名称",
+        serviceNameValue: "Hello Nanny",
+        addressLabel: "地址",
+        addressValue: "64/1 Room No. 210, Soi Pasi 1, Ekamai Road, Khlong Tan Nuea, Watthana, Bangkok 10110",
+        taxIdLabel: "TAX ID",
+        taxIdValue: "0105567229649",
+        businessHoursLabel: "营业时间",
+        emailLabel: "邮箱",
+        emailValue: "info@hellonanny-san.com",
+      },
+      cta: {
+        title: "准备好找到完美的帮手了吗？",
+        subtitle: "告诉我们您的需求，我们会为您匹配合适的保姆。",
+        button: "提交请求",
+      },
     },
     servicePage: {
-      title: "什么是Hello Nanny？",
-      subtitle: "曼谷值得信赖的保姆和家政匹配服务。",
-      sections: [
-        { title: "找到完美帮手", desc: "无论您需要全职保姆、兼职家政还是临时保姆，我们都能为您找到合适的匹配。" },
-        { title: "多语言支持", desc: "我们的保姆会说英语、日语、泰语、中文等。为国际家庭消除语言障碍。" },
-        { title: "严格筛选", desc: "每位候选人都经过身份验证和面试。通过背景调查的候选人有特殊标记。" },
-      ],
+      hero: {
+        title: "什么是Hello Nanny？",
+        subtitle: "我们在泰国提供保姆、管家、育儿嫂和家政的匹配服务。",
+      },
+      concerns: {
+        title: "您是否有这些困扰？",
+        items: [
+          "保姆的薪资是多少？",
+          "应该从哪里雇人？",
+          "不会说当地语言也没关系吗？",
+          "我在带孩子，没有时间面试。",
+        ],
+        solution: "我们创建此服务是为了解决在曼谷雇用家政帮手时每个人都会遇到的困扰。利用我们经验丰富的帮手网络，我们希望为家庭带来安心——随时轻松回答您的问题。",
+      },
+      features: {
+        reliability: {
+          title: "可靠性",
+          desc: "寻找保姆时会遇到许多挑战——语言障碍、薪资不确定性以及选择合适的人。我们对客户进行初步了解，并用保姆的母语传达您的要求，以防止不匹配并促进顺畅沟通。",
+        },
+        accessibility: {
+          title: "便捷性",
+          desc: "所有面试都可以在线完成。一旦您选择了心仪的保姆，我们会及时确认其最新可用性。我们会提前发送问卷表以确保顺畅沟通，我们的团队也可以在面试期间提供协助。",
+        },
+        comfortable: {
+          title: "舒适优雅的日子",
+          desc: "保姆的存在让您的日常生活如同住在酒店般优雅。特别是对于养育孩子的家庭，这将是极大的支持，让您在享受与家人共度美好时光的同时，由经验丰富的专业人员照料家务。",
+        },
+      },
+      nannies: {
+        title: "可用保姆和家政",
+        subtitle: "浏览我们的注册帮手。按经验、语言和可用性筛选。",
+      },
     },
     processPage: {
-      title: "简单流程",
-      subtitle: "开始很简单。只需遵循这3个步骤。",
+      hero: {
+        title: "简单的3步流程",
+        subtitle: "开始很简单。今天就找到您的完美帮手。",
+      },
+      stepLabel: "步骤",
+      steps: {
+        step1: {
+          title: "提交您的请求",
+          desc: "通过LINE或我们的联系表单发送您的需求。告诉我们您需要什么帮助——保姆、家政或两者都需要。",
+          details: [
+            "使用我们独特的AI系统，根据您的需求从注册员工中精心挑选候选人。",
+            "您将在1个工作日内收到潜在匹配列表。",
+            "如果没有即时匹配的候选人，我们将发布您的需求以寻找新候选人。",
+          ],
+        },
+        step2: {
+          title: "在线面试",
+          desc: "选择您希望如何进行面试：",
+          details: [
+            "选项1：有我们团队支持的在线面试（服务费400泰铢）。",
+            "选项2：无我们协助的在线面试（免费）。",
+            "选项3：仅与保姆直接面试（需要押金）。",
+          ],
+          tip: "这是提出问题、讨论薪资问题并确认候选人是否满足您期望的时间。",
+        },
+        step3: {
+          title: "匹配后付款",
+          desc: "确认匹配后支付介绍费。",
+          details: [
+            "付款方式：银行转账、二维码、信用卡/借记卡（按要求）。",
+            "服务开始前需全额付款。",
+            "匹配后支持：我们将为您和您的员工提供支持，确保顺利开始。",
+            "更换政策：如果出现问题，您可以根据所选方案更换员工。",
+          ],
+        },
+      },
+      pricing: {
+        title: "系统使用费",
+        subtitle: "仅一次性收费。无隐藏费用。保姆薪资另行设定。",
+        mostPopular: "最受欢迎",
+        sendRequest: "提交请求",
+        plans: [
+          {
+            name: "兼职",
+            price: "6,000",
+            badge: "实惠方案",
+            features: [
+              "预约咨询",
+              "沟通服务",
+              "最多可选择2次",
+            ],
+            note: "每周工作时间少于30小时",
+          },
+          {
+            name: "全职",
+            price: "7,800",
+            badge: "常规方案",
+            features: [
+              "预约咨询",
+              "沟通服务",
+              "最多可选择3次",
+            ],
+            note: "2个月内",
+          },
+          {
+            name: "短期",
+            price: "4,000",
+            badge: "体验方案",
+            features: [
+              "预约咨询",
+              "沟通服务",
+              "最多可选择1次",
+            ],
+            note: "5至14天",
+          },
+        ],
+      },
+      cta: {
+        title: "今天就找到您的帮手！",
+        subtitle: "立即发送请求，24小时内匹配成功。",
+      },
     },
     faqPage: {
       title: "常见问题",
-      subtitle: "查找有关服务的常见问题解答。",
+      subtitle: "查找有关我们服务的常见问题解答。",
       items: [
         { q: "找到匹配需要多长时间？", a: "大多数家庭在3-7天内找到合适的匹配。有些在短短24小时内就找到了。" },
         { q: "保姆会说什么语言？", a: "我们的保姆会说泰语、英语、日语、中文等多种语言。" },
@@ -769,12 +1296,58 @@ const translations = {
         { q: "可以在决定前面试候选人吗？", a: "当然可以！我们安排在线视频面试。" },
         { q: "接受哪些支付方式？", a: "接受银行转账、信用卡和各种电子支付。" },
       ],
+      categories: {
+        general: "一般问题",
+        salaryCosts: "薪资与费用",
+        serviceAgreement: "服务协议",
+        safetySecurity: "安全保障",
+        tipsForSuccess: "成功秘诀",
+      },
+      general: {
+        q1: "为什么选择Hello Nanny？",
+        a1: "曼谷有很多家政服务，但能确保日本品质、克服语言障碍、顺利建立商业合作的服务寥寥无几。我们是一家帮助过众多家庭的公司。Hello Nanny致力于为客户提供可靠、值得信赖的服务。",
+        q2: "你们雇用什么样的人？",
+        a2: "在Hello Nanny，所有求职者都会接受在线直接面试。此外，我们通过自有社区渠道，只选择经验丰富且积极性高的人员。我们还保留所有求职者的护照和身份证复印件。",
+        q3: "我可以面试候选人吗？",
+        a3: "我们提供以下面试方式。录用后，您也可以根据所选方案更换保姆。\n\n\u2022 方式1：团队支持的在线面试（服务费400泰铢）\n\u2022 方式2：无支持的在线面试（免费）\n\u2022 方式3：仅与保姆直接面试（需缴纳押金）",
+      },
+      salaryCosts: {
+        q1: "大概薪资是多少？",
+        a1: "薪资主要取决于求职者的经验和之前的就业状况。通勤者的薪资会高于住家者（因为需要自付餐费和交通费）。",
+        q2: "关于加班？",
+        a2: "在泰国通常是100泰铢/小时，但建议根据薪资水平给予相应小费。",
+        q3: "关于犯罪记录检查？",
+        a3: "如果需要对候选人进行犯罪记录检查，我们可以安排，每人1,000泰铢。",
+      },
+      serviceAgreement: {
+        q1: "如果匹配不成功怎么办？",
+        a1: "Hello Nanny根据您选择的方案，在录用后提供更换保姆服务。如需更换，请随时联系我们。如有顾虑，我们也建议您准备书面合同。在录用前确认细节可以大大减少问题。特别是沟通不畅导致的小问题很常见，书面合同可以消除这些问题。",
+        q2: "我需要签合同吗？",
+        a2: "我们提供合同样本，如有需要请随意使用。如果想添加样本中未列出的条款，请自行添加。",
+        q3: "泰国公共假期怎么办？",
+        a3: "大多数保姆或家政人员基本按照泰国假期日历休息。但具体细节请与您雇用的人商讨。",
+      },
+      safetySecurity: {
+        q1: "关于盗窃？",
+        a1: "招聘时，家庭最常见的担忧是盗窃。雇用保姆时，请务必记录其身份证或护照复印件、联系方式和家庭住址并保存在家中。此外，请将贵重物品、名牌物品和现金放在上锁的柜子或保险箱中。即使最初没有恶意，也不能保证不会一时冲动。为防止这种情况，重要的是遵守不借东西、不交出钥匙、不将钱财和物品放在可见处等习惯。请注意，我们不参与也不对家庭与保姆之间的任何问题承担责任。",
+      },
+      tipsForSuccess: {
+        q1: "如何让保姆长期工作？",
+        a1: "我们认为雇主采取行动与保姆建立良好关系、让她长期工作是非常重要的。以下三点很关键：\n\n1. 支付合理薪资。住家的考虑餐费，通勤的考虑交通费。薪资过低，她们更容易找到其他工作。\n\n2. 不要设定过于严格的规则，但要进行必要的最低限度管理。保姆不喜欢严格的规则和监控。长期逐步引导，创造舒适的工作环境。\n\n3. 一定要表扬。表扬会激励她们。重要的是发现优点并加以表扬，而不是总是指出缺点。",
+      },
     },
     contactPage: {
-      title: "联系我们",
-      subtitle: "有问题？通过您喜欢的方式联系我们。",
+      title: "发送请求",
+      subtitle: "告诉我们您家庭的需求，我们将为您匹配最合适的保姆或家政人员。",
       formTitle: "提交请求",
       formPlaceholder: "联系表单将在此嵌入。",
+      otherWays: "其他联系方式",
+      lineLabel: "LINE",
+      lineDesc: "官方账号",
+      whatsappLabel: "WhatsApp",
+      officeTitle: "办公室信息",
+      responseTitle: "响应时间",
+      responseDesc: "我们通常在工作日24小时内回复。如有紧急需求，请通过LINE或WhatsApp联系我们。",
     },
     registerPage: {
       title: "加入我们",
@@ -783,8 +1356,26 @@ const translations = {
       contactTitle: "注册方式:",
     },
     recruitPage: {
-      title: "加入团队",
-      subtitle: "我们正在寻找热情的人加入VANNESS ASIA。帮助我们连接家庭和帮手。",
+      title: "加入我们的团队",
+      subtitle: "我们正在寻找热情的人来帮助泰国的家庭",
+      whoTitle: "我们在寻找谁",
+      whoDesc: "我们欢迎有育儿、家政管理、客户支持或咨询经验的泰国籍人士。如果您热爱帮助家庭并有积极的态度，我们期待您的加入！",
+      positions: {
+        nanny: { title: "保姆 / 育儿嫂", desc: "为曼谷的外国家庭提供育儿服务。有儿童照顾经验者优先。" },
+        maid: { title: "家政 / 管家", desc: "为外籍和泰国家庭提供清洁、烹饪和家务管理服务。" },
+        support: { title: "客户支持", desc: "协助家庭和保姆完成匹配流程、日程安排和沟通。" },
+        coordinator: { title: "咨询 / 协调员", desc: "协调家庭和帮手之间的沟通。多语言能力加分。" },
+      },
+      whyTitle: "为什么选择我们",
+      benefits: {
+        salary: { title: "有竞争力的薪资", desc: "薪资根据经验和技能协商。" },
+        incentive: { title: "激励计划", desc: "基于绩效的激励和奖金。" },
+        schedule: { title: "灵活的时间安排", desc: "提供兼职、全职和住家选项。" },
+        team: { title: "支持性团队", desc: "加入一个重视您贡献的多元文化友好团队。" },
+      },
+      applyTitle: "立即申请",
+      applyDesc: "填写以下表格或直接联系我们。我们会尽快回复您。",
+      altContact: "或通过以下方式直接联系我们：",
     },
   },
   th: {
@@ -977,34 +1568,175 @@ const translations = {
       rights: "สงวนลิขสิทธิ์",
     },
     aboutPage: {
-      title: "เกี่ยวกับเรา",
-      subtitle: "เรียนรู้เพิ่มเติมเกี่ยวกับ Hello Nanny และพันธกิจของเรา",
-      companyName: "VANNESS ASIA CO., LTD.",
-      mission: "พันธกิจของเราคือเชื่อมต่อครอบครัวในกรุงเทพฯ กับพี่เลี้ยงและแม่บ้านที่ไว้ใจได้",
-      vision: "เป็นแพลตฟอร์มจับคู่พี่เลี้ยงและแม่บ้านที่น่าเชื่อถือที่สุดในเอเชียตะวันออกเฉียงใต้",
-      values: [
-        { title: "ความไว้วางใจและความปลอดภัย", desc: "เราคัดกรองผู้สมัครทุกคนอย่างรอบคอบ" },
-        { title: "ความเร็ว", desc: "กระบวนการจับคู่ที่มีประสิทธิภาพ" },
-        { title: "ราคาเหมาะสม", desc: "ไม่มีค่าธรรมเนียมแอบแฝง โปร่งใส" },
-        { title: "หลายภาษา", desc: "ทีมงานและพี่เลี้ยงหลายคนพูดได้หลายภาษา" },
-      ],
+      hero: {
+        title: "เกี่ยวกับเรา",
+        subtitle: "เชื่อมต่อครอบครัวกับพี่เลี้ยงที่ไว้ใจได้ในประเทศไทย",
+      },
+      whoWeAre: {
+        title: "เราคือใคร",
+        description: "Hello Nanny คือบริการจับคู่พี่เลี้ยงและแม่บ้านที่ดำเนินการโดย VANNESS ASIA CO., LTD. เราเป็นสะพานเชื่อมระหว่างพี่เลี้ยงที่มีทักษะกับครอบครัวชาวต่างชาติที่อาศัยอยู่ในประเทศไทย ช่วยหาคนที่เหมาะสมที่สุดสำหรับความต้องการของครอบครัว",
+      },
+      mission: {
+        title: "พันธกิจ",
+        description: "เป็นสะพานเชื่อมระหว่างพี่เลี้ยงที่มีทักษะกับครอบครัวชาวต่างชาติในประเทศไทย เราเชื่อว่าทุกครอบครัวสมควรได้รับการดูแลเด็กและการสนับสนุนงานบ้านที่เชื่อถือได้ โดยไม่มีอุปสรรคทางภาษาหรือวัฒนธรรม",
+      },
+      vision: {
+        title: "วิสัยทัศน์",
+        goalIntro: "เป้าหมายของเราคือให้ทุกครอบครัวพูดว่า:",
+        quote: "ดีใจมากที่เจอพี่เลี้ยงคนนี้!",
+        description: "เรามุ่งมั่นสร้างความสัมพันธ์ที่ยืนยาวและมีความสุขระหว่างครอบครัวและผู้ช่วยผ่านการจับคู่อย่างพิถีพิถันและการสนับสนุนอย่างต่อเนื่อง",
+      },
+      values: {
+        title: "คุณค่าของเรา",
+        subtitle: "สิ่งที่ทำให้ Hello Nanny แตกต่างจากบริการอื่น",
+        items: [
+          { title: "ครอบครัวมาก่อน", desc: "เรารับฟังกฎ ความชอบ และไลฟ์สไตล์เฉพาะตัวของแต่ละครอบครัวอย่างใส่ใจ เพื่อหาคู่ที่เหมาะสม ทุกครอบครัวแตกต่างกัน และเราเคารพสิ่งนั้น" },
+          { title: "ทลายกำแพงภาษา", desc: "เราสื่อสารกับพี่เลี้ยงแต่ละคนในภาษาที่พวกเขาถนัดเพื่อให้เข้าใจกันอย่างราบรื่น ทีมหลายภาษาของเราเป็นตัวกลางระหว่างครอบครัวและผู้ช่วย" },
+          { title: "เครือข่ายขนาดใหญ่ที่ผ่านการตรวจสอบ", desc: "ด้วยพี่เลี้ยงและแม่บ้านที่ลงทะเบียนกว่า 2,000 คน เรามีผู้สมัครที่มีประสบการณ์มากมาย ทุกคนผ่านการสัมภาษณ์และยืนยันตัวตนโดยทีมของเราโดยตรง" },
+          { title: "เข้าใจวัฒนธรรมหลากหลาย", desc: "เราเข้าใจความต้องการพิเศษของครอบครัวชาวต่างชาติในประเทศไทย บริการของเรารองรับครอบครัวที่พูดภาษาญี่ปุ่น อังกฤษ จีน และไทย" },
+          { title: "ความเร็วและความน่าเชื่อถือ", desc: "บริการจับคู่ที่เร็วที่สุดในกรุงเทพฯ เราตั้งเป้าแนะนำผู้สมัครภายใน 24 ชั่วโมงหลังได้รับคำขอ รวดเร็ว มีประสิทธิภาพ และเชื่อถือได้" },
+        ],
+      },
+      companyInfo: {
+        title: "ข้อมูลบริษัท",
+        companyNameLabel: "ชื่อบริษัท",
+        companyNameValue: "VANNESS ASIA CO., LTD",
+        serviceNameLabel: "ชื่อบริการ",
+        serviceNameValue: "Hello Nanny",
+        addressLabel: "ที่อยู่",
+        addressValue: "64/1 Room No. 210, Soi Pasi 1, Ekamai Road, Khlong Tan Nuea, Watthana, Bangkok 10110",
+        taxIdLabel: "TAX ID",
+        taxIdValue: "0105567229649",
+        businessHoursLabel: "เวลาทำการ",
+        emailLabel: "อีเมล",
+        emailValue: "info@hellonanny-san.com",
+      },
+      cta: {
+        title: "พร้อมหาผู้ช่วยที่สมบูรณ์แบบหรือยัง?",
+        subtitle: "บอกเราเกี่ยวกับความต้องการของคุณ แล้วเราจะจับคู่คุณกับพี่เลี้ยงที่เหมาะสม",
+        button: "ส่งคำขอ",
+      },
     },
     servicePage: {
-      title: "Hello Nanny คืออะไร?",
-      subtitle: "บริการจับคู่พี่เลี้ยงและแม่บ้านที่น่าเชื่อถือในกรุงเทพฯ",
-      sections: [
-        { title: "หาผู้ช่วยที่สมบูรณ์แบบ", desc: "ไม่ว่าจะต้องการพี่เลี้ยงฟูลไทม์ แม่บ้านพาร์ทไทม์ หรือพี่เลี้ยงชั่วคราว" },
-        { title: "สนับสนุนหลายภาษา", desc: "พี่เลี้ยงพูดอังกฤษ ญี่ปุ่น ไทย จีน และอื่นๆ" },
-        { title: "คัดกรองอย่างละเอียด", desc: "ผู้สมัครทุกคนผ่านการยืนยันตัวตนและสัมภาษณ์" },
-      ],
+      hero: {
+        title: "Hello Nanny คืออะไร?",
+        subtitle: "เราให้บริการจับคู่พี่เลี้ยงเด็ก แม่บ้าน พี่เลี้ยง และคนช่วยงานบ้านในประเทศไทย",
+      },
+      concerns: {
+        title: "คุณมีความกังวลเหล่านี้หรือไม่?",
+        items: [
+          "พี่เลี้ยงได้เงินเดือนเท่าไร?",
+          "ควรจ้างจากไหน?",
+          "พูดภาษาไม่ได้ก็ได้ไหม?",
+          "กำลังเลี้ยงลูกอยู่ ไม่มีเวลาสัมภาษณ์",
+        ],
+        solution: "เราเริ่มบริการนี้เพื่อแก้ปัญหาที่ทุกคนพบเมื่อจ้างผู้ช่วยงานบ้านในกรุงเทพฯ ด้วยเครือข่ายผู้ช่วยที่มีประสบการณ์ เราต้องการมอบความอุ่นใจให้ครอบครัว — ตอบคำถามของคุณได้ทุกเมื่ออย่างง่ายดาย",
+      },
+      features: {
+        reliability: {
+          title: "ความน่าเชื่อถือ",
+          desc: "เมื่อค้นหาพี่เลี้ยง จะพบความท้าทายมากมาย — อุปสรรคทางภาษา ความไม่แน่นอนเรื่องเงินเดือน และการเลือกคนที่เหมาะสม เราทำการสอบถามเบื้องต้นกับลูกค้าและสื่อสารคำขอของคุณในภาษาแม่ของพี่เลี้ยงเพื่อป้องกันความไม่ตรงกันและอำนวยความสะดวกในการสื่อสาร",
+        },
+        accessibility: {
+          title: "ความสะดวกในการเข้าถึง",
+          desc: "การสัมภาษณ์ทั้งหมดสามารถทำได้ออนไลน์ เมื่อคุณเลือกพี่เลี้ยงที่ชอบแล้ว เราจะยืนยันความพร้อมล่าสุดอย่างรวดเร็ว เราส่งแบบสอบถามล่วงหน้าเพื่อให้การสื่อสารราบรื่น และทีมของเราพร้อมช่วยเหลือระหว่างการสัมภาษณ์หากจำเป็น",
+        },
+        comfortable: {
+          title: "วันที่สะดวกสบายและสง่างาม",
+          desc: "การมีพี่เลี้ยงทำให้ชีวิตประจำวันของคุณสง่างามเหมือนอยู่ในโรงแรม โดยเฉพาะสำหรับผู้ที่เลี้ยงลูก จะเป็นการสนับสนุนที่ดีมาก ช่วยให้คุณเพลิดเพลินกับเวลาคุณภาพกับครอบครัวในขณะที่งานบ้านได้รับการดูแลจากผู้เชี่ยวชาญ",
+        },
+      },
+      nannies: {
+        title: "พี่เลี้ยงและแม่บ้านที่พร้อมให้บริการ",
+        subtitle: "เรียกดูผู้ช่วยที่ลงทะเบียนของเรา กรองตามประสบการณ์ ภาษา และความพร้อม",
+      },
     },
     processPage: {
-      title: "ขั้นตอนง่ายๆ",
-      subtitle: "เริ่มต้นง่ายๆ แค่ทำตาม 3 ขั้นตอนนี้",
+      hero: {
+        title: "ขั้นตอนง่ายๆ 3 ขั้นตอน",
+        subtitle: "เริ่มต้นง่ายๆ หาผู้ช่วยที่สมบูรณ์แบบวันนี้",
+      },
+      stepLabel: "ขั้นตอน",
+      steps: {
+        step1: {
+          title: "ส่งคำขอของคุณ",
+          desc: "ส่งความต้องการผ่าน LINE หรือแบบฟอร์มติดต่อ บอกเราว่าต้องการความช่วยเหลือแบบไหน — พี่เลี้ยง แม่บ้าน หรือทั้งสองอย่าง",
+          details: [
+            "ใช้ระบบ AI เฉพาะของเรา คัดเลือกผู้สมัครจากพนักงานที่ลงทะเบียนตามความต้องการของคุณอย่างพิถีพิถัน",
+            "คุณจะได้รับรายชื่อผู้สมัครที่เหมาะสมภายใน 1 วันทำการ",
+            "หากไม่มีผู้สมัครที่ตรงกันทันที เราจะประกาศคำขอของคุณเพื่อหาผู้สมัครใหม่",
+          ],
+        },
+        step2: {
+          title: "สัมภาษณ์ออนไลน์",
+          desc: "เลือกวิธีที่คุณต้องการสัมภาษณ์:",
+          details: [
+            "ตัวเลือก 1: สัมภาษณ์ออนไลน์พร้อมการสนับสนุนจากทีมของเรา (ค่าบริการ 400 บาท)",
+            "ตัวเลือก 2: สัมภาษณ์ออนไลน์โดยไม่มีการช่วยเหลือจากเรา (ฟรี)",
+            "ตัวเลือก 3: สัมภาษณ์โดยตรงกับพี่เลี้ยงเท่านั้น (ต้องวางมัดจำ)",
+          ],
+          tip: "นี่คือเวลาสำหรับถามคำถาม พูดคุยเรื่องเงินเดือน และยืนยันว่าผู้สมัครตรงตามความคาดหวังของคุณ",
+        },
+        step3: {
+          title: "จ่ายหลังจับคู่สำเร็จ",
+          desc: "จ่ายค่าแนะนำหลังยืนยันการจับคู่",
+          details: [
+            "วิธีชำระเงิน: โอนเงิน, QR Code, บัตรเครดิต/เดบิต (ตามคำขอ)",
+            "ต้องชำระเต็มจำนวนก่อนเริ่มบริการ",
+            "การสนับสนุนหลังจับคู่: เราจะสนับสนุนทั้งคุณและพนักงานเพื่อให้เริ่มต้นได้อย่างราบรื่น",
+            "นโยบายเปลี่ยนตัว: หากเกิดปัญหา คุณสามารถเปลี่ยนพนักงานได้ตามแผนที่เลือก",
+          ],
+        },
+      },
+      pricing: {
+        title: "ค่าธรรมเนียมการใช้ระบบ",
+        subtitle: "ค่าธรรมเนียมครั้งเดียวเท่านั้น ไม่มีค่าใช้จ่ายแอบแฝง เงินเดือนพี่เลี้ยงกำหนดแยกต่างหาก",
+        mostPopular: "ยอดนิยม",
+        sendRequest: "ส่งคำขอ",
+        plans: [
+          {
+            name: "พาร์ทไทม์",
+            price: "6,000",
+            badge: "แผนประหยัด",
+            features: [
+              "สอบถามความต้องการล่วงหน้า",
+              "บริการสื่อสาร",
+              "เลือกได้สูงสุด 2 ครั้ง",
+            ],
+            note: "ชั่วโมงทำงานต่อสัปดาห์น้อยกว่า 30 ชั่วโมง",
+          },
+          {
+            name: "ฟูลไทม์",
+            price: "7,800",
+            badge: "แผนปกติ",
+            features: [
+              "สอบถามความต้องการล่วงหน้า",
+              "บริการสื่อสาร",
+              "เลือกได้สูงสุด 3 ครั้ง",
+            ],
+            note: "ภายใน 2 เดือน",
+          },
+          {
+            name: "ระยะสั้น",
+            price: "4,000",
+            badge: "แผนทดลอง",
+            features: [
+              "สอบถามความต้องการล่วงหน้า",
+              "บริการสื่อสาร",
+              "เลือกได้สูงสุด 1 ครั้ง",
+            ],
+            note: "5 ถึง 14 วัน",
+          },
+        ],
+      },
+      cta: {
+        title: "หาผู้ช่วยวันนี้!",
+        subtitle: "ส่งคำขอตอนนี้ จับคู่ได้ภายใน 24 ชั่วโมง",
+      },
     },
     faqPage: {
       title: "คำถามที่พบบ่อย",
-      subtitle: "คำตอบสำหรับคำถามทั่วไปเกี่ยวกับบริการ",
+      subtitle: "คำตอบสำหรับคำถามทั่วไปเกี่ยวกับบริการของเรา",
       items: [
         { q: "ใช้เวลาจับคู่นานแค่ไหน?", a: "ส่วนใหญ่พบคู่ที่เหมาะใน 3-7 วัน บางครอบครัวพบใน 24 ชั่วโมง" },
         { q: "พี่เลี้ยงพูดภาษาอะไรได้บ้าง?", a: "ไทย อังกฤษ ญี่ปุ่น จีน และอื่นๆ" },
@@ -1015,12 +1747,58 @@ const translations = {
         { q: "สัมภาษณ์ก่อนตัดสินใจได้ไหม?", a: "ได้แน่นอน! เราจัดสัมภาษณ์วิดีโอออนไลน์ให้" },
         { q: "รับชำระเงินแบบไหนบ้าง?", a: "โอนเงิน บัตรเครดิต และการชำระเงินดิจิทัลต่างๆ" },
       ],
+      categories: {
+        general: "ทั่วไป",
+        salaryCosts: "เงินเดือนและค่าใช้จ่าย",
+        serviceAgreement: "ข้อตกลงบริการ",
+        safetySecurity: "ความปลอดภัย",
+        tipsForSuccess: "เคล็ดลับความสำเร็จ",
+      },
+      general: {
+        q1: "ทำไมต้อง Hello Nanny?",
+        a1: "มีบริการแม่บ้านมากมายในกรุงเทพฯ แต่มีเพียงไม่กี่แห่งที่สามารถรับประกันคุณภาพระดับญี่ปุ่น เอาชนะอุปสรรคด้านภาษา และเริ่มต้นความร่วมมือทางธุรกิจได้อย่างราบรื่น เราเป็นบริษัทที่ช่วยเหลือผู้คนมากมายในอดีต Hello Nanny มุ่งมั่นที่จะให้บริการที่น่าเชื่อถือและไว้วางใจแก่ลูกค้า",
+        q2: "คุณจ้างคนประเภทไหน?",
+        a2: "ที่ Hello Nanny ผู้สมัครงานทุกคนจะได้รับการสัมภาษณ์ออนไลน์โดยตรง นอกจากนี้ เราคัดเลือกเฉพาะผู้ที่มีประสบการณ์และแรงจูงใจสูงผ่านเครือข่ายชุมชนของเราเอง เรายังเก็บสำเนาหนังสือเดินทางและบัตรประชาชนของผู้สมัครทุกคน",
+        q3: "ฉันสามารถสัมภาษณ์ผู้สมัครได้ไหม?",
+        a3: "เราสามารถจัดสัมภาษณ์ได้ดังนี้ คุณยังสามารถเปลี่ยนพี่เลี้ยงได้ตามแผนที่เลือกหลังจ้างงาน\n\n\u2022 ตัวเลือก 1: สัมภาษณ์ออนไลน์พร้อมทีมสนับสนุน (ค่าบริการ 400 บาท)\n\u2022 ตัวเลือก 2: สัมภาษณ์ออนไลน์โดยไม่มีทีมช่วย (ฟรี)\n\u2022 ตัวเลือก 3: สัมภาษณ์ตัวต่อตัวกับพี่เลี้ยงเท่านั้น (ต้องวางมัดจำ)",
+      },
+      salaryCosts: {
+        q1: "เงินเดือนประมาณเท่าไหร่?",
+        a1: "เงินเดือนขึ้นอยู่กับประสบการณ์และสถานะการจ้างงานก่อนหน้าของผู้สมัครเป็นหลัก ผู้ที่เดินทางมาทำงานจะได้รับเงินเดือนมากกว่าผู้ที่อยู่ประจำ (เนื่องจากต้องจ่ายค่าอาหารและค่าเดินทางเอง)",
+        q2: "เรื่องการทำงานล่วงเวลา?",
+        a2: "ปกติในประเทศไทยคือ 100 บาท/ชั่วโมง แต่แนะนำให้ทิปตามระดับเงินเดือน",
+        q3: "เรื่องการตรวจประวัติอาชญากรรม?",
+        a3: "หากต้องการตรวจประวัติอาชญากรรมของผู้สมัคร เราจัดการให้ได้ในราคา 1,000 บาทต่อคน",
+      },
+      serviceAgreement: {
+        q1: "ถ้าจับคู่ไม่ลงตัวล่ะ?",
+        a1: "Hello Nanny เสนอบริการเปลี่ยนพี่เลี้ยงหลังจ้างงาน ขึ้นอยู่กับแผนที่คุณเลือก หากต้องการเปลี่ยนแปลง กรุณาติดต่อเรา เราแนะนำให้เตรียมสัญญาเป็นลายลักษณ์อักษรหากมีข้อกังวล การยืนยันรายละเอียดก่อนจ้างงานจะช่วยลดปัญหาได้มาก โดยเฉพาะปัญหาเล็กน้อยจากการสื่อสารผิดพลาด สัญญาเป็นลายลักษณ์อักษรสามารถแก้ปัญหาเหล่านี้ได้",
+        q2: "ต้องทำสัญญาไหม?",
+        a2: "เรามีตัวอย่างสัญญาให้ใช้ฟรี หากต้องการเพิ่มข้อกำหนดนอกเหนือจากตัวอย่าง สามารถเพิ่มเติมได้",
+        q3: "วันหยุดนักขัตฤกษ์ของไทยเป็นอย่างไร?",
+        a3: "พี่เลี้ยงและแม่บ้านส่วนใหญ่หยุดตามปฏิทินวันหยุดไทย อย่างไรก็ตาม กรุณาหารือรายละเอียดกับผู้ที่คุณจ้าง",
+      },
+      safetySecurity: {
+        q1: "เรื่องการลักขโมย?",
+        a1: "เมื่อจ้างงาน ความกังวลที่พบบ่อยที่สุดคือเรื่องการลักขโมย เมื่อจ้างพี่เลี้ยง ต้องบันทึกสำเนาบัตรประชาชนหรือหนังสือเดินทาง ข้อมูลติดต่อ และที่อยู่บ้านไว้ที่บ้าน กรุณาเก็บของมีค่า สินค้าแบรนด์เนม และเงินสดในตู้ล็อคหรือเซฟ แม้เริ่มแรกไม่มีเจตนาร้าย แต่ไม่อาจรับประกันว่าจะไม่ถูกล่อลวงชั่ววูบ เพื่อป้องกัน สำคัญที่ต้องปฏิบัติเช่น ไม่ให้ยืมของ ไม่มอบกุญแจ และไม่วางเงินหรือสิ่งของในที่มองเห็นได้ โปรดทราบว่าเราไม่มีส่วนเกี่ยวข้องและไม่รับผิดชอบต่อปัญหาระหว่างครอบครัวกับแม่บ้านหรือพี่เลี้ยง",
+      },
+      tipsForSuccess: {
+        q1: "จะทำให้พี่เลี้ยงทำงานนานขึ้นได้อย่างไร?",
+        a1: "เราเชื่อว่าการที่นายจ้างลงมือสร้างความสัมพันธ์ที่ดีกับพี่เลี้ยงและทำให้เธอทำงานนานเป็นสิ่งสำคัญมาก สามข้อสำคัญ:\n\n1. จ่ายเงินเดือนที่เหมาะสม พิจารณาค่าอาหารหากอยู่ประจำ และค่าเดินทางหากเดินทางมาทำงาน หากเงินเดือนต่ำเกินไป เธอจะหางานใหม่ได้ง่าย\n\n2. อย่าตั้งกฎเกณฑ์เข้มงวดเกินไป แต่ต้องมีการดูแลที่จำเป็นขั้นต่ำ พี่เลี้ยงไม่ชอบกฎเข้มงวดและการจับตา ค่อยๆ ให้คำแนะนำในระยะยาวและสร้างสภาพแวดล้อมการทำงานที่สะดวกสบาย\n\n3. อย่าลืมชมเชย คำชมจะเป็นแรงจูงใจ สำคัญที่จะหาข้อดีและชมเชย แทนที่จะชี้แต่ข้อเสียเสมอ",
+      },
     },
     contactPage: {
-      title: "ติดต่อเรา",
-      subtitle: "มีคำถาม? ติดต่อเราผ่านช่องทางที่คุณสะดวก",
+      title: "ส่งคำขอ",
+      subtitle: "บอกเราเกี่ยวกับความต้องการของครอบครัวคุณ แล้วเราจะจับคู่พี่เลี้ยงหรือแม่บ้านที่เหมาะสมให้",
       formTitle: "ส่งคำขอ",
       formPlaceholder: "แบบฟอร์มติดต่อจะฝังที่นี่",
+      otherWays: "ช่องทางติดต่ออื่นๆ",
+      lineLabel: "LINE",
+      lineDesc: "บัญชีทางการ",
+      whatsappLabel: "WhatsApp",
+      officeTitle: "ข้อมูลสำนักงาน",
+      responseTitle: "เวลาตอบกลับ",
+      responseDesc: "โดยปกติเราจะตอบกลับภายใน 24 ชั่วโมงในวันทำการ สำหรับคำขอเร่งด่วน กรุณาติดต่อผ่าน LINE หรือ WhatsApp",
     },
     registerPage: {
       title: "ร่วมงานกับเรา",
@@ -1029,8 +1807,26 @@ const translations = {
       contactTitle: "ลงทะเบียนผ่าน:",
     },
     recruitPage: {
-      title: "ร่วมทีม",
-      subtitle: "เรากำลังมองหาคนที่มีความหลงใหลเข้าร่วม VANNESS ASIA",
+      title: "ร่วมทีมกับเรา",
+      subtitle: "เรากำลังมองหาคนที่มีความหลงใหลเพื่อช่วยเหลือครอบครัวในประเทศไทย",
+      whoTitle: "เรากำลังมองหาใคร",
+      whoDesc: "เรายินดีต้อนรับคนไทยที่มีประสบการณ์ด้านการดูแลเด็ก การจัดการบ้าน การสนับสนุนลูกค้า หรือการให้คำปรึกษา หากคุณรักการช่วยเหลือครอบครัวและมีทัศนคติเชิงบวก เราอยากรู้จักคุณ!",
+      positions: {
+        nanny: { title: "พี่เลี้ยง / เบบี้ซิตเตอร์", desc: "ดูแลเด็กสำหรับครอบครัวชาวต่างชาติที่อาศัยในกรุงเทพฯ มีประสบการณ์ดูแลเด็กจะพิจารณาเป็นพิเศษ" },
+        maid: { title: "แม่บ้าน / ผู้ดูแลบ้าน", desc: "ทำความสะอาด ทำอาหาร และจัดการบ้านสำหรับครอบครัวชาวต่างชาติและคนไทย" },
+        support: { title: "ฝ่ายสนับสนุนลูกค้า", desc: "ช่วยเหลือครอบครัวและพี่เลี้ยงในกระบวนการจับคู่ การนัดหมาย และการสื่อสาร" },
+        coordinator: { title: "ที่ปรึกษา / ผู้ประสานงาน", desc: "ช่วยประสานงานระหว่างครอบครัวและผู้ช่วย ทักษะหลายภาษาจะได้รับการพิจารณาเป็นพิเศษ" },
+      },
+      whyTitle: "ทำไมต้องทำงานกับเรา",
+      benefits: {
+        salary: { title: "เงินเดือนที่แข่งขันได้", desc: "เงินเดือนต่อรองได้ตามประสบการณ์และทักษะ" },
+        incentive: { title: "โปรแกรมสิ่งจูงใจ", desc: "สิ่งจูงใจและโบนัสตามผลงาน" },
+        schedule: { title: "ตารางเวลายืดหยุ่น", desc: "มีตัวเลือกพาร์ทไทม์ ฟูลไทม์ และอยู่ประจำ" },
+        team: { title: "ทีมที่สนับสนุน", desc: "เข้าร่วมทีมที่เป็นมิตรและหลากหลายวัฒนธรรมที่ให้คุณค่ากับการมีส่วนร่วมของคุณ" },
+      },
+      applyTitle: "สมัครเลย",
+      applyDesc: "กรอกแบบฟอร์มด้านล่างหรือติดต่อเราโดยตรง เราจะติดต่อกลับโดยเร็วที่สุด",
+      altContact: "หรือติดต่อเราโดยตรงผ่าน:",
     },
   },
 };

@@ -14,54 +14,19 @@ import {
   Mail,
 } from "lucide-react";
 import RecruitForm from "@/components/RecruitForm";
+import { useLocale } from "@/lib/LocaleContext";
+import type { LucideIcon } from "lucide-react";
 
-const positions = [
-  {
-    icon: Users,
-    title: "Nanny / Babysitter",
-    desc: "Childcare for foreign families living in Bangkok. Experience with children preferred.",
-  },
-  {
-    icon: Briefcase,
-    title: "Maid / Housekeeper",
-    desc: "Cleaning, cooking, and household management for expat and Thai families.",
-  },
-  {
-    icon: Heart,
-    title: "Customer Support",
-    desc: "Assist families and nannies with matching process, scheduling, and communications.",
-  },
-  {
-    icon: MessageCircle,
-    title: "Consulting / Coordinator",
-    desc: "Help coordinate between families and helpers. Multilingual skills are a plus.",
-  },
-];
+const positionIcons: LucideIcon[] = [Users, Briefcase, Heart, MessageCircle];
+const positionKeys = ["nanny", "maid", "support", "coordinator"] as const;
 
-const benefits = [
-  {
-    icon: DollarSign,
-    title: "Competitive Salary",
-    desc: "Salary is negotiable based on experience and skills.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Incentive Program",
-    desc: "Performance-based incentives and bonuses for great work.",
-  },
-  {
-    icon: Clock,
-    title: "Flexible Schedule",
-    desc: "Part-time, full-time, and live-in options available.",
-  },
-  {
-    icon: Users,
-    title: "Supportive Team",
-    desc: "Join a multicultural, friendly team that values your contributions.",
-  },
-];
+const benefitIcons: LucideIcon[] = [DollarSign, TrendingUp, Clock, Users];
+const benefitKeys = ["salary", "incentive", "schedule", "team"] as const;
 
 export default function RecruitPage() {
+  const { t } = useLocale();
+  const rp = t.recruitPage;
+
   return (
     <div className="min-h-screen">
       {/* Hero */}
@@ -76,11 +41,10 @@ export default function RecruitPage() {
         <div className="relative z-10 section-container text-center">
           <ScrollAnimation type="fade-in">
             <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
-              Join Our Team
+              {rp.title}
             </h1>
             <p className="text-white/80 text-lg max-w-2xl mx-auto">
-              We&apos;re looking for passionate people to help families in
-              Thailand
+              {rp.subtitle}
             </p>
           </ScrollAnimation>
         </div>
@@ -92,22 +56,21 @@ export default function RecruitPage() {
           <ScrollAnimation type="fade-in">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-extrabold text-brand-black mb-4">
-                Who We&apos;re Looking For
+                {rp.whoTitle}
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                We welcome Thai nationals with experience in childcare, household
-                management, customer support, or consulting. If you love helping
-                families and have a positive attitude, we want to hear from you!
+                {rp.whoDesc}
               </p>
             </div>
           </ScrollAnimation>
           <ScrollAnimation type="stagger">
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {positions.map((pos, i) => {
-                const Icon = pos.icon;
+              {positionKeys.map((key, i) => {
+                const Icon = positionIcons[i];
+                const pos = rp.positions[key];
                 return (
                   <div
-                    key={i}
+                    key={key}
                     className="bg-brand-gray-50 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center"
                   >
                     <div className="w-14 h-14 bg-brand-yellow/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -130,16 +93,17 @@ export default function RecruitPage() {
         <div className="section-container">
           <ScrollAnimation type="fade-in">
             <h2 className="text-3xl font-extrabold text-brand-black text-center mb-12">
-              Why Work With Us
+              {rp.whyTitle}
             </h2>
           </ScrollAnimation>
           <ScrollAnimation type="stagger">
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, i) => {
-                const Icon = benefit.icon;
+              {benefitKeys.map((key, i) => {
+                const Icon = benefitIcons[i];
+                const benefit = rp.benefits[key];
                 return (
                   <div
-                    key={i}
+                    key={key}
                     className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                   >
                     <div className="w-12 h-12 bg-brand-yellow rounded-xl flex items-center justify-center mb-4">
@@ -163,11 +127,10 @@ export default function RecruitPage() {
           <ScrollAnimation type="fade-in">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-extrabold text-brand-black mb-4">
-                Apply Now
+                {rp.applyTitle}
               </h2>
               <p className="text-gray-600">
-                Fill out the form below or contact us directly. We&apos;ll get
-                back to you as soon as possible.
+                {rp.applyDesc}
               </p>
             </div>
           </ScrollAnimation>
@@ -183,7 +146,7 @@ export default function RecruitPage() {
           <ScrollAnimation type="fade-in" delay={200}>
             <div className="mt-12 text-center">
               <p className="text-gray-500 mb-6">
-                Or contact us directly through:
+                {rp.altContact}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
