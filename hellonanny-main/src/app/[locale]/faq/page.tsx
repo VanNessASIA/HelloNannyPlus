@@ -20,6 +20,8 @@ function getFaqCategories(t: { faqPage: Record<string, any> }): FAQCategory[] {
         { q: fp.general.q1, a: fp.general.a1 },
         { q: fp.general.q2, a: fp.general.a2 },
         { q: fp.general.q3, a: fp.general.a3 },
+        { q: fp.general.q4, a: fp.general.a4 },
+        { q: fp.general.q5, a: fp.general.a5 },
       ],
     },
     {
@@ -29,6 +31,8 @@ function getFaqCategories(t: { faqPage: Record<string, any> }): FAQCategory[] {
         { q: fp.salaryCosts.q1, a: fp.salaryCosts.a1 },
         { q: fp.salaryCosts.q2, a: fp.salaryCosts.a2 },
         { q: fp.salaryCosts.q3, a: fp.salaryCosts.a3 },
+        { q: fp.salaryCosts.q4, a: fp.salaryCosts.a4 },
+        { q: fp.salaryCosts.q5, a: fp.salaryCosts.a5 },
       ],
     },
     {
@@ -38,6 +42,7 @@ function getFaqCategories(t: { faqPage: Record<string, any> }): FAQCategory[] {
         { q: fp.serviceAgreement.q1, a: fp.serviceAgreement.a1 },
         { q: fp.serviceAgreement.q2, a: fp.serviceAgreement.a2 },
         { q: fp.serviceAgreement.q3, a: fp.serviceAgreement.a3 },
+        { q: fp.serviceAgreement.q4, a: fp.serviceAgreement.a4 },
       ],
     },
     {
