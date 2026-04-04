@@ -103,6 +103,18 @@ export default function ProcessPage() {
                           </p>
                         </div>
                       )}
+                      {/* Payment logos on Step 3 */}
+                      {i === 2 && (
+                        <div className="mt-6">
+                          <p className="text-sm text-gray-500 mb-3">Payment Methods</p>
+                          <div className="flex items-center gap-3">
+                            <Image src="/images/payment/promptpay.svg" alt="PromptPay / Thai QR Payment" width={80} height={36} className="h-9 w-auto" />
+                            <Image src="/images/payment/visa.svg" alt="Visa" width={60} height={36} className="h-9 w-auto" />
+                            <Image src="/images/payment/mastercard.svg" alt="Mastercard" width={60} height={36} className="h-9 w-auto" />
+                          </div>
+                          <p className="text-xs text-gray-400 mt-2">(Bank transfer, QR Code payment, Credit/Debit card upon request)</p>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </ScrollAnimation>

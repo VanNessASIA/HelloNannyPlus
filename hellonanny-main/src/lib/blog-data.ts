@@ -1,7 +1,22 @@
-export const blogData = [
+export interface BlogPost {
+  slug: string;
+  title: string;
+  excerpt: string;
+  image: string;
+  date: string;
+  content: string;
+  sectionImages?: Record<number, string>; // section index -> image path
+}
+
+export const blogData: BlogPost[] = [
   {
     slug: "5Checkpoints",
     title: "5 Checkpoints to Evaluate If Your Nanny Is Truly Trustworthy",
+    sectionImages: {
+      1: "/images/resume-review.jpg",
+      3: "/images/mom-reading-kids.jpg",
+      5: "/images/headset-support.jpg",
+    },
     excerpt:
       "The short answer: the three keys to identifying a truly trustworthy nanny are verifying her background, observing how she interacts with your child, and assessing her ability to handle emergencies. Using a reputable placement agency makes it far easier to cover all three — efficiently and reliably.",
     image: "/images/nanny-playing-baby.jpg",
@@ -89,6 +104,11 @@ We follow up one week after the start date to check in with both parties. If the
   },
   {
     slug: "7Things",
+    sectionImages: {
+      2: "/images/couple-with-laptop.jpg",
+      4: "/images/cleaning-hands.jpg",
+      6: "/images/office-operators.jpg",
+    },
     title: "7 Things to Know Before Hiring a Nanny or Maid in Bangkok",
     excerpt:
       "The bottom line: when hiring a nanny or maid in Bangkok, the two most important things are defining the role clearly and using a trusted placement agency. Get these two right, and you dramatically reduce the risk of mismatches and problems down the line.",
@@ -201,6 +221,10 @@ Average matching time: just 3 days`,
   },
   {
     slug: "Interview_Success_Guide",
+    sectionImages: {
+      1: "/images/team-meeting.jpg",
+      3: "/images/happy-family.jpg",
+    },
     title: "Interview Success Guide for Nannies: How to Confidently Show Your Best Self",
     excerpt:
       "Meeting a new family can be both exciting and nerve-wracking. Especially during interviews, it's your chance to showcase your experience and personality. These days, online interviews have become more common.",
@@ -256,6 +280,10 @@ At Hello Nanny In Thailand, we offer full support to help you feel confident in 
   },
   {
     slug: "Salaries_2025Edition",
+    sectionImages: {
+      1: "/images/cleaning-hands.jpg",
+      3: "/images/baby-feet-heart.jpg",
+    },
     title: "How much are Nanny and Maid Salaries in Bangkok? [2025 Edition!!]",
     excerpt:
       "Hiring a nanny or maid in Bangkok can significantly improve your family's quality of life—especially for working parents or expat households. This guide covers everything you need to know about the current salary ranges, what factors affect pay, what additional costs to expect, and how to ensure a smooth, respectful working relationship.",
@@ -316,6 +344,11 @@ At Hello Nanny in Thailand, we connect families with experienced, reliable worke
   },
   {
     slug: "Complete_Guide_Hiring_Nanny_Maid_in_Thailand",
+    sectionImages: {
+      1: "/images/mom-baby-park.jpg",
+      3: "/images/team-portrait.jpg",
+      5: "/images/family-on-bed.jpg",
+    },
     title: "The Complete Guide to Hiring a Nanny Maid in Thailand: Essential Tips for Success",
     excerpt:
       "Hiring a nanny in Thailand is a great way to ease the burden of household chores and childcare, making daily life more comfortable. However, for first-time employers, the process of finding the right nanny and understanding what to look for can be overwhelming.",
@@ -399,6 +432,10 @@ Looking for the perfect nanny? Let Hello Nanny in Thailand help! We connect fami
   },
   {
     slug: "Nationality-Based_Characteristics",
+    sectionImages: {
+      2: "/images/team-meeting.jpg",
+      4: "/images/nanny-playing-baby.jpg",
+    },
     title: "Choosing the Right Nanny in Thailand: Nationality-Based Characteristics and Hiring Tips",
     excerpt:
       "When hiring a nanny, it is important to consider not only experience and skills but also nationality-based characteristics. Cultural background, language proficiency, and work style can significantly impact compatibility.",
@@ -466,6 +503,11 @@ Understanding the characteristics of different nationalities helps you choose th
   },
   {
     slug: "Success_Stories",
+    sectionImages: {
+      1: "/images/baby-crawling.jpg",
+      3: "/images/mom-with-phone.jpg",
+      5: "/images/baby-feet-heart.jpg",
+    },
     title: "Hiring a Nanny in Thailand: Key Considerations and Success Stories for a Smooth Start and Strong Relationship",
     excerpt:
       "Hiring a nanny can be a wonderful decision that enriches your family's life. However, if it's your first time hiring, you may have concerns or questions. This article provides practical tips for starting your nanny relationship smoothly and ensuring a long-term, positive working arrangement.",
@@ -559,6 +601,10 @@ At Hello Nanny in Thailand, we help families find the perfect nanny to suit thei
   },
   {
     slug: "The_Cost-Effectiveness",
+    sectionImages: {
+      2: "/images/couple-with-laptop.jpg",
+      4: "/images/resume-review.jpg",
+    },
     title: "Maximizing Value: Cost-Effective Tips for Hiring a Nanny or Maid in Thailand",
     excerpt:
       "When hiring a nanny or maid, costs are often a primary consideration. However, choosing the cheapest option may not always guarantee the quality of service you need. This article explores where to invest your money to ensure you get the best value and services from your nanny or maid.",
@@ -646,6 +692,10 @@ Hello Nanny in Thailand specializes in connecting families with experienced and 
   },
   {
     slug: "Hiring_a_Nanny_for_the_First_Time",
+    sectionImages: {
+      1: "/images/happy-family.jpg",
+      3: "/images/mom-reading-kids.jpg",
+    },
     title: "Successfully Hiring Your First Nanny in Bangkok: Tips to Build Trust and Start Strong",
     excerpt:
       "Congratulations on your new life in Bangkok! Adjusting to a new environment while managing childcare and household tasks can be challenging. However, with the help of a nanny or maid, your transition can become much smoother.",
@@ -735,6 +785,11 @@ The relationship with your nanny or maid plays a vital role in enhancing your fa
   },
   {
     slug: "Building_Trust_and_Longevity",
+    sectionImages: {
+      1: "/images/cleaner-making-bed.jpg",
+      3: "/images/team-portrait.jpg",
+      5: "/images/office-operators.jpg",
+    },
     title: "Why Your Nanny or Maid Keeps Leaving—and How to Build Lasting Relationships in Bangkok",
     excerpt:
       "If you've hired a nanny or maid in Bangkok, Thailand, only to see them leave soon after, you're not alone. Managing a household is already challenging, and finding a trustworthy nanny or maid who stays long-term can feel even harder.",

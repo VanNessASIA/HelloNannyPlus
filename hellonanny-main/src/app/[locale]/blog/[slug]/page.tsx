@@ -30,6 +30,9 @@ export default function BlogPostPage() {
   // Find related posts (exclude current)
   const relatedPosts = blogData.filter((p) => p.slug !== slug).slice(0, 3);
 
+  // Section images from blog data
+  const sectionImages = post.sectionImages || {};
+
   // Parse content into rich blocks
   const renderContent = (content: string) => {
     const blocks = content.split("\n\n");
@@ -43,14 +46,28 @@ export default function BlogPostPage() {
       if (/^(Checkpoint|Step)\s+\d+/i.test(trimmed) || /^#{2}\s/.test(trimmed)) {
         sectionIndex++;
         const text = trimmed.replace(/^#{2}\s/, "");
+        const sectionImg = sectionImages[sectionIndex];
         return (
-          <div key={i} className="mt-12 mb-6 flex items-start gap-4">
-            <div className="w-10 h-10 bg-brand-yellow rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
-              <span className="text-sm font-extrabold text-brand-black">{sectionIndex}</span>
+          <div key={i}>
+            {sectionImg && (
+              <div className="my-8 rounded-2xl overflow-hidden shadow-md">
+                <Image
+                  src={sectionImg}
+                  alt={text}
+                  width={800}
+                  height={400}
+                  className="w-full h-56 md:h-72 object-cover"
+                />
+              </div>
+            )}
+            <div className="mt-12 mb-6 flex items-start gap-4">
+              <div className="w-10 h-10 bg-brand-yellow rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                <span className="text-sm font-extrabold text-brand-black">{sectionIndex}</span>
+              </div>
+              <h2 className="text-2xl font-bold text-brand-black leading-snug">
+                {text}
+              </h2>
             </div>
-            <h2 className="text-2xl font-bold text-brand-black leading-snug">
-              {text}
-            </h2>
           </div>
         );
       }
@@ -75,16 +92,30 @@ export default function BlogPostPage() {
       }
 
       // Numbered headings like "1. Something"
-      if (/^\d+\.\s/.test(trimmed) && trimmed.length < 100 && !trimmed.includes('. ') && trimmed.split('.').length <= 2) {
+      if (/^\d+\.\s/.test(trimmed) && trimmed.length < 100 && trimmed.split('.').length <= 2) {
         sectionIndex++;
+        const sectionImg = sectionImages[sectionIndex];
         return (
-          <div key={i} className="mt-12 mb-6 flex items-start gap-4">
-            <div className="w-10 h-10 bg-brand-yellow rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
-              <span className="text-sm font-extrabold text-brand-black">{sectionIndex}</span>
+          <div key={i}>
+            {sectionImg && (
+              <div className="my-8 rounded-2xl overflow-hidden shadow-md">
+                <Image
+                  src={sectionImg}
+                  alt={trimmed}
+                  width={800}
+                  height={400}
+                  className="w-full h-56 md:h-72 object-cover"
+                />
+              </div>
+            )}
+            <div className="mt-12 mb-6 flex items-start gap-4">
+              <div className="w-10 h-10 bg-brand-yellow rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                <span className="text-sm font-extrabold text-brand-black">{sectionIndex}</span>
+              </div>
+              <h2 className="text-2xl font-bold text-brand-black leading-snug">
+                {trimmed}
+              </h2>
             </div>
-            <h2 className="text-2xl font-bold text-brand-black leading-snug">
-              {trimmed}
-            </h2>
           </div>
         );
       }

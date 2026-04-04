@@ -446,7 +446,7 @@ export default function Home() {
                   </p>
                   <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
                     <Image
-                      src={`https://api.dicebear.com/7.x/initials/svg?seed=${review.name}&backgroundColor=FFC107`}
+                      src={`/images/avatars/${["emily", "yuki", "pierre", "wei", "carlos", "somchai"][i]}.svg`}
                       alt={review.name}
                       width={40}
                       height={40}

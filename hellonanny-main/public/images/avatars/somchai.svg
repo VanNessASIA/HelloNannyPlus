@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F6D365"/>
+      <stop offset="100%" style="stop-color:#FDA085"/>
+    </linearGradient>
+  </defs>
+  <circle cx="60" cy="60" r="60" fill="url(#bg)"/>
+  <!-- Hair -->
+  <ellipse cx="60" cy="35" rx="29" ry="23" fill="#1A1A1A"/>
+  <path d="M31 38 Q35 28 47 26 Q39 34 37 44 Z" fill="#1A1A1A"/>
+  <path d="M89 38 Q85 28 73 26 Q81 34 83 44 Z" fill="#1A1A1A"/>
+  <!-- Face -->
+  <ellipse cx="60" cy="55" rx="24" ry="26" fill="#D4A06A"/>
+  <!-- Eyes -->
+  <ellipse cx="50" cy="52" rx="3" ry="3" fill="#1A1A1A"/>
+  <ellipse cx="70" cy="52" rx="3" ry="3" fill="#1A1A1A"/>
+  <circle cx="51" cy="51" r="1" fill="white"/>
+  <circle cx="71" cy="51" r="1" fill="white"/>
+  <!-- Eyebrows -->
+  <path d="M44 46 Q50 43 56 46" stroke="#1A1A1A" stroke-width="1.5" fill="none"/>
+  <path d="M64 46 Q70 43 76 46" stroke="#1A1A1A" stroke-width="1.5" fill="none"/>
+  <!-- Nose -->
+  <path d="M57 56 Q60 61 63 56" stroke="#C4956A" stroke-width="1.2" fill="none"/>
+  <!-- Wide smile -->
+  <path d="M48 64 Q60 76 72 64" stroke="#A0604A" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M50 64 Q60 72 70 64" fill="white"/>
+  <!-- Blush -->
+  <circle cx="42" cy="60" r="5" fill="#FFB5B5" opacity="0.3"/>
+  <circle cx="78" cy="60" r="5" fill="#FFB5B5" opacity="0.3"/>
+  <!-- Body/Shirt -->
+  <path d="M30 95 Q32 82 60 80 Q88 82 90 95 L90 120 L30 120 Z" fill="#FFB347"/>
+  <!-- Collar detail -->
+  <circle cx="60" cy="86" r="3" fill="#E8A030"/>
+</svg>
