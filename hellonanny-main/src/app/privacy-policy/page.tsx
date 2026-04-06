@@ -1,2 +1,9 @@
-import { redirect } from "next/navigation";
-export default function Page() { redirect("/en/privacy-policy"); }
+"use client";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+
+export default function Page() {
+  const router = useRouter();
+  useEffect(() => { router.replace("/en/privacy-policy"); }, [router]);
+  return null;
+}

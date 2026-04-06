@@ -17,6 +17,8 @@ const howFoundOptions = [
 
 export default function RequestForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [salaryRateType, setSalaryRateType] = useState<"month" | "hour">("month");
+  const [isAsap, setIsAsap] = useState(false);
   const [form, setForm] = useState({
     firstName: "",
     familyName: "",
@@ -52,11 +54,20 @@ export default function RequestForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
+    const combinedSalary = form.salaryBudget
+      ? `${form.salaryBudget}/${salaryRateType}`
+      : "";
+    const combinedStartDate = isAsap ? "ASAP" : form.startDate;
     try {
       const res = await fetch("/api/submit-form", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ formType: "request", ...form }),
+        body: JSON.stringify({
+          formType: "request",
+          ...form,
+          salaryBudget: combinedSalary,
+          startDate: combinedStartDate,
+        }),
       });
       const data = await res.json();
       if (data.status === "success") {
@@ -285,26 +296,54 @@ export default function RequestForm() {
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-1.5">
-                Salary Budget (THB/month)
+                Salary Budget (THB)
               </label>
-              <input
-                type="text"
-                value={form.salaryBudget}
-                onChange={(e) => update("salaryBudget", e.target.value)}
-                placeholder="e.g., 15,000 - 20,000"
-                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-yellow focus:ring-2 focus:ring-brand-yellow/20 outline-none transition-all bg-white"
-              />
+              <div className="flex gap-2">
+                <select
+                  value={salaryRateType}
+                  onChange={(e) => setSalaryRateType(e.target.value as "month" | "hour")}
+                  className="px-3 py-3 rounded-xl border border-gray-200 focus:border-brand-yellow focus:ring-2 focus:ring-brand-yellow/20 outline-none transition-all bg-white text-sm font-medium text-gray-700 shrink-0"
+                >
+                  <option value="month">Monthly</option>
+                  <option value="hour">Hourly</option>
+                </select>
+                <input
+                  type="text"
+                  value={form.salaryBudget}
+                  onChange={(e) => update("salaryBudget", e.target.value)}
+                  placeholder={salaryRateType === "month" ? "e.g., 15,000" : "e.g., 100"}
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-yellow focus:ring-2 focus:ring-brand-yellow/20 outline-none transition-all bg-white"
+                />
+              </div>
             </div>
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-1.5">
                 Preferred Start Date
               </label>
-              <input
-                type="date"
-                value={form.startDate}
-                onChange={(e) => update("startDate", e.target.value)}
-                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-yellow focus:ring-2 focus:ring-brand-yellow/20 outline-none transition-all bg-white"
-              />
+              <div className="space-y-2">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setIsAsap(!isAsap);
+                    if (!isAsap) update("startDate", "");
+                  }}
+                  className={`px-4 py-1.5 rounded-full text-sm font-medium border-2 transition-all ${
+                    isAsap
+                      ? "border-brand-yellow bg-brand-yellow/10 text-brand-black"
+                      : "border-gray-200 text-gray-500 hover:border-gray-300"
+                  }`}
+                >
+                  ASAP
+                </button>
+                {!isAsap && (
+                  <input
+                    type="date"
+                    value={form.startDate}
+                    onChange={(e) => update("startDate", e.target.value)}
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-yellow focus:ring-2 focus:ring-brand-yellow/20 outline-none transition-all bg-white"
+                  />
+                )}
+              </div>
             </div>
           </div>
         </div>
@@ -358,7 +397,7 @@ export default function RequestForm() {
 
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-2.5">
-              How did you hear about us?
+              How did you hear about us? <span className="text-red-400">*</span>
             </label>
             <div className="flex flex-wrap gap-2">
               {howFoundOptions.map((opt) => (
@@ -376,6 +415,15 @@ export default function RequestForm() {
                 </button>
               ))}
             </div>
+            <input
+              type="text"
+              required
+              value={form.howFound}
+              onChange={() => {}}
+              className="sr-only"
+              aria-hidden="true"
+              tabIndex={-1}
+            />
           </div>
         </div>
       </div>

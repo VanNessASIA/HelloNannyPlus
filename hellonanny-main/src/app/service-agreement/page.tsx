@@ -1,2 +1,9 @@
-import { redirect } from "next/navigation";
-export default function Page() { redirect("/en/service-agreement"); }
+"use client";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+
+export default function Page() {
+  const router = useRouter();
+  useEffect(() => { router.replace("/en/service-agreement"); }, [router]);
+  return null;
+}

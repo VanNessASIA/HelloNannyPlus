@@ -1,4 +1,9 @@
-import { redirect } from "next/navigation";
+"use client";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+
 export default function RootPage() {
-  redirect("/en");
+  const router = useRouter();
+  useEffect(() => { router.replace("/en"); }, [router]);
+  return null;
 }
