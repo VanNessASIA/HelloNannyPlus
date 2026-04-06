@@ -21,54 +21,54 @@ import {
 const PLANS = [
   {
     id: "short",
-    tag: "バケーション向け",
-    name: "ショートタームプラン",
+    tag: "For Vacations",
+    name: "Short-term Plan",
     nameEn: "Short-term (Vacation Plan)",
     price: "4,000",
     unit: "THB",
-    period: "5〜14日間",
+    period: "5–14 days",
     popular: false,
     color: "border-gray-200",
     features: [
-      "候補者1名のご紹介",
-      "事前ヒアリング",
-      "コミュニケーションサポート",
-      "短期・旅行中のサポートに最適",
+      "1 candidate introduction",
+      "Pre-request consultation",
+      "Communication support",
+      "Perfect for short stays & holidays",
     ],
   },
   {
     id: "parttime",
-    tag: "お試しに",
-    name: "パートタイムプラン",
+    tag: "Flexible Option",
+    name: "Part-time Plan",
     nameEn: "Part-time",
     price: "6,000",
     unit: "THB",
-    period: "週30時間未満",
+    period: "Under 30 hrs / week",
     popular: false,
     color: "border-gray-200",
     features: [
-      "候補者2名までご紹介",
-      "事前ヒアリング",
-      "コミュニケーションサポート",
-      "週数回のサポートに最適",
+      "Up to 2 candidate introductions",
+      "Pre-request consultation",
+      "Communication support",
+      "Great for a few days per week",
     ],
   },
   {
     id: "fulltime",
-    tag: "人気No.1",
-    name: "フルタイムプラン",
+    tag: "Most Popular",
+    name: "Full-time Plan",
     nameEn: "Full-time",
     price: "7,800",
     unit: "THB",
-    period: "週30時間以上",
+    period: "30+ hrs / week",
     popular: true,
     color: "border-brand-yellow",
     features: [
-      "候補者3名まで（2ヶ月以内）",
-      "事前ヒアリング",
-      "コミュニケーションサポート",
-      "毎日のサポートに最適",
-      "フォローアップサポート付き",
+      "Up to 3 candidates (within 2 months)",
+      "Pre-request consultation",
+      "Communication support",
+      "Ideal for daily household support",
+      "Follow-up support included",
     ],
   },
 ];
@@ -76,78 +76,75 @@ const PLANS = [
 const REASONS = [
   {
     icon: Users,
-    title: "2,000名以上の登録スタッフ",
-    desc: "豊富なネットワークから、ご家族のニーズに合った最適な候補者をご紹介します。",
+    title: "2,000+ Registered Staff",
+    desc: "A large network of vetted nannies and maids ready to match your family's specific needs.",
   },
   {
     icon: Shield,
-    title: "全員身元確認済み",
-    desc: "登録スタッフは全員、弊社チームによる面接と身元確認を受けています。安心してお任せください。",
+    title: "100% Background Checked",
+    desc: "Every candidate is personally interviewed and background-verified by our team before introduction.",
   },
   {
     icon: Clock,
-    title: "最短即日マッチング",
-    desc: "リクエスト受領後24時間以内の候補者ご紹介を目指しています。お急ぎの方も安心です。",
+    title: "Same-Day Matching",
+    desc: "We aim to introduce candidates within 24 hours of your request. No long waiting times.",
   },
   {
     icon: MessageCircle,
-    title: "4言語完全対応",
-    desc: "日本語・英語・中国語・タイ語に対応。言語の壁なく、スムーズにコミュニケーションできます。",
+    title: "4-Language Support",
+    desc: "We speak English, Japanese, Chinese, and Thai — no language barriers between you and your helper.",
   },
   {
     icon: Heart,
-    title: "マッチング後払い",
-    desc: "採用が決まるまで一切費用はかかりません。気に入った候補者が見つかってからのお支払いです。",
+    title: "Pay After Hiring",
+    desc: "Zero upfront cost. You only pay the matching fee once you've found the right person.",
   },
 ];
 
 const STEPS = [
   {
     num: "01",
-    title: "無料相談・リクエスト送信",
-    desc: "LINEまたはフォームから、ご希望のサービス、スケジュール、ご予算をお知らせください。",
-    icon: MessageCircle,
+    title: "Free Consultation & Request",
+    desc: "Tell us your needs via LINE or our form — service type, schedule, budget, and any preferences.",
   },
   {
     num: "02",
-    title: "候補者のご紹介・面接",
-    desc: "厳選された候補者をご紹介。ビデオ面接で直接確認できるので、ご自宅からでも安心です。",
-    icon: Users,
+    title: "Meet Your Candidates",
+    desc: "We hand-pick matched candidates for you. Video interviews from home — no need to go anywhere.",
   },
   {
     num: "03",
-    title: "採用決定後にお支払い",
-    desc: "気に入った方が見つかってからのお支払い。採用前に費用は一切かかりません。",
-    icon: Heart,
+    title: "Hire & Pay After",
+    desc: "Found the right fit? Then you pay. No charges until you're happy with your match.",
   },
 ];
 
 const REVIEWS = [
   {
-    text: "Hello Nannyのおかげで1週間以内に素晴らしいナニーが見つかりました。プロセスがとてもスムーズで、スタッフのサポートも丁寧でした。",
+    text: "Thanks to Hello Nanny, we found an amazing nanny within a week. The whole process was incredibly smooth and the staff support was wonderful.",
     name: "Emily R.",
-    family: "シンガポール人家族",
+    family: "Singaporean Family",
     avatar: "/images/avatars/emily.svg",
     rating: 5,
   },
   {
-    text: "バンコクで日本語を話せるナニーを見つけられるか不安でしたが、Hello Nannyが実現してくれました！本当に助かっています。",
+    text: "I was worried about finding a Japanese-speaking nanny in Bangkok, but Hello Nanny made it happen! She's wonderful and we couldn't be happier.",
     name: "Yuki T.",
-    family: "日本人家族",
+    family: "Japanese Family",
     avatar: "/images/avatars/yuki.svg",
     rating: 5,
   },
   {
-    text: "ビデオ面接が便利でした。決める前に候補者と直接話せて、安心して採用できました。とてもプロフェッショナルなサービスです。",
+    text: "The video interview feature was brilliant. Being able to meet candidates before deciding gave us total peace of mind. Very professional service.",
     name: "Pierre D.",
-    family: "フランス人家族",
+    family: "French Family",
     avatar: "/images/avatars/pierre.svg",
     rating: 5,
   },
   {
-    text: "手頃な料金で信頼できるサービスです。Hello Nannyでメイドを見つけ、もう1年以上一緒に生活しています。",
+    text: "Affordable and reliable. We found our housekeeper through Hello Nanny and she's been with us for over a year now. Highly recommended.",
     name: "Wei L.",
-    family: "中国人家族",
+    family: "Chinese Family",
     avatar: "/images/avatars/wei.svg",
     rating: 5,
   },
@@ -155,24 +152,24 @@ const REVIEWS = [
 
 const FAQS = [
   {
-    q: "相談は本当に無料ですか？",
-    a: "はい、完全無料です。採用が決まった時点でのみ、マッチング費用（プランに応じた金額）をいただきます。",
+    q: "Is the initial consultation really free?",
+    a: "Yes, completely free. You only pay the matching fee (based on your chosen plan) once you decide to hire someone.",
   },
   {
-    q: "どのくらいで候補者を紹介してもらえますか？",
-    a: "通常、リクエスト受領後24時間以内に候補者をご紹介しています。最短で即日のご紹介も可能です。",
+    q: "How quickly can you introduce candidates?",
+    a: "We typically introduce candidates within 24 hours of receiving your request. Same-day introductions are also possible.",
   },
   {
-    q: "日本語で対応してもらえますか？",
-    a: "はい、日本語スタッフが対応いたします。また日本語を話せるナニー・メイドのご紹介も可能です。",
+    q: "Do you offer support in English?",
+    a: "Absolutely. Our team supports English, Japanese, Chinese, and Thai. We can also match you with helpers who speak your preferred language.",
   },
   {
-    q: "候補者が合わなかった場合はどうなりますか？",
-    a: "プランに応じた人数（1〜3名）の候補者をご紹介しています。合わない場合は次の候補者をご提案します。",
+    q: "What if the candidate isn't the right fit?",
+    a: "Depending on your plan, we introduce 1–3 candidates. If none of them are suitable, we'll work with you to find better options.",
   },
   {
-    q: "バンコク以外でも利用できますか？",
-    a: "現在はバンコクを中心にサービスを提供しています。エリア外の場合はお問い合わせください。",
+    q: "Do you only operate in Bangkok?",
+    a: "We primarily serve Bangkok. If you're outside the central area, please contact us and we'll do our best to help.",
   },
 ];
 
@@ -200,13 +197,13 @@ export default function LP1() {
               className="hidden sm:flex items-center gap-1.5 px-4 py-2 bg-[#06C755] text-white text-sm font-semibold rounded-full hover:bg-[#05b34c] transition-colors"
             >
               <MessageCircle className="w-4 h-4" />
-              LINE相談
+              Chat on LINE
             </a>
             <Link
-              href="/ja/contact"
+              href="/en/contact"
               className="flex items-center gap-1.5 px-4 py-2 bg-[#FFC107] text-[#1A1A1A] text-sm font-bold rounded-full hover:bg-[#E5AC00] transition-colors"
             >
-              無料相談
+              Free Consultation
               <ChevronRight className="w-4 h-4" />
             </Link>
           </div>
@@ -217,7 +214,7 @@ export default function LP1() {
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <Image
           src="/images/mom-baby-park.jpg"
-          alt="バンコクで子育てする家族"
+          alt="Family in Bangkok park"
           fill
           className="object-cover object-[30%_50%] md:object-center"
           priority
@@ -229,43 +226,46 @@ export default function LP1() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-[#FFC107] text-[#1A1A1A] px-4 py-1.5 rounded-full text-sm font-bold mb-6">
               <Sparkles className="w-4 h-4" />
-              バンコクNo.1 ナニー・メイド紹介サービス
+              Bangkok&apos;s #1 Nanny &amp; Maid Matching Service
             </div>
 
             <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
-              信頼できる
+              Find a Trusted
               <br />
-              <span className="text-[#FFC107]">ナニー・メイド</span>を
+              <span className="text-[#FFC107]">Nanny or Maid</span>
               <br />
-              最短即日マッチング
+              in Bangkok — Fast.
             </h1>
 
             <p className="text-white/90 text-lg md:text-xl mb-4 leading-relaxed">
-              バンコク在住のご家族をサポート。
+              Supporting expat families across Bangkok.
               <br />
-              全員身元確認済み・日本語対応・<strong className="text-white">採用後のみお支払い</strong>。
+              All staff background-checked. Multilingual team.{" "}
+              <strong className="text-white">Pay only after hiring.</strong>
             </p>
 
             {/* Trust badges */}
             <div className="flex flex-wrap gap-3 mb-8">
-              {["2,000名以上の登録スタッフ", "全員身元確認済み", "前払い不要"].map((badge) => (
-                <span
-                  key={badge}
-                  className="flex items-center gap-1.5 bg-white/20 backdrop-blur-sm text-white text-sm px-3 py-1.5 rounded-full border border-white/30"
-                >
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#FFC107]" />
-                  {badge}
-                </span>
-              ))}
+              {["2,000+ Registered Staff", "100% Background Checked", "No Upfront Payment"].map(
+                (badge) => (
+                  <span
+                    key={badge}
+                    className="flex items-center gap-1.5 bg-white/20 backdrop-blur-sm text-white text-sm px-3 py-1.5 rounded-full border border-white/30"
+                  >
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#FFC107]" />
+                    {badge}
+                  </span>
+                )
+              )}
             </div>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
-                href="/ja/contact"
+                href="/en/contact"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#FFC107] text-[#1A1A1A] text-base font-extrabold rounded-full hover:bg-[#E5AC00] transition-all hover:-translate-y-0.5 shadow-lg"
               >
-                無料でリクエストを送る
+                Send a Free Request
                 <ChevronRight className="w-5 h-5" />
               </Link>
               <a
@@ -275,11 +275,11 @@ export default function LP1() {
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#06C755] text-white text-base font-bold rounded-full hover:bg-[#05b34c] transition-all hover:-translate-y-0.5 shadow-lg"
               >
                 <MessageCircle className="w-5 h-5" />
-                LINEで相談する
+                Chat on LINE
               </a>
             </div>
             <p className="text-white/60 text-sm mt-3">
-              ※ 採用が決まるまで費用は一切かかりません
+              No payment required until you hire
             </p>
           </div>
         </div>
@@ -291,20 +291,20 @@ export default function LP1() {
           <div className="text-center mb-10">
             <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-red-50 text-red-600 text-sm font-semibold rounded-full mb-4">
               <AlertCircle className="w-4 h-4" />
-              こんなお悩みはありませんか？
+              Sound familiar?
             </span>
             <h2 className="text-2xl md:text-3xl font-extrabold text-[#1A1A1A]">
-              バンコクでの育児・家事、一人で抱え込んでいませんか？
+              Finding reliable help in Bangkok shouldn&apos;t be this hard.
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              "信頼できるナニーをどこで探せばいいかわからない",
-              "タイ語でのやりとりに不安がある",
-              "面接や採用手続きが大変そうで踏み出せない",
-              "子どもと相性の良いナニーを見つけられるか心配",
-              "バケーション中だけ短期でサポートしてほしい",
-              "毎日の家事が追いつかず疲弊している",
+              "Don't know where to find a trustworthy nanny in Bangkok",
+              "Worried about language barriers with Thai-speaking helpers",
+              "The interview and hiring process feels overwhelming",
+              "Not sure if the helper will get along well with your kids",
+              "Need short-term support during holidays or a vacation",
+              "Household chores are piling up and you're exhausted",
             ].map((pain) => (
               <div
                 key={pain}
@@ -319,7 +319,7 @@ export default function LP1() {
           </div>
           <div className="text-center mt-8">
             <p className="text-lg font-bold text-[#1A1A1A]">
-              そのお悩み、<span className="text-[#E5AC00]">Hello Nanny</span>が解決します。
+              <span className="text-[#E5AC00]">Hello Nanny</span> takes care of all of it.
             </p>
           </div>
         </div>
@@ -330,10 +330,10 @@ export default function LP1() {
         <div className="max-w-5xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             {[
-              { num: "2,000+", label: "登録スタッフ数", icon: Users },
-              { num: "500+", label: "サポートしたご家族", icon: Heart },
-              { num: "100%", label: "身元確認済み", icon: Shield },
-              { num: "24h", label: "最短マッチング", icon: Clock },
+              { num: "2,000+", label: "Registered Staff", icon: Users },
+              { num: "500+", label: "Families Served", icon: Heart },
+              { num: "100%", label: "Background Checked", icon: Shield },
+              { num: "24h", label: "Same-Day Match", icon: Clock },
             ].map(({ num, label, icon: Icon }) => (
               <div key={label} className="bg-white/30 backdrop-blur rounded-2xl p-4">
                 <Icon className="w-6 h-6 text-[#1A1A1A] mx-auto mb-2" />
@@ -350,15 +350,15 @@ export default function LP1() {
         <div className="max-w-5xl mx-auto px-4">
           <div className="text-center mb-12">
             <span className="inline-block px-4 py-1.5 bg-[#FFC107]/20 text-[#E5AC00] text-sm font-semibold rounded-full mb-4">
-              選ばれる理由
+              Why Choose Us
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1A1A] mb-4">
-              Hello Nannyが
+              Why Bangkok Families
               <br className="sm:hidden" />
-              バンコクNO.1の理由
+              {" "}Choose Hello Nanny
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              2020年のサービス開始以来、500以上のご家族から信頼をいただいています。
+              Trusted by 500+ families since 2020. Here&apos;s what makes us different.
             </p>
           </div>
 
@@ -384,15 +384,14 @@ export default function LP1() {
         <div className="max-w-5xl mx-auto px-4">
           <div className="text-center mb-12">
             <span className="inline-block px-4 py-1.5 bg-[#FFC107]/20 text-[#E5AC00] text-sm font-semibold rounded-full mb-4">
-              ご利用の流れ
+              How It Works
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1A1A]">
-              かんたん3ステップ
+              3 Simple Steps
             </h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 relative">
-            {/* Connector line - desktop only */}
             <div className="hidden md:block absolute top-12 left-1/4 right-1/4 h-0.5 bg-[#FFC107]/40 z-0" />
 
             {STEPS.map(({ num, title, desc }, i) => (
@@ -408,36 +407,46 @@ export default function LP1() {
 
           <div className="text-center mt-12">
             <Link
-              href="/ja/contact"
+              href="/en/contact"
               className="inline-flex items-center gap-2 px-10 py-4 bg-[#FFC107] text-[#1A1A1A] font-extrabold text-lg rounded-full hover:bg-[#E5AC00] transition-all hover:-translate-y-0.5 shadow-lg"
             >
-              今すぐ無料相談する
+              Get Started for Free
               <ChevronRight className="w-5 h-5" />
             </Link>
-            <p className="text-gray-400 text-sm mt-3">前払い不要・採用後のみお支払い</p>
+            <p className="text-gray-400 text-sm mt-3">No upfront payment · Pay only after hiring</p>
           </div>
         </div>
       </section>
 
-      {/* ===== SERVICE IMAGE ===== */}
+      {/* ===== SERVICE TYPES ===== */}
       <section className="py-20 bg-white overflow-hidden">
         <div className="max-w-5xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div>
               <span className="inline-block px-4 py-1.5 bg-[#FFC107]/20 text-[#E5AC00] text-sm font-semibold rounded-full mb-4">
-                サービス内容
+                Our Services
               </span>
               <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1A1A] mb-6">
-                ナニー・メイド・
-                <br />
-                どちらもお任せください
+                Nanny, Maid, or Both —<br />We&apos;ve Got You Covered
               </h2>
               <ul className="space-y-4">
                 {[
-                  { title: "住み込みナニー (Live-in)", desc: "24時間サポート。子育て中の家族に最適" },
-                  { title: "通いナニー (Live-out)", desc: "指定時間のみのサポート。柔軟なスケジュール" },
-                  { title: "メイド・家政婦", desc: "掃除・洗濯・料理など家事全般をサポート" },
-                  { title: "短期・バケーション向け", desc: "旅行中・帰省中のスポットサポートにも対応" },
+                  {
+                    title: "Live-in Nanny",
+                    desc: "Round-the-clock support. Ideal for families with young children.",
+                  },
+                  {
+                    title: "Live-out Nanny",
+                    desc: "Support during set hours. Flexible and adjustable to your schedule.",
+                  },
+                  {
+                    title: "Maid / Housekeeper",
+                    desc: "Cleaning, laundry, cooking, and all household tasks taken care of.",
+                  },
+                  {
+                    title: "Short-term / Vacation Support",
+                    desc: "Need cover during a trip or holiday? We offer short-term placements too.",
+                  },
                 ].map(({ title, desc }) => (
                   <li key={title} className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-[#FFC107] flex-shrink-0 mt-0.5" />
@@ -451,16 +460,36 @@ export default function LP1() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="relative rounded-2xl overflow-hidden h-52">
-                <Image src="/images/nanny-playing-baby.jpg" alt="ナニーと赤ちゃん" fill className="object-cover" />
+                <Image
+                  src="/images/nanny-playing-baby.jpg"
+                  alt="Nanny with baby"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="relative rounded-2xl overflow-hidden h-52 mt-8">
-                <Image src="/images/cleaner-making-bed.jpg" alt="メイドによる家事" fill className="object-cover" />
+                <Image
+                  src="/images/cleaner-making-bed.jpg"
+                  alt="Housekeeper making bed"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="relative rounded-2xl overflow-hidden h-52 -mt-8">
-                <Image src="/images/baby-crawling.jpg" alt="赤ちゃんとケア" fill className="object-cover" />
+                <Image
+                  src="/images/baby-crawling.jpg"
+                  alt="Baby with care"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="relative rounded-2xl overflow-hidden h-52">
-                <Image src="/images/happy-family.jpg" alt="幸せな家族" fill className="object-cover" />
+                <Image
+                  src="/images/happy-family.jpg"
+                  alt="Happy family"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
@@ -472,13 +501,13 @@ export default function LP1() {
         <div className="max-w-5xl mx-auto px-4">
           <div className="text-center mb-12">
             <span className="inline-block px-4 py-1.5 bg-[#FFC107]/20 text-[#E5AC00] text-sm font-semibold rounded-full mb-4">
-              料金プラン
+              Pricing
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1A1A] mb-4">
-              シンプルな料金体系
+              Simple, Transparent Pricing
             </h2>
             <p className="text-gray-600 text-lg">
-              追加費用なし。採用が決まってからのお支払いです。
+              One flat fee. No hidden costs. Pay only when you hire.
             </p>
           </div>
 
@@ -486,12 +515,14 @@ export default function LP1() {
             {PLANS.map((plan) => (
               <div
                 key={plan.id}
-                className={`relative bg-white rounded-3xl border-2 ${plan.color} p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${plan.popular ? "ring-2 ring-[#FFC107]" : ""}`}
+                className={`relative bg-white rounded-3xl border-2 ${plan.color} p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${
+                  plan.popular ? "ring-2 ring-[#FFC107]" : ""
+                }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                     <span className="bg-[#FFC107] text-[#1A1A1A] px-4 py-1.5 rounded-full text-sm font-extrabold whitespace-nowrap shadow">
-                      ★ 人気No.1
+                      ★ Most Popular
                     </span>
                   </div>
                 )}
@@ -504,7 +535,7 @@ export default function LP1() {
                 </div>
                 <div className="mb-2">
                   <span className="text-4xl font-extrabold text-[#1A1A1A]">฿{plan.price}</span>
-                  <span className="text-gray-500 text-sm ml-1">一括払い</span>
+                  <span className="text-gray-500 text-sm ml-1">one-time</span>
                 </div>
                 <p className="text-[#E5AC00] text-sm font-semibold mb-6">{plan.period}</p>
 
@@ -518,21 +549,21 @@ export default function LP1() {
                 </ul>
 
                 <Link
-                  href="/ja/contact"
+                  href="/en/contact"
                   className={`w-full flex items-center justify-center gap-2 py-3 rounded-full font-bold text-sm transition-all ${
                     plan.popular
                       ? "bg-[#FFC107] text-[#1A1A1A] hover:bg-[#E5AC00]"
                       : "bg-gray-100 text-[#1A1A1A] hover:bg-gray-200"
                   }`}
                 >
-                  このプランで相談する
+                  Choose This Plan
                   <ChevronRight className="w-4 h-4" />
                 </Link>
               </div>
             ))}
           </div>
           <p className="text-center text-gray-500 text-sm mt-6">
-            ※ すべてのプランに事前ヒアリング・コミュニケーションサポートが含まれます
+            * All plans include a pre-request consultation and communication support
           </p>
         </div>
       </section>
@@ -542,10 +573,10 @@ export default function LP1() {
         <div className="max-w-5xl mx-auto px-4">
           <div className="text-center mb-12">
             <span className="inline-block px-4 py-1.5 bg-[#FFC107]/20 text-[#E5AC00] text-sm font-semibold rounded-full mb-4">
-              お客様の声
+              Customer Reviews
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1A1A]">
-              ご利用いただいたご家族から
+              What Our Families Say
             </h2>
           </div>
 
@@ -560,7 +591,9 @@ export default function LP1() {
                     <Star key={i} className="w-4 h-4 fill-[#FFC107] text-[#FFC107]" />
                   ))}
                 </div>
-                <p className="text-gray-700 text-sm leading-relaxed mb-4">&ldquo;{text}&rdquo;</p>
+                <p className="text-gray-700 text-sm leading-relaxed mb-4">
+                  &ldquo;{text}&rdquo;
+                </p>
                 <div className="flex items-center gap-3">
                   <div className="relative w-10 h-10 rounded-full overflow-hidden bg-gray-200 flex-shrink-0">
                     <Image src={avatar} alt={name} fill className="object-cover" />
@@ -581,10 +614,10 @@ export default function LP1() {
         <div className="max-w-3xl mx-auto px-4">
           <div className="text-center mb-12">
             <span className="inline-block px-4 py-1.5 bg-[#FFC107]/20 text-[#E5AC00] text-sm font-semibold rounded-full mb-4">
-              よくある質問
+              FAQ
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1A1A]">
-              FAQ
+              Frequently Asked Questions
             </h2>
           </div>
 
@@ -600,7 +633,9 @@ export default function LP1() {
                 >
                   <span className="font-bold text-[#1A1A1A] pr-4">{q}</span>
                   <ChevronDown
-                    className={`w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-200 ${openFaq === i ? "rotate-180" : ""}`}
+                    className={`w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-200 ${
+                      openFaq === i ? "rotate-180" : ""
+                    }`}
                   />
                 </button>
                 {openFaq === i && (
@@ -624,22 +659,22 @@ export default function LP1() {
             <Baby className="w-8 h-8 text-[#1A1A1A]" />
           </div>
           <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-4">
-            理想のヘルパーを
+            Ready to Find Your
             <br />
-            見つけましょう
+            Perfect Helper?
           </h2>
           <p className="text-white/70 text-lg mb-8 max-w-xl mx-auto">
-            バンコクの多くのご家族がHello Nannyを信頼しています。
+            Hundreds of Bangkok families trust Hello Nanny.
             <br />
-            まずは無料でご相談ください。
+            Start with a free consultation — no commitment, no payment.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/ja/contact"
+              href="/en/contact"
               className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-[#FFC107] text-[#1A1A1A] text-lg font-extrabold rounded-full hover:bg-[#E5AC00] transition-all hover:-translate-y-0.5 shadow-xl"
             >
-              無料でリクエストを送る
+              Send a Free Request
               <ChevronRight className="w-5 h-5" />
             </Link>
             <a
@@ -649,11 +684,11 @@ export default function LP1() {
               className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-[#06C755] text-white text-lg font-bold rounded-full hover:bg-[#05b34c] transition-all hover:-translate-y-0.5 shadow-xl"
             >
               <MessageCircle className="w-5 h-5" />
-              LINEで相談する
+              Chat on LINE
             </a>
           </div>
           <p className="text-white/40 text-sm mt-4">
-            前払い不要 · 採用が決まってからのお支払い
+            No upfront payment · Pay only after hiring
           </p>
         </div>
       </section>
@@ -665,10 +700,10 @@ export default function LP1() {
           <br className="sm:hidden" />
           <span className="hidden sm:inline"> · </span>
           <Link href="/privacy-policy" className="hover:text-gray-300 transition-colors">
-            プライバシーポリシー
+            Privacy Policy
           </Link>
           <span className="mx-2 text-gray-700">·</span>
-          <Link href="/ja/faq" className="hover:text-gray-300 transition-colors">
+          <Link href="/en/faq" className="hover:text-gray-300 transition-colors">
             FAQ
           </Link>
         </p>
@@ -680,7 +715,7 @@ export default function LP1() {
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 sm:hidden w-14 h-14 bg-[#06C755] rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform"
-        aria-label="LINE相談"
+        aria-label="Chat on LINE"
       >
         <MessageCircle className="w-7 h-7 text-white" />
       </a>
