@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
 import { useState } from "react";
 import {
   CheckCircle2,
@@ -21,9 +20,6 @@ import {
   CheckCircle,
   Loader2,
 } from "lucide-react";
-
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
-const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID;
 
 const LINE_URL = "https://lin.ee/8na220P";
 const WHATSAPP_URL = "https://wa.me/66649133653";
@@ -284,30 +280,7 @@ export default function LP1() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
-    <>
-      {/* ── Analytics ── */}
-      {GA_ID && GA_ID !== "G-XXXXXXXXXX" && (
-        <>
-          <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
-          <Script id="ga4" strategy="afterInteractive">{`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_ID}');
-          `}</Script>
-        </>
-      )}
-      {CLARITY_ID && CLARITY_ID !== "XXXXXXXXXX" && (
-        <Script id="clarity" strategy="afterInteractive">{`
-          (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-          })(window, document, "clarity", "script", "${CLARITY_ID}");
-        `}</Script>
-      )}
-
-      <div className="min-h-screen bg-white font-sans antialiased">
+    <div className="min-h-screen bg-white font-sans antialiased">
 
         {/* ── Urgency Top Bar ── */}
         <div className="bg-[#1A1A1A] text-white text-center py-2.5 px-4 text-sm font-medium">
@@ -745,6 +718,5 @@ export default function LP1() {
         </div>
 
       </div>
-    </>
   );
 }

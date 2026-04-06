@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Home -->
+  <url>
+    <loc>https://hellonanny-san.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hellonanny-san.com/en"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hellonanny-san.com/ja"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://hellonanny-san.com/zh"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://hellonanny-san.com/th"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- LP -->
+  <url>
+    <loc>https://hellonanny-san.com/lp1</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Service -->
+  <url><loc>https://hellonanny-san.com/en/service</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://hellonanny-san.com/ja/service</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://hellonanny-san.com/zh/service</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hellonanny-san.com/th/service</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Contact -->
+  <url><loc>https://hellonanny-san.com/en/contact</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://hellonanny-san.com/ja/contact</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://hellonanny-san.com/zh/contact</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hellonanny-san.com/th/contact</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- FAQ -->
+  <url><loc>https://hellonanny-san.com/en/faq</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hellonanny-san.com/ja/faq</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hellonanny-san.com/zh/faq</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hellonanny-san.com/th/faq</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Process -->
+  <url><loc>https://hellonanny-san.com/en/process</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hellonanny-san.com/ja/process</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hellonanny-san.com/zh/process</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hellonanny-san.com/th/process</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- About -->
+  <url><loc>https://hellonanny-san.com/en/about</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hellonanny-san.com/ja/about</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hellonanny-san.com/zh/about</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://hellonanny-san.com/th/about</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <!-- Blog index -->
+  <url><loc>https://hellonanny-san.com/en/blog</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://hellonanny-san.com/ja/blog</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://hellonanny-san.com/zh/blog</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hellonanny-san.com/th/blog</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <!-- Blog posts -->
+  <url><loc>https://hellonanny-san.com/en/blog/Salaries_2025Edition</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hellonanny-san.com/ja/blog/Salaries_2025Edition</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hellonanny-san.com/zh/blog/Salaries_2025Edition</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hellonanny-san.com/th/blog/Salaries_2025Edition</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <url><loc>https://hellonanny-san.com/en/blog/Complete_Guide_Hiring_Nanny_Maid_in_Thailand</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hellonanny-san.com/ja/blog/Complete_Guide_Hiring_Nanny_Maid_in_Thailand</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hellonanny-san.com/zh/blog/Complete_Guide_Hiring_Nanny_Maid_in_Thailand</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hellonanny-san.com/th/blog/Complete_Guide_Hiring_Nanny_Maid_in_Thailand</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <url><loc>https://hellonanny-san.com/en/blog/Hiring_a_Nanny_for_the_First_Time</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hellonanny-san.com/ja/blog/Hiring_a_Nanny_for_the_First_Time</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hellonanny-san.com/zh/blog/Hiring_a_Nanny_for_the_First_Time</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hellonanny-san.com/th/blog/Hiring_a_Nanny_for_the_First_Time</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <url><loc>https://hellonanny-san.com/en/blog/Interview_Success_Guide</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hellonanny-san.com/ja/blog/Interview_Success_Guide</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hellonanny-san.com/zh/blog/Interview_Success_Guide</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hellonanny-san.com/th/blog/Interview_Success_Guide</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <url><loc>https://hellonanny-san.com/en/blog/5Checkpoints</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hellonanny-san.com/ja/blog/5Checkpoints</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hellonanny-san.com/zh/blog/5Checkpoints</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hellonanny-san.com/th/blog/5Checkpoints</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <url><loc>https://hellonanny-san.com/en/blog/7Things</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hellonanny-san.com/ja/blog/7Things</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hellonanny-san.com/zh/blog/7Things</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hellonanny-san.com/th/blog/7Things</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <url><loc>https://hellonanny-san.com/en/blog/Building_Trust_and_Longevity</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hellonanny-san.com/ja/blog/Building_Trust_and_Longevity</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hellonanny-san.com/zh/blog/Building_Trust_and_Longevity</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hellonanny-san.com/th/blog/Building_Trust_and_Longevity</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <url><loc>https://hellonanny-san.com/en/blog/Nationality-Based_Characteristics</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hellonanny-san.com/ja/blog/Nationality-Based_Characteristics</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hellonanny-san.com/zh/blog/Nationality-Based_Characteristics</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hellonanny-san.com/th/blog/Nationality-Based_Characteristics</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <url><loc>https://hellonanny-san.com/en/blog/Success_Stories</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hellonanny-san.com/ja/blog/Success_Stories</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hellonanny-san.com/zh/blog/Success_Stories</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hellonanny-san.com/th/blog/Success_Stories</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <url><loc>https://hellonanny-san.com/en/blog/The_Cost-Effectiveness</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hellonanny-san.com/ja/blog/The_Cost-Effectiveness</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hellonanny-san.com/zh/blog/The_Cost-Effectiveness</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hellonanny-san.com/th/blog/The_Cost-Effectiveness</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Recruit -->
+  <url><loc>https://hellonanny-san.com/en/recruit</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://hellonanny-san.com/ja/recruit</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <!-- Legal -->
+  <url><loc>https://hellonanny-san.com/privacy-policy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://hellonanny-san.com/service-agreement</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
+</urlset>
